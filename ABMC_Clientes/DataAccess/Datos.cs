@@ -21,11 +21,18 @@ namespace ABMC_Clientes.DataAccess {
 			conexion.Close();
 		}
 
-		public DataTable ConsultarTabla(string columnas, string tabla, string condicion) {
+		public void Actualizar(string consultaSQL) {
+			Conectar();
+			comando.CommandText = consultaSQL;
+			comando.ExecuteNonQuery();
+			Desconectar();
+		}
+
+		public DataTable ConsultarTabla(string columnas, string tabla, string condicion = "") {
 			try {
 				DataTable retTable = new DataTable();
 				Conectar();
-				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + " WHERE " + condicion;
+				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + condicion == "" ? "":(" WHERE " + condicion);
 				retTable.Load(comando.ExecuteReader());
 				Desconectar();
 				return retTable;

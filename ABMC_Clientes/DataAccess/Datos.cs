@@ -6,7 +6,7 @@ namespace ABMC_Clientes.DataAccess {
 		private SqlConnection conexion = new SqlConnection();
 		private SqlCommand comando = new SqlCommand();
 
-		private string cadenaConexion = @"Data Source=190.226.98.54,1433;Initial Catalog=PAV1_3K1;User ID=pav1;password=pav12020";
+		private string cadenaConexion = @"Data Source=DESKTOP-TPLIF3M\SQLEXPRESS;Initial Catalog=BugsTracker;Persist Security Info=True;User ID=sa;Password=pav";
 
 		public string CadenaConexion { get => cadenaConexion; set => cadenaConexion = value; }
 
@@ -32,7 +32,7 @@ namespace ABMC_Clientes.DataAccess {
 			try {
 				DataTable retTable = new DataTable();
 				Conectar();
-				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + condicion == "" ? "":(" WHERE " + condicion);
+				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + (condicion == "" ? "":(" WHERE " + condicion));
 				retTable.Load(comando.ExecuteReader());
 				Desconectar();
 				return retTable;

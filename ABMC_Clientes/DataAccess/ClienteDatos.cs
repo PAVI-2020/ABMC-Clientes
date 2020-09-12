@@ -4,12 +4,14 @@ using System.Data;
 
 namespace ABMC_Clientes.DataAccess {
 	public class ClienteDatos {
+
+		Datos oDato = new Datos();
 		public static Cliente[] RecuperarCliente() {
-			string consultaSQL = "SELECT C.id_cliente, C.cuit, C.razon_social, C.borrado, C.calle, C.numero, C.fecha_alta, Co.nombre as 'nombre_contacto', B.nombre as 'nombre_barrio'";
-			string tablasConsulta = "Clientes C JOIN Contactos Co ON (C.id_contacto == Co.id_contacto) JOIN Barrios B ON (B.id_barrio == C.id_barrio)";
-			string condicion = "B.id_producto=";
+			string consultaSQL = "C.id_cliente, C.cuit, C.razon_social, C.borrado, C.calle, C.numero, C.fecha_alta, Co.nombre as 'nombre_contacto', Co.apellido as 'apellido_contacto', B.nombre as 'nombre_barrio'";
+			string tablasConsulta = "Clientes C JOIN Contactos Co ON (C.id_contacto = Co.id_contacto) JOIN Barrios B ON (B.id_barrio = C.id_barrio)";
+			
 			Datos datos = new Datos();
-			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, condicion);
+			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta);
 
 			if (tablas.Rows.Count <= 0)
 				return null;
@@ -44,17 +46,17 @@ namespace ABMC_Clientes.DataAccess {
 
 		public static Cliente ConvertirCliente(DataRow input) {
 			Cliente c = new Cliente(
-				id: (int)input["id_cliente"],
-				cuit: (int)input["cuit"],
-				razonSocial: input["razon_social"].ToString(),
-				borrado: (bool)input["borrado"],
-				calle: input["calle"].ToString(),
-				numero: (int)input["numero"],
-				fechaAlta: DateTime.Parse(input["fecha_alta"].ToString()),
-				nombreBarrio: input["nombre_barrio"].ToString(),
-				nombreContacto: input["nombre_contacto"].ToString(),
-				idBarrio: (int)input["id_barrio"],
-				idContacto: (int)input["id_contacto"]
+                id: (int)input["id_cliente"],
+                cuit: (string)input["cuit"],
+                razonSocial: (string)input["razon_social"],
+                borrado: (int)input["borrado"],
+                calle: (string)input["calle"],
+                numero: (string)input["numero"],
+                fechaAlta: (DateTime)input["fecha_alta"],
+                nombreBarrio: (string)input["nombre_barrio"],
+                nombreContacto: (string)input["nombre_contacto"],
+                idBarrio: (int)input["id_barrio"],
+                idContacto: (int)input["id_contacto"]
 			);
 
 			return c;
@@ -69,5 +71,28 @@ namespace ABMC_Clientes.DataAccess {
 
 			return ret;
 		}
+
+		public void Eliminar(Cliente c)
+        {
+			string eliminacion = "UPDATE Clientes Set Borrado = 1 WHERE id_cliente = " + c.Id;
+			oDato.Actualizar(eliminacion);
+			
+        }
+
+		public void Insertar(Cliente cliente)
+        {
+			string insercion = "INSERT INTO Clientes (cuit, razon_social, borrado, calle, numero, fecha_alta, id_barrio, id_contacto) VALUES ('" +
+								cliente.Cuit.ToString() + "', '" + cliente.RazonSocial + "', 0, '" + cliente.Calle + "', '" + cliente.Numero.ToString() +
+								"', " + DateTime.Today + ", " + cliente.IdBarrio + ", " + cliente.IdContacto + ")";
+			oDato.Actualizar(insercion);
+        }
+
+		public void Actualizar(Cliente cliente)
+        {
+			string actualizacion = "UPDATE Clientes SET cuit= '" + cliente.Cuit.ToString() + "', razon_social= '" + cliente.RazonSocial + "', calle= '" + cliente.Calle +
+				"', numero= '" + cliente.Numero.ToString() +"', fecha_alta= "+cliente.FechaAlta+ "', id_barrio= " + cliente.IdBarrio + ", id_contacto= " + cliente.IdContacto;
+
+			oDato.Actualizar(actualizacion);
+        }
 	}
 }

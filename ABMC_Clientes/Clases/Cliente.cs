@@ -3,18 +3,22 @@
 namespace ABMC_Clientes.Clases {
 	public class Cliente {
 		private int id;
-		private int cuit;
+		private string cuit;
 		private string razonSocial;
-		private bool borrado;
+		private int borrado;
 		private string calle;
-		private int numero;
+		private string numero;
 		private DateTime fechaAlta;
 		private string nombreBarrio;
 		private string nombreContacto;
 		private int idBarrio;
 		private int idContacto;
 
-		public Cliente(int id, int cuit, string razonSocial, bool borrado, string calle, int numero, DateTime fechaAlta, string nombreBarrio, string nombreContacto, int idBarrio, int idContacto) {
+        public Cliente()
+        {
+        }
+
+        public Cliente(int id, string cuit, string razonSocial, int borrado, string calle, string numero, DateTime fechaAlta, string nombreBarrio, string nombreContacto, int idBarrio, int idContacto) {
 			this.id = id;
 			this.cuit = cuit;
 			this.razonSocial = razonSocial;
@@ -29,11 +33,11 @@ namespace ABMC_Clientes.Clases {
 		}
 
 		public int Id { get => id; set => id = value; }
-		public int Cuit { get => cuit; set => cuit = value; }
+		public string Cuit { get => cuit; set => cuit = value; }
 		public string RazonSocial { get => razonSocial; set => razonSocial = value; }
-		public bool Borrado { get => borrado; set => borrado = value; }
+		public int Borrado { get => borrado; set => borrado = value; }
 		public string Calle { get => calle; set => calle = value; }
-		public int Numero { get => numero; set => numero = value; }
+		public string Numero { get => numero; set => numero = value; }
 		public DateTime FechaAlta { get => fechaAlta; set => fechaAlta = value; }
 		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
 		public string Contacto { get => nombreContacto; set => nombreContacto = value; }

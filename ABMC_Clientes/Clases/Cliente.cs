@@ -1,11 +1,4 @@
-﻿using ABMC_Clientes.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace ABMC_Clientes.Clases {
 	public class Cliente {

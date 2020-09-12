@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ABMC_Clientes;
+using System;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes {
@@ -13,7 +11,7 @@ namespace ABMC_Clientes {
 		static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1());
+			Application.Run(new FormABMC());
 		}
 	}
 }

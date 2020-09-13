@@ -426,6 +426,7 @@
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.groupBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormABMC";
 			this.Text = "ABMC";
 			this.Load += new System.EventHandler(this.FormABMC_Load);

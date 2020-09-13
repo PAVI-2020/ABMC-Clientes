@@ -1,5 +1,6 @@
 ﻿using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
+using ABMC_Clientes.DataAccess;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -18,6 +19,8 @@ namespace ABMC_Clientes {
 			ClienteBusiness cliente = new ClienteBusiness();
 			Cliente[] clientes = cliente.ConsultarClientes();
 			CargarGrilla(grdClientes, clientes);
+			CargarComboOptions("Barrios", "id_barrio, nombre", cboBarrio);
+			CargarComboOptions("Contactos", "id_contacto, nombre + ' ' + apellido", cboContacto);
 		}
 
 		void Habilitar(bool estado) {
@@ -45,12 +48,54 @@ namespace ABMC_Clientes {
 			}
 		}
 
+		private void ActualizarCampos() {
+			DataGridViewRow tabla = new DataGridViewRow();
+			tabla = grdClientes.SelectedRows[0];
+			txtId.Text = tabla.Cells[0].Value.ToString();
+			txtCuit.Text = tabla.Cells[1].Value.ToString();
+			txtRazonSocial.Text = tabla.Cells[2].Value.ToString();
+			txtCalle.Text = tabla.Cells[3].Value.ToString();
+			txtNumero.Text = tabla.Cells[4].Value.ToString();
+			txtFecha.Text = tabla.Cells[5].Value.ToString();
+			cboBarrio.SelectedText = tabla.Cells[6].Value.ToString();
+			cboContacto.SelectedText = tabla.Cells[7].Value.ToString();
+		}
+
+		public void Limpiar() {
+			txtId.Text = "";
+			txtCuit.Text = "";
+			txtCalle.Text = "";
+			txtRazonSocial.Text = "";
+			txtFecha.Text = "";
+			txtNumero.Text = "";
+			cboBarrio.SelectedIndex = -1;
+			cboContacto.SelectedIndex = -1;
+
+		}
+
+		public void CargarComboOptions(string tabla, string columnas, ComboBox cmb) {
+			Datos datos = new Datos();
+
+			DataTable table = datos.ConsultarTabla(columnas, tabla);
+			cmb.DataSource = table;
+			cmb.DisplayMember = table.Columns[1].ColumnName;
+			cmb.ValueMember = table.Columns[0].ColumnName;
+
+			cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+			cmb.SelectedIndex = -1;
+			cmb.SelectedValue = -1;
+		}
+
+		private void FormABMC_Load(object sender, System.EventArgs e) {
+			this.dtpFecha.Visible = false;
+        }
+
 		private void btnSalir_Click(object sender, System.EventArgs e) {
 			Close();
 		}
 
-        private void btnEliminar_Click(object sender, System.EventArgs e) {
-			if (MessageBox.Show("¿Desea eliminar el cliente de cuit"+cboContacto.SelectedText+"?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK) {
+		private void btnEliminar_Click(object sender, System.EventArgs e) {
+			if (MessageBox.Show("¿Desea eliminar el cliente de cuit" + cboContacto.SelectedText + "?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK) {
 				Cliente cliente = new Cliente {
 					Id = int.Parse(txtId.Text),
 					Cuit = txtCuit.Text,
@@ -68,27 +113,10 @@ namespace ABMC_Clientes {
 				ClienteBusiness oClienteBusiness = new ClienteBusiness();
 
 				oClienteBusiness.Eliminar(cliente);
-            }
-        }
-
-		private void ActualizarCampos() {
-			DataGridViewRow tabla = new DataGridViewRow();
-			tabla = grdClientes.SelectedRows[0];
-			txtId.Text = tabla.Cells[0].Value.ToString();
-			txtCuit.Text = tabla.Cells[1].Value.ToString();
-			txtRazonSocial.Text = tabla.Cells[2].Value.ToString();
-			txtCalle.Text = tabla.Cells[3].Value.ToString();
-			txtNumero.Text = tabla.Cells[4].Value.ToString();
-			txtFecha.Text = tabla.Cells[5].Value.ToString();
-			cboBarrio.SelectedText = tabla.Cells[6].Value.ToString();
-			cboContacto.SelectedText = tabla.Cells[7].Value.ToString();
+			}
 		}
 
-		private void FormABMC_Load(object sender, System.EventArgs e) {
-			this.dtpFecha.Visible = false;
-        }
-
-        private void grdClientes_SelectionChanged(object sender, EventArgs e) {
+		private void grdClientes_SelectionChanged(object sender, EventArgs e) {
 			this.ActualizarCampos();
         }
 
@@ -99,20 +127,7 @@ namespace ABMC_Clientes {
 			this.txtCuit.Focus();
 			this.txtFecha.Text = DateTime.Today.ToString();
 			this.txtFecha.Enabled = false;
-
         }
-
-		public void Limpiar() {
-			txtId.Text = "";
-			txtCuit.Text = "";
-			txtCalle.Text = "";
-			txtRazonSocial.Text = "";
-			txtFecha.Text = "";
-			txtNumero.Text = "";
-			cboBarrio.SelectedIndex = -1;
-			cboContacto.SelectedIndex = -1;
-
-		}
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
 			Cliente cliente = new Cliente {

@@ -87,6 +87,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="assets\BlackStar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\BlackStarBanner.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

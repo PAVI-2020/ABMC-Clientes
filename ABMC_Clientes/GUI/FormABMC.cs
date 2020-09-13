@@ -2,6 +2,7 @@
 using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace ABMC_Clientes {
 		private void Form1_Shown(object sender, System.EventArgs e) {
 			Habilitar(false);
 			RefreshData();
+			ActualizarCampos();
 		}
 
 		void RefreshData() {
@@ -62,8 +64,8 @@ namespace ABMC_Clientes {
 			txtCalle.Text = tabla.Cells[3].Value.ToString();
 			txtNumero.Text = tabla.Cells[4].Value.ToString();
 			txtFecha.Text = tabla.Cells[5].Value.ToString();
-			cboBarrio.SelectedText = tabla.Cells[6].Value.ToString();
-			cboContacto.SelectedText = tabla.Cells[7].Value.ToString();
+			cboBarrio.SelectedIndex = cboBarrio.FindStringExact(tabla.Cells[6].Value.ToString());
+			cboContacto.SelectedIndex = cboContacto.FindStringExact(tabla.Cells[7].Value.ToString());
 		}
 
 		public void Limpiar() {
@@ -124,7 +126,7 @@ namespace ABMC_Clientes {
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
 			Cliente cliente = new Cliente {
-				Id = 4,
+				Id = int.Parse(txtId.Text),
 				Cuit = txtCuit.Text,
 				RazonSocial = txtRazonSocial.Text,
 				Calle = txtCalle.Text,
@@ -160,6 +162,7 @@ namespace ABMC_Clientes {
 
         private void btnEditar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);
+			nuevo = false;
 			this.txtFecha.Visible = false;
 			this.dtpFecha.Visible = true;
 		}

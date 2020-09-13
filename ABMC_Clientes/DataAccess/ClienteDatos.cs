@@ -88,7 +88,8 @@ namespace ABMC_Clientes.DataAccess {
 		public static void ActualizarCliente(Cliente cliente) {
 			Datos datos = new Datos();
 			string actualizacion = "UPDATE Clientes SET cuit= '" + cliente.Cuit.ToString() + "', razon_social= '" + cliente.RazonSocial + "', calle= '" + cliente.Calle +
-				"', numero= '" + cliente.Numero.ToString() +"', fecha_alta= "+cliente.FechaAlta+ "', id_barrio= " + cliente.IdBarrio + ", id_contacto= " + cliente.IdContacto;
+				"', numero= '" + cliente.Numero.ToString() +"', fecha_alta='" + cliente.FechaAlta.ToString("yyyy-MM-dd hh:mm:ss") + "', id_barrio= " + cliente.IdBarrio + ", id_contacto= " + cliente.IdContacto
+				+ " WHERE id_cliente=" + cliente.Id;
 
 			datos.Actualizar(actualizacion);
         }

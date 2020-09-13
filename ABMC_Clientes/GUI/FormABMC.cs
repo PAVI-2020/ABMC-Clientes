@@ -16,8 +16,7 @@ namespace ABMC_Clientes {
 			Habilitar(false);
 
 			ClienteBusiness cliente = new ClienteBusiness();
-			
-				CargarGrilla(grdClientes, cliente.ConsultarClientes());
+			CargarGrilla(grdClientes, cliente.ConsultarClientes());
 		}
 
 		void Habilitar(bool estado) {
@@ -79,8 +78,7 @@ namespace ABMC_Clientes {
 
         }
 
-		private void ActualizarCampos()
-        {
+		private void ActualizarCampos() {
 			DataGridViewRow tabla = new DataGridViewRow();
 			tabla = grdClientes.SelectedRows[0];
 			txtId.Text = tabla.Cells[0].Value.ToString();
@@ -91,32 +89,27 @@ namespace ABMC_Clientes {
 			txtFecha.Text = tabla.Cells[5].Value.ToString();
 			cboBarrio.SelectedText = tabla.Cells[6].Value.ToString();
 			cboContacto.SelectedText = tabla.Cells[7].Value.ToString();
-
 		}
 
-		private void FormABMC_Load(object sender, System.EventArgs e)
-		{
+		private void FormABMC_Load(object sender, System.EventArgs e) {
 			this.dtpFecha.Visible = false;
         }
 
-        private void grdClientes_SelectionChanged(object sender, EventArgs e)
-        {
+        private void grdClientes_SelectionChanged(object sender, EventArgs e) {
 			this.ActualizarCampos();
         }
 
-		private void btnAgregar_Click(object sender, EventArgs e)
-		{
+		private void btnAgregar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);
 			this.nuevo = true;
-			this.limpiar();
+			this.Limpiar();
 			this.txtCuit.Focus();
 			this.txtFecha.Text = DateTime.Today.ToString();
 			this.txtFecha.Enabled = false;
 
         }
 
-		public void limpiar()
-        {
+		public void Limpiar() {
 			txtId.Text = "";
 			txtCuit.Text = "";
 			txtCalle.Text = "";
@@ -128,10 +121,8 @@ namespace ABMC_Clientes {
 
 		}
 
-		private void btnAceptar_Click(object sender, EventArgs e)
-		{
-			Cliente cliente = new Cliente
-			{
+		private void btnAceptar_Click(object sender, EventArgs e) {
+			Cliente cliente = new Cliente {
 				Id = int.Parse(txtId.Text),
 				Cuit = txtCuit.Text,
 				RazonSocial = txtRazonSocial.Text,
@@ -147,10 +138,10 @@ namespace ABMC_Clientes {
 
 			ClienteBusiness cBusiness = new ClienteBusiness();
 
-			if (nuevo)
-			{
-				if (txtId.Text == "" || txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" || txtFecha.Text == "" || txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1)
-				{
+			if (nuevo) {
+				if (txtId.Text == "" || txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" || txtFecha.Text == ""
+					|| txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1) {
+
 					MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
 					txtId.Focus();
 					return;
@@ -158,18 +149,13 @@ namespace ABMC_Clientes {
 
 				
 				cBusiness.Insertar(cliente);
-
-			}
-
-            else
-            {
+			} else {
 				cliente.FechaAlta = dtpFecha.Value;
 				cBusiness.ActualizarUsuario(cliente);
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
+        private void btnEditar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);
 			this.txtFecha.Visible = false;
 			this.dtpFecha.Visible = true;

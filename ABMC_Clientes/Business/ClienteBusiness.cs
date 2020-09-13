@@ -1,5 +1,4 @@
-﻿using System;
-using ABMC_Clientes.Clases;
+﻿using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
 
 namespace ABMC_Clientes.Business {
@@ -8,26 +7,16 @@ namespace ABMC_Clientes.Business {
 			return ClienteDatos.RecuperarCliente();
 		}
 
-		public void Eliminar(Cliente c)
-		{
-			ClienteDatos oClienteDatos = new ClienteDatos();
-			oClienteDatos.Eliminar(c);
+		public void Eliminar(Cliente c) {
+			ClienteDatos.EliminarCliente(c);
 		}
 
-		public void Insertar(Cliente cliente)
-        {
-			
-
-			ClienteDatos oClienteDatos = new ClienteDatos();
-			oClienteDatos.Insertar(cliente);
-
+		public void Insertar(Cliente cliente) {
+			ClienteDatos.InsertarCliente(cliente);
 		}
 
-		public void ActualizarUsuario(Cliente cliente)
-		{
-			ClienteDatos oClienteDatos = new ClienteDatos();
-			oClienteDatos.Actualizar(cliente);
+		public void ActualizarUsuario(Cliente cliente) {
+			ClienteDatos.ActualizarCliente(cliente);
 		}
-
 	}
 }

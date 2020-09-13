@@ -14,9 +14,7 @@ namespace ABMC_Clientes.Clases {
 		private int idBarrio;
 		private int idContacto;
 
-        public Cliente()
-        {
-        }
+        public Cliente() {}
 
         public Cliente(int id, string cuit, string razonSocial, int borrado, string calle, string numero, DateTime fechaAlta, string nombreBarrio, string nombreContacto, int idBarrio, int idContacto) {
 			this.id = id;

@@ -5,7 +5,7 @@ using System.Data;
 namespace ABMC_Clientes.DataAccess {
 	public class ClienteDatos {
 		public static Cliente[] RecuperarCliente() {
-			string consultaSQL = "C.id_cliente, C.cuit, C.razon_social, C.borrado, C.calle, C.numero, C.fecha_alta, Co.nombre as 'nombre_contacto', Co.apellido as 'apellido_contacto', B.nombre as 'nombre_barrio'";
+			string consultaSQL = "C.id_cliente, C.cuit, C.razon_social, C.borrado, C.calle, C.numero, C.fecha_alta, Co.nombre as 'nombre_contacto', Co.apellido as 'apellido_contacto', B.nombre as 'nombre_barrio', C.id_barrio, C.id_contacto";
 			string tablasConsulta = "Clientes C JOIN Contactos Co ON (C.id_contacto = Co.id_contacto) JOIN Barrios B ON (B.id_barrio = C.id_barrio)";
 			
 			Datos datos = new Datos();
@@ -44,17 +44,17 @@ namespace ABMC_Clientes.DataAccess {
 
 		public static Cliente ConvertirCliente(DataRow input) {
 			Cliente c = new Cliente(
-                id: (int)input["id_cliente"],
-                cuit: (string)input["cuit"],
-                razonSocial: (string)input["razon_social"],
-                borrado: (int)input["borrado"],
-                calle: (string)input["calle"],
-                numero: (string)input["numero"],
-                fechaAlta: (DateTime)input["fecha_alta"],
-                nombreBarrio: (string)input["nombre_barrio"],
-                nombreContacto: (string)input["nombre_contacto"],
-                idBarrio: (int)input["id_barrio"],
-                idContacto: (int)input["id_contacto"]
+                id:				(int)input["id_cliente"],
+                cuit:			(string)input["cuit"],
+                razonSocial:	(string)input["razon_social"],
+                borrado:		(bool)input["borrado"],
+                calle:			(string)input["calle"],
+                numero:			(string)input["numero"],
+                fechaAlta:		(DateTime)input["fecha_alta"],
+                nombreBarrio:	(string)input["nombre_barrio"],
+                nombreContacto: string.Join(" ", (string)input["nombre_contacto"], (string)input["apellido_contacto"]),
+                idBarrio:		(int)input["id_barrio"],
+                idContacto:		(int)input["id_contacto"]
 			);
 
 			return c;

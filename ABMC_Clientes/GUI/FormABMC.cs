@@ -16,7 +16,8 @@ namespace ABMC_Clientes {
 			Habilitar(false);
 
 			ClienteBusiness cliente = new ClienteBusiness();
-			CargarGrilla(grdClientes, cliente.ConsultarClientes());
+			Cliente[] clientes = cliente.ConsultarClientes();
+			CargarGrilla(grdClientes, clientes);
 		}
 
 		void Habilitar(bool estado) {
@@ -48,12 +49,9 @@ namespace ABMC_Clientes {
 			Close();
 		}
 
-        private void btnEliminar_Click(object sender, System.EventArgs e)
-        {
-			if (MessageBox.Show("¿Desea eliminar el cliente de cuit"+cboContacto.SelectedText+"?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK)
-            {
-				Cliente cliente = new Cliente
-				{
+        private void btnEliminar_Click(object sender, System.EventArgs e) {
+			if (MessageBox.Show("¿Desea eliminar el cliente de cuit"+cboContacto.SelectedText+"?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK) {
+				Cliente cliente = new Cliente {
 					Id = int.Parse(txtId.Text),
 					Cuit = txtCuit.Text,
 					RazonSocial = txtRazonSocial.Text,
@@ -71,11 +69,6 @@ namespace ABMC_Clientes {
 
 				oClienteBusiness.Eliminar(cliente);
             }
-        }
-
-        private void label7_Click(object sender, System.EventArgs e)
-        {
-
         }
 
 		private void ActualizarCampos() {

@@ -105,7 +105,6 @@
             this.label7.TabIndex = 45;
             this.label7.Text = "Contacto: ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 

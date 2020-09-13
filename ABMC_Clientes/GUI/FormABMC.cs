@@ -15,9 +15,13 @@ namespace ABMC_Clientes {
 
 		private void Form1_Shown(object sender, System.EventArgs e) {
 			Habilitar(false);
+			RefreshData();
+		}
 
+		void RefreshData() {
 			ClienteBusiness cliente = new ClienteBusiness();
 			Cliente[] clientes = cliente.ConsultarClientes();
+			grdClientes.Rows.Clear();
 			CargarGrilla(grdClientes, clientes);
 			CargarComboOptions("Barrios", "id_barrio, nombre", cboBarrio);
 			CargarComboOptions("Contactos", "id_contacto, nombre + ' ' + apellido", cboContacto);
@@ -49,8 +53,9 @@ namespace ABMC_Clientes {
 		}
 
 		private void ActualizarCampos() {
-			DataGridViewRow tabla = new DataGridViewRow();
-			tabla = grdClientes.SelectedRows[0];
+			if (grdClientes.Rows.Count == 0 || grdClientes.SelectedRows.Count == 0)
+				return;
+			DataGridViewRow tabla = grdClientes.SelectedRows[0];
 			txtId.Text = tabla.Cells[0].Value.ToString();
 			txtCuit.Text = tabla.Cells[1].Value.ToString();
 			txtRazonSocial.Text = tabla.Cells[2].Value.ToString();
@@ -95,24 +100,12 @@ namespace ABMC_Clientes {
 		}
 
 		private void btnEliminar_Click(object sender, System.EventArgs e) {
-			if (MessageBox.Show("¿Desea eliminar el cliente de cuit" + cboContacto.SelectedText + "?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK) {
-				Cliente cliente = new Cliente {
-					Id = int.Parse(txtId.Text),
-					Cuit = txtCuit.Text,
-					RazonSocial = txtRazonSocial.Text,
-					Calle = txtCalle.Text,
-					Numero = txtNumero.Text,
-					FechaAlta = DateTime.Parse(txtFecha.Text),
-					Barrio = cboBarrio.Text,
-					IdBarrio = (int)cboBarrio.SelectedValue,
-					Contacto = cboContacto.Text,
-					IdContacto = (int)cboContacto.SelectedValue,
-
-				};
-
+			if (MessageBox.Show("¿Desea eliminar el cliente de id " + txtId.Text + "?", "Eliminando usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK) {
 				ClienteBusiness oClienteBusiness = new ClienteBusiness();
 
-				oClienteBusiness.Eliminar(cliente);
+				oClienteBusiness.Eliminar(int.Parse(txtId.Text));
+				RefreshData();
+				Habilitar(false);
 			}
 		}
 
@@ -131,7 +124,7 @@ namespace ABMC_Clientes {
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
 			Cliente cliente = new Cliente {
-				Id = int.Parse(txtId.Text),
+				Id = 4,
 				Cuit = txtCuit.Text,
 				RazonSocial = txtRazonSocial.Text,
 				Calle = txtCalle.Text,
@@ -141,13 +134,13 @@ namespace ABMC_Clientes {
 				IdBarrio = (int)cboBarrio.SelectedValue,
 				Contacto = cboContacto.Text,
 				IdContacto = (int)cboContacto.SelectedValue,
-
+				Borrado = false
 			};
 
 			ClienteBusiness cBusiness = new ClienteBusiness();
 
 			if (nuevo) {
-				if (txtId.Text == "" || txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" || txtFecha.Text == ""
+				if (txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" || txtFecha.Text == ""
 					|| txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1) {
 
 					MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
@@ -155,13 +148,15 @@ namespace ABMC_Clientes {
 					return;
 				}
 
-				
 				cBusiness.Insertar(cliente);
 			} else {
 				cliente.FechaAlta = dtpFecha.Value;
 				cBusiness.ActualizarUsuario(cliente);
             }
-        }
+
+			RefreshData();
+			Habilitar(false);
+		}
 
         private void btnEditar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);

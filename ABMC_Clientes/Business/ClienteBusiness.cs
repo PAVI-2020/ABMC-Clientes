@@ -7,8 +7,8 @@ namespace ABMC_Clientes.Business {
 			return ClienteDatos.RecuperarCliente();
 		}
 
-		public void Eliminar(Cliente c) {
-			ClienteDatos.EliminarCliente(c);
+		public void Eliminar(int id) {
+			ClienteDatos.EliminarCliente(id);
 		}
 
 		public void Insertar(Cliente cliente) {

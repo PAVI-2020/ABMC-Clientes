@@ -9,7 +9,7 @@ namespace ABMC_Clientes.DataAccess {
 			string tablasConsulta = "Clientes C JOIN Contactos Co ON (C.id_contacto = Co.id_contacto) JOIN Barrios B ON (B.id_barrio = C.id_barrio)";
 			
 			Datos datos = new Datos();
-			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta);
+			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "C.borrado = 0");
 
 			if (tablas.Rows.Count <= 0)
 				return null;
@@ -70,9 +70,9 @@ namespace ABMC_Clientes.DataAccess {
 			return ret;
 		}
 
-		public static void EliminarCliente(Cliente c) {
+		public static void EliminarCliente(int id) {
 			Datos datos = new Datos();
-			string eliminacion = "UPDATE Clientes Set Borrado = 1 WHERE id_cliente = " + c.Id;
+			string eliminacion = "UPDATE Clientes Set Borrado = 1 WHERE id_cliente = " + id;
 
 			datos.Actualizar(eliminacion);
         }
@@ -81,7 +81,7 @@ namespace ABMC_Clientes.DataAccess {
 			Datos datos = new Datos();
 			string insercion = "INSERT INTO Clientes (cuit, razon_social, borrado, calle, numero, fecha_alta, id_barrio, id_contacto) VALUES ('" +
 								cliente.Cuit.ToString() + "', '" + cliente.RazonSocial + "', 0, '" + cliente.Calle + "', '" + cliente.Numero.ToString() +
-								"', " + DateTime.Today + ", " + cliente.IdBarrio + ", " + cliente.IdContacto + ")";
+								"', GETDATE(), " + cliente.IdBarrio + ", " + cliente.IdContacto + ")";
 			datos.Actualizar(insercion);
         }
 

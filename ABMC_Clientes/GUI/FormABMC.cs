@@ -8,11 +8,15 @@ using System.Windows.Forms;
 
 namespace ABMC_Clientes {
 	public partial class FormABMC : Form {
+		enum State { None, Nuevo, Consultar }
+		private State operacion;
+
+		bool nuevo { get { return operacion == State.Nuevo; } }
+		bool consultar { get { return operacion == State.Consultar; } }
+
 		public FormABMC() {
 			InitializeComponent();
 		}
-
-		bool nuevo = false;
 
 		private void Form1_Shown(object sender, System.EventArgs e) {
 			Habilitar(false);
@@ -33,7 +37,7 @@ namespace ABMC_Clientes {
 			txtCalle.Enabled = estado;
 			txtCuit.Enabled = estado;
 			txtId.Enabled = false;
-			txtFecha.Enabled = false;
+			dtpFecha.Enabled = false;
 			txtNumero.Enabled = estado;
 			txtRazonSocial.Enabled = estado;
 			btnAceptar.Enabled = estado;
@@ -48,6 +52,9 @@ namespace ABMC_Clientes {
 		}
 
 		void CargarGrilla(DataGridView grid, Cliente[] datos) {
+			grid.Rows.Clear();
+			if (datos == null)
+				return;
 			foreach (Cliente c in datos) {
 				grid.Rows.Add(
 					c.Id, c.Cuit, c.RazonSocial, c.Calle, c.Numero, c.FechaAlta, c.Barrio, c.Contacto);
@@ -63,7 +70,7 @@ namespace ABMC_Clientes {
 			txtRazonSocial.Text = tabla.Cells[2].Value.ToString();
 			txtCalle.Text = tabla.Cells[3].Value.ToString();
 			txtNumero.Text = tabla.Cells[4].Value.ToString();
-			txtFecha.Text = tabla.Cells[5].Value.ToString();
+			dtpFecha.Value = (DateTime)tabla.Cells[5].Value;
 			cboBarrio.SelectedIndex = cboBarrio.FindStringExact(tabla.Cells[6].Value.ToString());
 			cboContacto.SelectedIndex = cboContacto.FindStringExact(tabla.Cells[7].Value.ToString());
 		}
@@ -73,7 +80,6 @@ namespace ABMC_Clientes {
 			txtCuit.Text = "";
 			txtCalle.Text = "";
 			txtRazonSocial.Text = "";
-			txtFecha.Text = "";
 			txtNumero.Text = "";
 			cboBarrio.SelectedIndex = -1;
 			cboContacto.SelectedIndex = -1;
@@ -92,10 +98,6 @@ namespace ABMC_Clientes {
 			cmb.SelectedIndex = -1;
 			cmb.SelectedValue = -1;
 		}
-
-		private void FormABMC_Load(object sender, System.EventArgs e) {
-			this.dtpFecha.Visible = false;
-        }
 
 		private void btnSalir_Click(object sender, System.EventArgs e) {
 			Close();
@@ -117,14 +119,34 @@ namespace ABMC_Clientes {
 
 		private void btnAgregar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);
-			this.nuevo = true;
+			operacion = State.Nuevo;
 			this.Limpiar();
 			this.txtCuit.Focus();
-			this.txtFecha.Text = DateTime.Today.ToString();
-			this.txtFecha.Enabled = false;
         }
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
+			if (nuevo) {
+				AgregarCliente();
+			} else if (consultar) {
+				ConsultarClientes();
+			}
+			else {
+				ActualizarCliente();
+            }
+
+			Habilitar(false);
+		}
+
+		void AgregarCliente() {
+			ClienteBusiness cBusiness = new ClienteBusiness();
+			if (txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" ||
+				txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1) {
+
+				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
+				txtId.Focus();
+				return;
+			}
+
 			Cliente cliente = new Cliente {
 				Id = int.Parse(txtId.Text),
 				Cuit = txtCuit.Text,
@@ -139,32 +161,54 @@ namespace ABMC_Clientes {
 				Borrado = false
 			};
 
-			ClienteBusiness cBusiness = new ClienteBusiness();
-
-			if (nuevo) {
-				if (txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" || txtFecha.Text == ""
-					|| txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1) {
-
-					MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
-					txtId.Focus();
-					return;
-				}
-
-				cBusiness.Insertar(cliente);
-			} else {
-				cliente.FechaAlta = dtpFecha.Value;
-				cBusiness.ActualizarUsuario(cliente);
-            }
-
+			cBusiness.Insertar(cliente);
 			RefreshData();
-			Habilitar(false);
+		}
+
+		void ConsultarClientes() {
+			ClienteBusiness cBusiness = new ClienteBusiness();
+			CargarGrilla(grdClientes, cBusiness.ConsultarClientesFiltrado(
+					id: txtId.Text == "" ? -1 : int.Parse(txtId.Text),
+					cuit: txtCuit.Text,
+					razonSocial: txtRazonSocial.Text,
+					calle: txtCalle.Text,
+					numero: txtNumero.Text,
+					fechaAlta: dtpFecha.Value,
+					idBarrio: (int)cboBarrio.SelectedValue,
+					idContacto: (int)cboContacto.SelectedValue
+					));
+		}
+
+		void ActualizarCliente() {
+			ClienteBusiness cBusiness = new ClienteBusiness();
+			Cliente cliente = new Cliente {
+				Id = int.Parse(txtId.Text),
+				Cuit = txtCuit.Text,
+				RazonSocial = txtRazonSocial.Text,
+				Calle = txtCalle.Text,
+				Numero = txtNumero.Text,
+				FechaAlta = DateTime.Today,
+				Barrio = cboBarrio.Text,
+				IdBarrio = (int)cboBarrio.SelectedValue,
+				Contacto = cboContacto.Text,
+				IdContacto = (int)cboContacto.SelectedValue,
+				Borrado = false
+			};
+
+			cliente.FechaAlta = dtpFecha.Value;
+			cBusiness.ActualizarUsuario(cliente);
+			RefreshData();
 		}
 
         private void btnEditar_Click(object sender, EventArgs e) {
 			this.Habilitar(true);
-			nuevo = false;
-			this.txtFecha.Visible = false;
-			this.dtpFecha.Visible = true;
+			operacion = State.None;
 		}
-    }
+
+		private void btnConsultar_Click(object sender, EventArgs e) {
+			Habilitar(true);
+			txtId.Enabled = true;
+			operacion = State.Consultar;
+		}
+	}
 }

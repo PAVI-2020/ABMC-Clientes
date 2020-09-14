@@ -36,7 +36,6 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtNumero = new System.Windows.Forms.TextBox();
-			this.txtFecha = new System.Windows.Forms.TextBox();
 			this.txtCalle = new System.Windows.Forms.TextBox();
 			this.txtRazonSocial = new System.Windows.Forms.TextBox();
 			this.txtCuit = new System.Windows.Forms.TextBox();
@@ -73,6 +72,7 @@
 			this.btnConsultar.TabIndex = 49;
 			this.btnConsultar.Text = "Consultar Cliente";
 			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
 			// 
 			// cboContacto
 			// 
@@ -185,14 +185,6 @@
 			this.txtNumero.Name = "txtNumero";
 			this.txtNumero.Size = new System.Drawing.Size(100, 20);
 			this.txtNumero.TabIndex = 38;
-			// 
-			// txtFecha
-			// 
-			this.txtFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtFecha.Location = new System.Drawing.Point(816, 22);
-			this.txtFecha.Name = "txtFecha";
-			this.txtFecha.Size = new System.Drawing.Size(121, 20);
-			this.txtFecha.TabIndex = 37;
 			// 
 			// txtCalle
 			// 
@@ -380,6 +372,7 @@
 			// dtpFecha
 			// 
 			this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.dtpFecha.CustomFormat = "yyyy-MM-dd hh:mm:ss";
 			this.dtpFecha.Location = new System.Drawing.Point(816, 22);
 			this.dtpFecha.Name = "dtpFecha";
 			this.dtpFecha.Size = new System.Drawing.Size(121, 20);
@@ -414,7 +407,6 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtNumero);
-			this.Controls.Add(this.txtFecha);
 			this.Controls.Add(this.txtCalle);
 			this.Controls.Add(this.txtRazonSocial);
 			this.Controls.Add(this.txtCuit);
@@ -429,7 +421,6 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormABMC";
 			this.Text = "ABMC";
-			this.Load += new System.EventHandler(this.FormABMC_Load);
 			this.Shown += new System.EventHandler(this.Form1_Shown);
 			((System.ComponentModel.ISupportInitialize)(this.grdClientes)).EndInit();
 			this.groupBox1.ResumeLayout(false);
@@ -453,7 +444,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtNumero;
-		private System.Windows.Forms.TextBox txtFecha;
 		private System.Windows.Forms.TextBox txtCalle;
 		private System.Windows.Forms.TextBox txtRazonSocial;
 		private System.Windows.Forms.TextBox txtCuit;

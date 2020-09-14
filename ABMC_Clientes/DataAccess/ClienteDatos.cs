@@ -29,7 +29,8 @@ namespace ABMC_Clientes.DataAccess {
 				((numero != "")         ? "C.numero='"      + numero.ToString()     + "'"	: ""),
 				((idBarrio != -1)       ? "C.id_barrio="    + idBarrio.ToString()			: ""),
 				((idContacto != -1)     ? "C.id_contacto="  + idContacto.ToString()			: ""),
-				((fechaAlta != default(DateTime)) ? "C.fecha_alta='" + fechaAlta.ToString("yyyy-MM-dd hh:mm:ss") + "'" : "")
+				((fechaAlta != default(DateTime)) ? "C.fecha_alta='" + fechaAlta.ToString("yyyy-MM-dd hh:mm:ss") + "'" : ""),
+				"borrado=0"
 			};
 
 			condiciones = condiciones.Where(x => !string.IsNullOrEmpty(x)).ToArray();

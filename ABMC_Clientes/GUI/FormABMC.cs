@@ -173,8 +173,8 @@ namespace ABMC_Clientes {
 					razonSocial: txtRazonSocial.Text,
 					calle: txtCalle.Text,
 					numero: txtNumero.Text,
-					idBarrio: (int)cboBarrio.SelectedValue,
-					idContacto: (int)cboContacto.SelectedValue
+					idBarrio: cboBarrio.SelectedIndex == -1 ? -1 :(int)cboBarrio.SelectedValue,
+					idContacto: cboContacto.SelectedIndex == -1 ? -1 : (int)cboContacto.SelectedValue
 					));
 		}
 

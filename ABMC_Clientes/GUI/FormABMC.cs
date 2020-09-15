@@ -148,7 +148,7 @@ namespace ABMC_Clientes {
 			}
 
 			Cliente cliente = new Cliente {
-				Id = int.Parse(txtId.Text),
+				Id = 0,
 				Cuit = txtCuit.Text,
 				RazonSocial = txtRazonSocial.Text,
 				Calle = txtCalle.Text,
@@ -173,7 +173,6 @@ namespace ABMC_Clientes {
 					razonSocial: txtRazonSocial.Text,
 					calle: txtCalle.Text,
 					numero: txtNumero.Text,
-					fechaAlta: dtpFecha.Value,
 					idBarrio: (int)cboBarrio.SelectedValue,
 					idContacto: (int)cboContacto.SelectedValue
 					));

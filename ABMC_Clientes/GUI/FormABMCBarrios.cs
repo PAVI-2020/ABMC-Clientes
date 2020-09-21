@@ -155,5 +155,11 @@ namespace ABMC_Clientes.GUI {
 			txtiD.Enabled = true;
 			operacion = State.Consultar;
 		}
+
+		private void btnCancelar_Click(object sender, EventArgs e) {
+			Limpiar();
+			Habilitar(false);
+			operacion = State.None;
+		}
 	}
 }

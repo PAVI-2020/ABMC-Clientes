@@ -209,5 +209,11 @@ namespace ABMC_Clientes {
 			txtId.Enabled = true;
 			operacion = State.Consultar;
 		}
+
+		private void btnCancelar_Click(object sender, EventArgs e) {
+			Limpiar();
+			Habilitar(false);
+			operacion = State.None;
+		}
 	}
 }

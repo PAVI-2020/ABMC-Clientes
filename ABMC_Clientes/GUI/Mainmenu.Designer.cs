@@ -42,7 +42,6 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// btnAdmClientes
 			// 
@@ -62,7 +61,6 @@
 			this.btnAdmContactos.TabIndex = 2;
 			this.btnAdmContactos.Text = "Administracion Contactos";
 			this.btnAdmContactos.UseVisualStyleBackColor = true;
-			this.btnAdmContactos.Click += new System.EventHandler(this.button1_Click_1);
 			// 
 			// btnAdmBarrios
 			// 
@@ -82,6 +80,7 @@
 			this.btnAdmPruebas.TabIndex = 4;
 			this.btnAdmPruebas.Text = "Administracion Pruebas";
 			this.btnAdmPruebas.UseVisualStyleBackColor = true;
+			this.btnAdmPruebas.Click += new System.EventHandler(this.btnAdmPruebas_Click);
 			// 
 			// btnExit
 			// 

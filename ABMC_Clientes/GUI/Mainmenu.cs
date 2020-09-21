@@ -14,22 +14,19 @@ namespace ABMC_Clientes.GUI {
 			InitializeComponent();
 		}
 
-		private void pictureBox1_Click(object sender, EventArgs e) {
-
-		}
-
 		private void button1_Click(object sender, EventArgs e) {
 			FormABMC abmcClientes = new FormABMC();
-			abmcClientes.Show();
-		}
-
-		private void button1_Click_1(object sender, EventArgs e) {
-
+			abmcClientes.ShowDialog();
 		}
 
 		private void btnAdmBarrios_Click(object sender, EventArgs e) {
 			frmABMCBarrios abmcBarrios = new frmABMCBarrios();
-			abmcBarrios.Show();
+			abmcBarrios.ShowDialog();
+		}
+
+		private void btnAdmPruebas_Click(object sender, EventArgs e) {
+			FormABMCPruebas abmcPruebas = new FormABMCPruebas();
+			abmcPruebas.ShowDialog();
 		}
 
 		private void btnExit_Click(object sender, EventArgs e) {

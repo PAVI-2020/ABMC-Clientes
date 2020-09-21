@@ -1,6 +1,7 @@
 ﻿using ABMC_Clientes;
 using System;
 using System.Windows.Forms;
+using ABMC_Clientes.GUI;
 
 namespace ABMC_Clientes {
 	static class Program {
@@ -11,7 +12,7 @@ namespace ABMC_Clientes {
 		static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormABMC());
+			Application.Run(new frmMainMenu());
 		}
 	}
 }

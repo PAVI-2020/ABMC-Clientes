@@ -50,10 +50,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
+    <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="DataAccess\BarrioDatos.cs" />
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
+    <Compile Include="GUI\FormABMCBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormABMCBarrios.Designer.cs">
+      <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Mainmenu.Designer.cs">
+      <DependentUpon>Mainmenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormABMC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormABMCBarrios.resx">
+      <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Mainmenu.resx">
+      <DependentUpon>Mainmenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormABMC.resx">
       <DependentUpon>FormABMC.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

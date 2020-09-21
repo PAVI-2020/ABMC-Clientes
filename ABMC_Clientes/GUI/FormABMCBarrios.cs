@@ -161,5 +161,6 @@ namespace ABMC_Clientes.GUI {
 			Habilitar(false);
 			operacion = State.None;
 		}
-	}
+
+    }
 }

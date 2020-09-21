@@ -50,12 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\ContactosBusiness.cs" />
     <Compile Include="Business\PruebasBusiness.cs" />
     <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
+    <Compile Include="Clases\Contacto.cs" />
     <Compile Include="Clases\Prueba.cs" />
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="DataAccess\ContactoDatos.cs" />
     <Compile Include="DataAccess\PruebaDatos.cs" />
     <Compile Include="DataAccess\BarrioDatos.cs" />
     <Compile Include="DataAccess\ClienteDatos.cs" />
@@ -65,6 +68,12 @@
     </Compile>
     <Compile Include="GUI\FormABMCBarrios.Designer.cs">
       <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormABMCContactos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormABMCContactos.Designer.cs">
+      <DependentUpon>FormABMCContactos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormABMCPruebas.cs">
       <SubType>Form</SubType>
@@ -88,6 +97,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormABMCBarrios.resx">
       <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormABMCContactos.resx">
+      <DependentUpon>FormABMCContactos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormABMCPruebas.resx">
       <DependentUpon>FormABMCPruebas.cs</DependentUpon>

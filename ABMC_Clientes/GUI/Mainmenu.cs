@@ -32,5 +32,11 @@ namespace ABMC_Clientes.GUI {
 		private void btnExit_Click(object sender, EventArgs e) {
 			this.Close();
 		}
-	}
+
+        private void btnAdmContactos_Click(object sender, EventArgs e)
+        {
+			FormABMCContactos abmcContactos = new FormABMCContactos();
+			abmcContactos.ShowDialog();
+        }
+    }
 }

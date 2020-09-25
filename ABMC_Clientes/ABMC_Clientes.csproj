@@ -51,16 +51,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\ContactosBusiness.cs" />
+    <Compile Include="Business\DetalleFacturaBusiness.cs" />
+    <Compile Include="Business\FacturaBusiness.cs" />
     <Compile Include="Business\PruebasBusiness.cs" />
     <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Clases\Contacto.cs" />
+    <Compile Include="Clases\DetalleFactura.cs" />
+    <Compile Include="Clases\Factura.cs" />
     <Compile Include="Clases\Prueba.cs" />
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="DataAccess\ContactoDatos.cs" />
+    <Compile Include="DataAccess\DetalleFacturaDatos.cs" />
+    <Compile Include="DataAccess\FacturaDatos.cs" />
     <Compile Include="DataAccess\PruebaDatos.cs" />
     <Compile Include="DataAccess\BarrioDatos.cs" />
     <Compile Include="DataAccess\ClienteDatos.cs" />

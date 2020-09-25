@@ -90,6 +90,12 @@
     <Compile Include="GUI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmFacturacion.Designer.cs">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Mainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmFacturacion.resx">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Mainmenu.resx">
       <DependentUpon>Mainmenu.cs</DependentUpon>

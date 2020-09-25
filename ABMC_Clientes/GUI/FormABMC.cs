@@ -215,5 +215,10 @@ namespace ABMC_Clientes {
 			Habilitar(false);
 			operacion = State.None;
 		}
-	}
+
+        private void FormABMC_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

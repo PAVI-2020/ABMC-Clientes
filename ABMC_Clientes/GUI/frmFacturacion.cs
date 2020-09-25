@@ -9,8 +9,25 @@ namespace ABMC_Clientes.GUI {
 
         public frmFacturacion() {
             InitializeComponent();
+            proyectosName = FetchProyectosName();
+            productosName = FetchProductosName();
+        }
 
+        private Dictionary<int, string> FetchProyectosName() {
+            throw new NotImplementedException();
+		}
 
+        private Dictionary<int, string> FetchProductosName() {
+            throw new NotImplementedException();
+        }
+
+        private void CalcularTotal() {
+            float total = 0;
+            foreach (DataGridViewRow row in grdDetallesFactura.Rows) {
+                total += float.Parse(row.Cells[3].Value.ToString());
+            }
+
+            txtTotal.Text = total.ToString();
         }
 
         private void cboTipoCobro_SelectedIndexChanged(object sender, EventArgs e) {
@@ -50,10 +67,27 @@ namespace ABMC_Clientes.GUI {
             }
 
             grdDetallesFactura.Rows.Add(grdDetallesFactura.Rows.Count + 1, cboTipoCobro.Text, cobrado, txtPrecio.Text);
+            CalcularTotal();
 		}
 
 		private void btnFacturar_Click(object sender, EventArgs e) {
 
 		}
+
+		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {
+            int id;
+            if (int.TryParse(txtIdProyecto.Text, out id))
+                txtNombreProy.Text = proyectosName[id];
+            else
+                txtNombreProy.Text = "-";
+		}
+
+		private void txtIdProducto_TextChanged(object sender, EventArgs e) {
+            int id;
+            if (int.TryParse(txtIdProducto.Text, out id))
+                txtNombreProd.Text = productosName[id];
+            else
+                txtNombreProd.Text = "-";
+        }
 	}
 }

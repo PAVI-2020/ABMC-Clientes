@@ -63,7 +63,7 @@
 			this.IdCobrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label14 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtTotal = new System.Windows.Forms.TextBox();
 			this.btnFacturar = new System.Windows.Forms.Button();
 			this.btnSalir = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
@@ -263,6 +263,7 @@
 			this.txtIdProducto.Name = "txtIdProducto";
 			this.txtIdProducto.Size = new System.Drawing.Size(47, 20);
 			this.txtIdProducto.TabIndex = 8;
+			this.txtIdProducto.TextChanged += new System.EventHandler(this.txtIdProducto_TextChanged);
 			// 
 			// label12
 			// 
@@ -315,6 +316,7 @@
 			this.txtIdProyecto.Name = "txtIdProyecto";
 			this.txtIdProyecto.Size = new System.Drawing.Size(47, 20);
 			this.txtIdProyecto.TabIndex = 2;
+			this.txtIdProyecto.TextChanged += new System.EventHandler(this.txtIdProyecto_TextChanged);
 			// 
 			// cboTipoCobro
 			// 
@@ -390,14 +392,16 @@
 			this.label14.TabIndex = 14;
 			this.label14.Text = "Total";
 			// 
-			// textBox1
+			// txtTotal
 			// 
-			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox1.Location = new System.Drawing.Point(429, 484);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(130, 20);
-			this.textBox1.TabIndex = 15;
+			this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtTotal.Location = new System.Drawing.Point(429, 484);
+			this.txtTotal.Name = "txtTotal";
+			this.txtTotal.ReadOnly = true;
+			this.txtTotal.Size = new System.Drawing.Size(130, 20);
+			this.txtTotal.TabIndex = 15;
+			this.txtTotal.Text = "0";
+			this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// btnFacturar
 			// 
@@ -428,7 +432,7 @@
 			this.ClientSize = new System.Drawing.Size(616, 580);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnFacturar);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtTotal);
 			this.Controls.Add(this.label14);
 			this.Controls.Add(this.grdDetallesFactura);
 			this.Controls.Add(this.groupBox2);
@@ -483,7 +487,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCobrado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Button btnSalir;
     }

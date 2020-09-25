@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ABMC_Clientes.Clases;
+using System;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
 	public partial class frmMainMenu : Form {
+		private Usuario currentUsuario;
+
 		public frmMainMenu() {
 			InitializeComponent();
+		}
+
+		private void LogUser() {
+			if (currentUsuario == null) {
+				FormLogin login = new FormLogin();
+				if (login.ShowDialog() == DialogResult.OK)
+					currentUsuario = login.usuario;
+			}
 		}
 
 		private void button1_Click(object sender, EventArgs e) {
@@ -33,10 +37,14 @@ namespace ABMC_Clientes.GUI {
 			this.Close();
 		}
 
-        private void btnAdmContactos_Click(object sender, EventArgs e)
-        {
+		private void btnAdmContactos_Click(object sender, EventArgs e) {
 			FormABMCContactos abmcContactos = new FormABMCContactos();
 			abmcContactos.ShowDialog();
-        }
-    }
+		}
+
+		private void btnTransaccion_Click(object sender, EventArgs e) {
+			LogUser();
+			
+		}
+	}
 }

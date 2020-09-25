@@ -54,15 +54,18 @@
     <Compile Include="Business\PruebasBusiness.cs" />
     <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
+    <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Clases\Contacto.cs" />
     <Compile Include="Clases\Prueba.cs" />
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="DataAccess\ContactoDatos.cs" />
     <Compile Include="DataAccess\PruebaDatos.cs" />
     <Compile Include="DataAccess\BarrioDatos.cs" />
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
+    <Compile Include="DataAccess\UsuarioDatos.cs" />
     <Compile Include="GUI\FormABMCBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +83,12 @@
     </Compile>
     <Compile Include="GUI\FormABMCPruebas.Designer.cs">
       <DependentUpon>FormABMCPruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Mainmenu.cs">
       <SubType>Form</SubType>
@@ -103,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormABMCPruebas.resx">
       <DependentUpon>FormABMCPruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Mainmenu.resx">
       <DependentUpon>Mainmenu.cs</DependentUpon>

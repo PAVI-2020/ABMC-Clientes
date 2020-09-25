@@ -8,9 +8,9 @@ using ABMC_Clientes.DataAccess;
 
 namespace ABMC_Clientes.Business
 {
-    class ProductoBusiness
+    public class ProductoBusiness
     {
-        public static Producto[] consultarProductos()
+        public static Producto[] ConsultarProductos()
         {
             return ProductoDatos.recuperarProductos();
         }

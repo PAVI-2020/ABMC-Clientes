@@ -12,11 +12,11 @@ namespace ABMC_Clientes.DataAccess
     {
 		public static Proyecto[] RecuperarProyecto()
 		{
-			string consultaSQL = "P.id_proyecto, P.id_producto, P.descripcion, P.version, P.alcance, P.id_responsable, P.borrado ";
-			string tablasConsulta = "Proyecto P";
+			string consultaSQL = "P.id_proyecto, P.id_producto, P.descripcion, P.version, P.alcance, P.id_responsable, P.borrado";
+			string tablasConsulta = "Proyectos P";
 
 			Datos datos = new Datos();
-			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "F.borrado = 0");
+			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "P.borrado = 0");
 
 			if (tablas.Rows.Count <= 0)
 				return null;
@@ -30,11 +30,11 @@ namespace ABMC_Clientes.DataAccess
 				id_proyecto: (int)input["id_proyecto"],
 				id_producto: (int)input["id_producto"],
 				descripcion: (string)input["descripcion"],
-				version: (int)input["version"],
+				version: (string)input["version"],
 				alcance: (string)input["alcance"],
 				id_responsable: (int)input["id_responsable"],
 				borrado: (bool)input["borrado"]
-			); ; ;
+			);
 
 			return p;
 		}

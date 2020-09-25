@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABMC_Clientes.Clases
 {
-    class Producto
+    public class Producto
     {
         int id_producto;
         string nombre;

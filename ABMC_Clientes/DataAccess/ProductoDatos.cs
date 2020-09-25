@@ -12,11 +12,11 @@ namespace ABMC_Clientes.DataAccess
     {
         public static Producto[] recuperarProductos()
         {
-            string consultaSQL = "B.id_barrio, B.nombre, B.borrado";
-            string tablasConsulta = "Barrios B";
+            string consultaSQL = "P.id_producto, P.nombre, P.borrado";
+            string tablasConsulta = "Productos P";
 
             Datos datos = new Datos();
-            DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "B.borrado = 0");
+            DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "P.borrado = 0");
 
             if (tablas.Rows.Count <= 0)
                 return null;

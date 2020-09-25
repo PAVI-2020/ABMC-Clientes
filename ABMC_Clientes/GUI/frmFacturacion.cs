@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ABMC_Clientes.Business;
+using ABMC_Clientes.Clases;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -14,11 +16,26 @@ namespace ABMC_Clientes.GUI {
         }
 
         private Dictionary<int, string> FetchProyectosName() {
-            throw new NotImplementedException();
+            Dictionary<int, string> ret = new Dictionary<int, string>();
+            ProyectoBusiness pBusiness = new ProyectoBusiness();
+            Proyecto[] proyectos = pBusiness.ConsultarProyectos();
+
+            foreach (Proyecto p in proyectos) {
+                ret.Add(p.Id_proyecto, p.Descripcion);
+            }
+
+            return ret;
 		}
 
         private Dictionary<int, string> FetchProductosName() {
-            throw new NotImplementedException();
+            Dictionary<int, string> ret = new Dictionary<int, string>();
+            Producto[] productos = ProductoBusiness.ConsultarProductos();
+
+            foreach (Producto p in productos) {
+                ret.Add(p.Id_producto, p.Nombre);
+            }
+
+            return ret;
         }
 
         private void CalcularTotal() {
@@ -76,7 +93,7 @@ namespace ABMC_Clientes.GUI {
 
 		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {
             int id;
-            if (int.TryParse(txtIdProyecto.Text, out id))
+            if (int.TryParse(txtIdProyecto.Text, out id) && proyectosName.ContainsKey(id))
                 txtNombreProy.Text = proyectosName[id];
             else
                 txtNombreProy.Text = "-";
@@ -84,7 +101,7 @@ namespace ABMC_Clientes.GUI {
 
 		private void txtIdProducto_TextChanged(object sender, EventArgs e) {
             int id;
-            if (int.TryParse(txtIdProducto.Text, out id))
+            if (int.TryParse(txtIdProducto.Text, out id) && productosName.ContainsKey(id))
                 txtNombreProd.Text = productosName[id];
             else
                 txtNombreProd.Text = "-";

@@ -1,7 +1,9 @@
 ﻿using System;
 
-namespace ABMC_Clientes.Clases {
-	public class DetalleFactura {
+namespace ABMC_Clientes.Clases
+{
+	public class DetalleFactura
+	{
 		private int id_detalle_factura;
 		private int id_factura;
 		private int numero_orden;
@@ -10,8 +12,11 @@ namespace ABMC_Clientes.Clases {
 		private int id_ciclo_prueba;
 		private decimal precio;
 		private bool borrado;
+		private string nombreProyecto;
+		private string nombreProducto;
 
-		public DetalleFactura(int id_detalle_factura, int id_factura, int numero_orden, int id_producto, int id_proyecto, int id_ciclo_prueba, decimal precio, bool borrado) {
+		public DetalleFactura(int id_detalle_factura, int id_factura, int numero_orden, int id_producto, int id_proyecto, int id_ciclo_prueba, decimal precio, bool borrado)
+		{
 			this.id_detalle_factura = id_detalle_factura;
 			this.id_factura = id_factura;
 			this.numero_orden = numero_orden;
@@ -22,6 +27,20 @@ namespace ABMC_Clientes.Clases {
 			this.borrado = borrado;
 		}
 
+		public DetalleFactura(int id_detalle_factura, int id_factura, int numero_orden, int id_producto, int id_proyecto, int id_ciclo_prueba, decimal precio, bool borrado, string nombreProyecto, string nombreProducto)
+		{
+			this.id_detalle_factura = id_detalle_factura;
+			this.id_factura = id_factura;
+			this.numero_orden = numero_orden;
+			this.id_producto = id_producto;
+			this.id_proyecto = id_proyecto;
+			this.id_ciclo_prueba = id_ciclo_prueba;
+			this.precio = precio;
+			this.borrado = borrado;
+			this.NombreProyecto = nombreProyecto;
+			this.NombreProducto = nombreProducto;
+		}
+
 		public int Id_detalle_factura { get => id_detalle_factura; set => id_detalle_factura = value; }
 		public int Id_factura { get => id_factura; set => id_factura = value; }
 		public int Numero_orden { get => numero_orden; set => numero_orden = value; }
@@ -30,5 +49,9 @@ namespace ABMC_Clientes.Clases {
 		public int Id_ciclo_prueba { get => id_ciclo_prueba; set => id_ciclo_prueba = value; }
 		public decimal Precio { get => precio; set => precio = value; }
 		public bool Borrado { get => borrado; set => borrado = value; }
+		public string NombreProyecto { get => nombreProyecto; set => nombreProyecto = value; }
+		public string NombreProducto { get => nombreProducto; set => nombreProducto = value; }
 	}
 }
+
+

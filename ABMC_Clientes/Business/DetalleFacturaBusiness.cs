@@ -6,9 +6,5 @@ namespace ABMC_Clientes.Business {
 		public DetalleFactura[] ConsultarFacturas() {
 			return DetalleFacturaDatos.RecuperarDFactura();
 		}
-
-		public void Insertar(DetalleFactura dFactura) {
-			DetalleFacturaDatos.InsertarDFactura(dFactura);
-		}
 	}
 }

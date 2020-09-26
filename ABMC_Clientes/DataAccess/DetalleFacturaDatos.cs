@@ -47,9 +47,8 @@ namespace ABMC_Clientes.DataAccess
 			return ret;
 		}
 
-		public static void InsertarDFactura(DetalleFactura dFactura)
+		public static void InsertarDFactura(DetalleFactura dFactura, Datos datos)
 		{
-			Datos datos = new Datos();
 			string insercion = "INSERT INTO FacturasDetalle (id_factura, numero_orden, id_producto, id_proyecto, id_ciclo_prueba, precio, borrado) VALUES (" +
 								dFactura.Id_factura.ToString() + ", " +
 								dFactura.Numero_orden.ToString() + ", " +
@@ -58,7 +57,7 @@ namespace ABMC_Clientes.DataAccess
 								((dFactura.Id_ciclo_prueba == -1) ? "NULL" : dFactura.Id_ciclo_prueba.ToString()) + ", " +
 								dFactura.Precio.ToString() +
 								", 0)";
-			datos.Actualizar(insercion);
+			datos.EjecutarSQLConTransaccion(insercion);
 		}
 	}
 }

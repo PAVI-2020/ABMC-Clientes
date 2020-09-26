@@ -96,12 +96,12 @@ namespace ABMC_Clientes.GUI {
 
             foreach (DataGridViewRow dgrid in grdDetallesFactura.Rows)
             {
-                if ((string)dgrid.Cells[1].Value == "Por producto") {
-                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), Convert.ToInt32(dgrid.Cells[2]), -1, -1, Convert.ToDecimal(dgrid.Cells[3]), false));
+                if ((string)dgrid.Cells[1].Value == "Por Producto") {
+                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), Convert.ToInt32(dgrid.Cells[2].Value), -1, -1, Convert.ToDecimal(dgrid.Cells[3].Value), false));
                          }
-                else if((string)dgrid.Cells[1].Value == "Por proyecto")
+                else if((string)dgrid.Cells[1].Value == "Por Proyecto")
                     {
-                        detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1, Convert.ToInt32(dgrid.Cells[2]), -1, Convert.ToDecimal(dgrid.Cells[3]), false));
+                        detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1, Convert.ToInt32(dgrid.Cells[2].Value), -1, Convert.ToDecimal(dgrid.Cells[3].Value), false));
                     }
 
                 else

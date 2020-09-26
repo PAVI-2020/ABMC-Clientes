@@ -25,11 +25,9 @@ namespace ABMC_Clientes.DataAccess {
 
 		public void BeginTransaction()
 		{
-
 			if (conexion.State == ConnectionState.Open)
 				transaccion = conexion.BeginTransaction();
 		}
-
 
 		public void Commit()
 		{
@@ -55,7 +53,6 @@ namespace ABMC_Clientes.DataAccess {
 			Desconectar();
         }
 
-
 		public DataTable ConsultarTabla(string columnas, string tabla, string condicion = "") {
 			try {
 				DataTable retTable = new DataTable();
@@ -70,6 +67,11 @@ namespace ABMC_Clientes.DataAccess {
 				Desconectar();
 			}
 
+		}
+
+		public void Open() {
+			if (conexion.State != ConnectionState.Open)
+				Conectar();
 		}
 
 		public int EjecutarSQLConTransaccion(string strSQL)

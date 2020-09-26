@@ -10,12 +10,13 @@ namespace ABMC_Clientes.GUI {
 			InitializeComponent();
 		}
 
-		private void LogUser() {
+		private Usuario LogUser() {
 			if (currentUsuario == null) {
 				FormLogin login = new FormLogin();
 				if (login.ShowDialog() == DialogResult.OK)
 					currentUsuario = login.usuario;
 			}
+			return currentUsuario;
 		}
 
 		private void button1_Click(object sender, EventArgs e) {
@@ -43,8 +44,8 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnTransaccion_Click(object sender, EventArgs e) {
-			LogUser();
-			frmFacturacion fact = new frmFacturacion();
+			int idUsuario = LogUser().IdUsuario;
+			frmFacturacion fact = new frmFacturacion(idUsuario);
 			fact.ShowDialog();			
 		}
 	}

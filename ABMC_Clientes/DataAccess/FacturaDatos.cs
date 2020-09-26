@@ -49,17 +49,18 @@ namespace ABMC_Clientes.DataAccess
 		public static void InsertarFactura(Factura factura)
 		{
 			Datos datos = new Datos();
-
-			datos.BeginTransaction();
+			datos.Open();
 
 			try
 			{
-				string insercion = "INSERT INTO Factura (numero_factura, id_cliente, fecha, id_usuario_creador, borrado) VALUES ('" +
+				datos.BeginTransaction();
+
+				string insercion = "INSERT INTO Facturas (numero_factura, id_cliente, fecha, id_usuario_creador, borrado) VALUES ('" +
 									factura.Numero_factura.ToString() + "', '" +
 									factura.Id_cliente.ToString() + "', '" +
-									factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "'" +
-									factura.Id_usuario_creador.ToString() + "'" +
-									", 0)";
+									factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
+									factura.Id_usuario_creador.ToString() + ", " +
+									"0)";
 
 				datos.EjecutarSQLConTransaccion(insercion);
 				int id_factura = Convert.ToInt32(datos.ConsultaSQLScalar("Select @@IDENTITY"));
@@ -71,15 +72,11 @@ namespace ABMC_Clientes.DataAccess
 					detf.Id_factura = id_factura;
 					DetalleFacturaDatos.InsertarDFactura(detf);
 				}
-			}
-
-			catch(Exception e)
+			} catch(Exception e)
             {
 				datos.Rollback();
 				throw e;
-            }
-
-            finally
+            } finally
             {
 				datos.Commit();
 				datos.Close();

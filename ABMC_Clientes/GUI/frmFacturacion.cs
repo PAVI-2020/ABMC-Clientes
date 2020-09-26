@@ -6,11 +6,14 @@ using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
     public partial class frmFacturacion : Form {
+        public int idUsuario;
+
         private Dictionary<int, string> proyectosName;
         private Dictionary<int, string> productosName;
 
-        public frmFacturacion() {
+        public frmFacturacion(int idUsuario) {
             InitializeComponent();
+            this.idUsuario = idUsuario;
             proyectosName = FetchProyectosName();
             productosName = FetchProductosName();
         }
@@ -103,12 +106,12 @@ namespace ABMC_Clientes.GUI {
 
                 else
                 {
-                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1,  -1, Convert.ToInt32(dgrid.Cells[2]), Convert.ToDecimal(dgrid.Cells[3]), false));
+                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1,  -1, Convert.ToInt32(dgrid.Cells[2].Value), Convert.ToDecimal(dgrid.Cells[3].Value), false));
                 }
             }
 
             
-            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), 0, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
+            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), idUsuario, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 

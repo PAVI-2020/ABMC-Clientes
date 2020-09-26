@@ -50,13 +50,13 @@ namespace ABMC_Clientes.DataAccess
 		public static void InsertarDFactura(DetalleFactura dFactura)
 		{
 			Datos datos = new Datos();
-			string insercion = "INSERT INTO FacturasDetalle (id_factura, numero_orden, id_producto, id_ciclo_prueba, precio, borrado) VALUES (" +
-								dFactura.Id_factura.ToString() + ", '" +
-								dFactura.Numero_orden.ToString() + "', " +
-								((dFactura.Id_producto == -1) ? "NULL" : "'"+dFactura.Id_producto.ToString()+"'") + ", '" +
-								((dFactura.Id_proyecto == -1) ? "NULL" : "'" + dFactura.Id_proyecto.ToString() + "'") + ", '"+
-								((dFactura.Id_ciclo_prueba == -1) ? "NULL" : "'" + dFactura.Id_ciclo_prueba.ToString() + "'") + ", " +
-								dFactura.Precio.ToString() + "" +
+			string insercion = "INSERT INTO FacturasDetalle (id_factura, numero_orden, id_producto, id_proyecto, id_ciclo_prueba, precio, borrado) VALUES (" +
+								dFactura.Id_factura.ToString() + ", " +
+								dFactura.Numero_orden.ToString() + ", " +
+								((dFactura.Id_producto == -1) ? "NULL" : dFactura.Id_producto.ToString()) + ", " +
+								((dFactura.Id_proyecto == -1) ? "NULL" : dFactura.Id_proyecto.ToString()) + ", " +
+								((dFactura.Id_ciclo_prueba == -1) ? "NULL" : dFactura.Id_ciclo_prueba.ToString()) + ", " +
+								dFactura.Precio.ToString() +
 								", 0)";
 			datos.Actualizar(insercion);
 		}

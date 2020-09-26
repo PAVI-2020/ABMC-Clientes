@@ -24,7 +24,7 @@ namespace ABMC_Clientes.DataAccess
 		{
 			Factura f = new Factura(
 				id_factura: (int)input["id_factura"],
-				numero_factura: (int)input["numero_factura"],
+				numero_factura: (string)input["numero_factura"],
 				id_cliente: (int)input["id_cliente"],
 				fecha: (DateTime)input["fecha"],
 				id_usuario_creador: (int)input["id_usuario_creador"],
@@ -49,15 +49,44 @@ namespace ABMC_Clientes.DataAccess
 		public static void InsertarFactura(Factura factura)
 		{
 			Datos datos = new Datos();
-			string insercion = "INSERT INTO Factura (id_factura, numero_factura, id_cliente, fecha, id_usuario_creador, borrado) VALUES ('" +
-								factura.Id_factura.ToString() + "', '" +
-								factura.Numero_factura.ToString() + "', '" +
-								factura.Id_cliente.ToString() + "', '" +
-								factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "'" +
-								factura.Id_usuario_creador.ToString() + "'" +
-								", 0)";
-			datos.Actualizar(insercion);
+
+			datos.BeginTransaction();
+
+			try
+			{
+				string insercion = "INSERT INTO Factura (numero_factura, id_cliente, fecha, id_usuario_creador, borrado) VALUES ('" +
+									factura.Numero_factura.ToString() + "', '" +
+									factura.Id_cliente.ToString() + "', '" +
+									factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "'" +
+									factura.Id_usuario_creador.ToString() + "'" +
+									", 0)";
+
+				datos.EjecutarSQLConTransaccion(insercion);
+				int id_factura = Convert.ToInt32(datos.ConsultaSQLScalar("Select @@IDENTITY"));
+
+				factura.Id_factura = id_factura;
+
+				foreach (DetalleFactura detf in factura.Detalles)
+				{
+					detf.Id_factura = id_factura;
+					DetalleFacturaDatos.InsertarDFactura(detf);
+				}
+			}
+
+			catch(Exception e)
+            {
+				datos.Rollback();
+				throw e;
+            }
+
+            finally
+            {
+				datos.Commit();
+				datos.Close();
+            }
+
 		}
+
 	}
 }
 

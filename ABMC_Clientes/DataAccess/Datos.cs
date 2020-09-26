@@ -1,10 +1,12 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System;
 
 namespace ABMC_Clientes.DataAccess {
 	public class Datos {
 		private SqlConnection conexion = new SqlConnection();
 		private SqlCommand comando = new SqlCommand();
+		private SqlTransaction transaccion;
 
 		private string cadenaConexion = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=BugsTracker;Integrated Security=True";
 
@@ -21,12 +23,38 @@ namespace ABMC_Clientes.DataAccess {
 			conexion.Close();
 		}
 
+		public void BeginTransaction()
+		{
+
+			if (conexion.State == ConnectionState.Open)
+				transaccion = conexion.BeginTransaction();
+		}
+
+
+		public void Commit()
+		{
+			if (transaccion != null)
+				transaccion.Commit();
+		}
+
+		public void Rollback()
+		{
+			if (transaccion != null)
+				transaccion.Rollback();
+		}
+
 		public void Actualizar(string consultaSQL) {
 			Conectar();
 			comando.CommandText = consultaSQL;
 			comando.ExecuteNonQuery();
 			Desconectar();
 		}
+
+		public void Close()
+        {
+			Desconectar();
+        }
+
 
 		public DataTable ConsultarTabla(string columnas, string tabla, string condicion = "") {
 			try {
@@ -43,5 +71,44 @@ namespace ABMC_Clientes.DataAccess {
 			}
 
 		}
+
+		public int EjecutarSQLConTransaccion(string strSQL)
+        {
+			SqlCommand cmd = new SqlCommand();
+
+			int rtdo = 0;
+			try
+			{
+				cmd.Connection = conexion;
+				cmd.Transaction = transaccion;
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = strSQL;
+
+				rtdo = cmd.ExecuteNonQuery();
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+			}
+			return rtdo;
+		}
+
+		public object ConsultaSQLScalar(string strSql)
+		{
+			SqlCommand cmd = new SqlCommand();
+			try
+			{
+				cmd.Connection = conexion;
+				cmd.Transaction = transaccion;
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = strSql;
+				return cmd.ExecuteScalar();
+			}
+			catch (SqlException ex)
+			{
+				throw (ex);
+			}
+		}
+
 	}
 }

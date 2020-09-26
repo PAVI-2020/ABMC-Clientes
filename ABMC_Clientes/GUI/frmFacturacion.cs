@@ -89,6 +89,29 @@ namespace ABMC_Clientes.GUI {
 
 		private void btnFacturar_Click(object sender, EventArgs e) {
 
+            List<DetalleFactura> detalles = new List<DetalleFactura>();
+
+            foreach (DataGridViewRow dgrid in grdDetallesFactura.Rows)
+            {
+                if ((string)dgrid.Cells[1].Value == "Por producto") {
+                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), Convert.ToInt32(dgrid.Cells[2]), -1, -1, Convert.ToDecimal(dgrid.Cells[3]), false));
+                         }
+                else if((string)dgrid.Cells[1].Value == "Por proyecto")
+                    {
+                        detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1, Convert.ToInt32(dgrid.Cells[2]), -1, Convert.ToDecimal(dgrid.Cells[3]), false));
+                    }
+
+                else
+                {
+                    detalles.Add(new DetalleFactura(0, 0, Convert.ToInt32(dgrid.Cells[0].Value), -1,  -1, Convert.ToInt32(dgrid.Cells[2]), Convert.ToDecimal(dgrid.Cells[3]), false));
+                }
+            }
+
+            
+            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), 0, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
+            FacturaBusiness fbus = new FacturaBusiness();
+            fbus.CrearFactura(factura);
+
 		}
 
 		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {

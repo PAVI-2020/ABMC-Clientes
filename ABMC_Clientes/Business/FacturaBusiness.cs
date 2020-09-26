@@ -11,5 +11,10 @@ namespace ABMC_Clientes.Business {
 		public void Insertar(Factura factura) {
 			FacturaDatos.InsertarFactura(factura);
 		}
+
+		public void CrearFactura(Factura factura)
+        {
+			FacturaDatos.InsertarFactura(factura);
+        }
 	}
 }

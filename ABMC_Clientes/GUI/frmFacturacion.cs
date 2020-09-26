@@ -112,6 +112,8 @@ namespace ABMC_Clientes.GUI {
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 
+            this.Close();
+
 		}
 
 		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {

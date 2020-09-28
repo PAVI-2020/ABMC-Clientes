@@ -65,6 +65,14 @@ namespace ABMC_Clientes.GUI {
             txtTotal.Text = total.ToString();
         }
 
+        private void ClearFields() {
+            txtIdCliente.Text = "";
+            cboTipoCobro.SelectedIndex = -1;
+            txtPrecio.Text = "";
+            txtNumeroFactura.Text = "";
+            grdDetallesFactura.Rows.Clear();
+        }
+
         private void cboTipoCobro_SelectedIndexChanged(object sender, EventArgs e) {
             txtIdProducto.Enabled = (cboTipoCobro.SelectedIndex == 0);
             txtIdProyecto.Enabled = (cboTipoCobro.SelectedIndex == 1);
@@ -148,8 +156,7 @@ namespace ABMC_Clientes.GUI {
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 
-            this.Close();
-
+            ClearFields();
 		}
 
 		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {

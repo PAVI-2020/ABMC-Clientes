@@ -58,7 +58,7 @@ namespace ABMC_Clientes.DataAccess
 				string insercion = "INSERT INTO Facturas (numero_factura, id_cliente, fecha, id_usuario_creador, borrado) VALUES ('" +
 									factura.Numero_factura.ToString() + "', " +
 									factura.Id_cliente.ToString() + ", '" +
-									factura.Fecha.ToString("yyyy-dd-MM hh:mm:ss") + "', " +
+									factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
 									factura.Id_usuario_creador.ToString() + ", " +
 									"0)";
 

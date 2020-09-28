@@ -6,16 +6,19 @@ using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
     public partial class frmFacturacion : Form {
-        public int idUsuario;
+        public Usuario usuario;
 
         private Dictionary<int, string> proyectosName;
         private Dictionary<int, string> productosName;
+        private Dictionary<int, string> razonesSociales;
 
-        public frmFacturacion(int idUsuario) {
+        public frmFacturacion(Usuario usuario) {
             InitializeComponent();
-            this.idUsuario = idUsuario;
+            this.usuario = usuario;
             proyectosName = FetchProyectosName();
             productosName = FetchProductosName();
+            razonesSociales = FetchRazonesSociales();
+            txtUsuario.Text = usuario.N_usuario;
         }
 
         private Dictionary<int, string> FetchProyectosName() {
@@ -36,6 +39,18 @@ namespace ABMC_Clientes.GUI {
 
             foreach (Producto p in productos) {
                 ret.Add(p.Id_producto, p.Nombre);
+            }
+
+            return ret;
+        }
+
+        private Dictionary<int, string> FetchRazonesSociales() {
+            Dictionary<int, string> ret = new Dictionary<int, string>();
+            ClienteBusiness bus = new ClienteBusiness();
+            Cliente[] clientes = bus.ConsultarClientes();
+
+            foreach (Cliente c in clientes) {
+                ret.Add(c.Id, c.RazonSocial);
             }
 
             return ret;
@@ -80,7 +95,7 @@ namespace ABMC_Clientes.GUI {
                 (txtPrecio.Text == "") ||
                 (txtNumeroFactura.Text == "") ||
                 (txtIdCliente.Text == "") ||
-                (cboTipoCobro.SelectedIndex != -1)
+                (cboTipoCobro.SelectedIndex == -1)
                 )
                 {
                 MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
@@ -129,7 +144,7 @@ namespace ABMC_Clientes.GUI {
             }
 
             
-            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), idUsuario, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
+            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), usuario.IdUsuario, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 
@@ -151,6 +166,14 @@ namespace ABMC_Clientes.GUI {
                 txtNombreProd.Text = productosName[id];
             else
                 txtNombreProd.Text = "-";
+        }
+
+		private void txtIdCliente_TextChanged(object sender, EventArgs e) {
+            int id;
+            if (int.TryParse(txtIdCliente.Text, out id) && razonesSociales.ContainsKey(id))
+                txtRazonSocial.Text = razonesSociales[id];
+            else
+                txtRazonSocial.Text = "-";
         }
 	}
 }

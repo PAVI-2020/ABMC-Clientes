@@ -44,8 +44,8 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnTransaccion_Click(object sender, EventArgs e) {
-			int idUsuario = LogUser().IdUsuario;
-			frmFacturacion fact = new frmFacturacion(idUsuario);
+			Usuario usuario = LogUser();
+			frmFacturacion fact = new frmFacturacion(usuario);
 			fact.ShowDialog();			
 		}
 	}

@@ -141,10 +141,11 @@
 			// 
 			// txtIdCliente
 			// 
-			this.txtIdCliente.Location = new System.Drawing.Point(235, 75);
+			this.txtIdCliente.Location = new System.Drawing.Point(235, 79);
 			this.txtIdCliente.Name = "txtIdCliente";
 			this.txtIdCliente.Size = new System.Drawing.Size(45, 20);
 			this.txtIdCliente.TabIndex = 8;
+			this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
 			// 
 			// txtRazonSocial
 			// 

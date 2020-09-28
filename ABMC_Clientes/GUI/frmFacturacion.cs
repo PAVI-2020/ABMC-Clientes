@@ -73,7 +73,19 @@ namespace ABMC_Clientes.GUI {
 
 		private void btnAgregar_Click(object sender, EventArgs e) {
             string cobrado = "";
-
+            if (
+                (txtIdProducto.Enabled && txtIdProducto.Text == "") || 
+                (txtIdProyecto.Enabled && txtIdProyecto.Text == "") || 
+                (txtIdCiclo.Enabled && txtIdCiclo.Text == "") || 
+                (txtPrecio.Text == "") ||
+                (txtNumeroFactura.Text == "") ||
+                (txtIdCliente.Text == "") ||
+                (cboTipoCobro.SelectedIndex != -1)
+                )
+                {
+                MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
+                return;
+                }
             switch (cboTipoCobro.SelectedIndex) {
                 case 0:
                     cobrado = txtIdProducto.Text;
@@ -93,7 +105,13 @@ namespace ABMC_Clientes.GUI {
 		private void btnFacturar_Click(object sender, EventArgs e) {
 
             List<DetalleFactura> detalles = new List<DetalleFactura>();
-
+            if (
+                    grdDetallesFactura.Rows.Count == 0
+               )
+            {
+                MessageBox.Show("Agregue una factura previamente", "Error", MessageBoxButtons.OK);
+                return;
+            }
             foreach (DataGridViewRow dgrid in grdDetallesFactura.Rows)
             {
                 if ((string)dgrid.Cells[1].Value == "Por Producto") {

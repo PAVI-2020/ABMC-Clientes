@@ -4,13 +4,14 @@ using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
 	public partial class frmMainMenu : Form {
-		private Usuario currentUsuario;
+		Usuario usuario;
 
 		public frmMainMenu() {
 			InitializeComponent();
 		}
 
 		private Usuario LogUser() {
+			Usuario currentUsuario = this.usuario;
 			if (currentUsuario == null) {
 				FormLogin login = new FormLogin();
 				if (login.ShowDialog() == DialogResult.OK)
@@ -44,17 +45,24 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnTransaccion_Click(object sender, EventArgs e) {
-			Usuario usuario = LogUser();
-			if (usuario == null)
-				return;
 			frmFacturacion fact = new frmFacturacion(usuario);
-			fact.ShowDialog();			
+			fact.ShowDialog();
 		}
 
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
+		private void btnSolicitarCicloPrueba_Click(object sender, EventArgs e) {
+		}
+
+		private void btnReportes_Click(object sender, EventArgs e) {
 			frmSeleccionReportes selec = new frmSeleccionReportes();
 			selec.ShowDialog();
         }
-    }
+
+		private void frmMainMenu_Load(object sender, EventArgs e) {
+			usuario = LogUser();
+			if (usuario == null) {
+				MessageBox.Show("Acceso denegado");
+				usuario = LogUser();
+			}
+		}
+	}
 }

@@ -123,6 +123,11 @@ namespace ABMC_Clientes.GUI {
 
             grdDetallesFactura.Rows.Add(grdDetallesFactura.Rows.Count + 1, cboTipoCobro.Text, cobrado, txtPrecio.Text);
             CalcularTotal();
+            txtIdCiclo.Clear();
+            txtIdProducto.Clear();
+            txtIdProyecto.Clear();
+            txtNombreProd.Clear();
+            txtNombreProy.Clear();
 		}
 
 		private void btnFacturar_Click(object sender, EventArgs e) {
@@ -156,6 +161,8 @@ namespace ABMC_Clientes.GUI {
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 
+            MessageBox.Show("La factura se ha realizado correctamente", "Facturacion", MessageBoxButtons.OK);
+
             ClearFields();
 		}
 
@@ -182,5 +189,10 @@ namespace ABMC_Clientes.GUI {
             else
                 txtRazonSocial.Text = "-";
         }
-	}
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            grdDetallesFactura.Rows.Remove(grdDetallesFactura.SelectedRows[0]);
+        }
+    }
 }

@@ -24,5 +24,23 @@ namespace ABMC_Clientes.GUI
             this.Close();
 
         }
-    }
+
+		private void btnReporteCiclos_Click(object sender, EventArgs e) {
+           FormReporteCiclodePrueba repo = new FormReporteCiclodePrueba();
+            repo.ShowDialog();
+            this.Close();
+        }
+
+		private void btnReporteFacturas_Click(object sender, EventArgs e) {
+            frmReporteFacturas repo = new frmReporteFacturas();
+            repo.ShowDialog();
+            Close();
+		}
+
+		private void btnDetalleCiclo_Click(object sender, EventArgs e) {
+           FormReporteDetalleCiclo repo = new FormReporteDetalleCiclo();
+            repo.ShowDialog();
+            Close();
+        }
+	}
 }

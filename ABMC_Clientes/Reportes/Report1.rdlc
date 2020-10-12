@@ -2,23 +2,26 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix2">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.14854cm</Width>
+              <Width>3.93347cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.23333cm</Width>
+              <Width>2.74993cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.33058cm</Width>
+              <Width>2.84868cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.76458cm</Width>
+              <Width>2.8175cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.79104cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -26,25 +29,25 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.41111cm</Height>
+              <Height>2.63419cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID Ciclo de Prueba</Value>
+                              <Value>ID Ciclo Prueba Detalle</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -60,21 +63,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox9">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Inicio de Ejecucion</Value>
+                              <Value>ID Ciclo Prueba</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -90,51 +93,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox11">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Fin Ejecucion</Value>
+                              <Value>ID Caso Prueba</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>ID Responsable</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -157,7 +130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID Plan Prueba</Value>
+                              <Value>ID Usuario Tester</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -187,7 +160,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Aceptado</Value>
+                              <Value>Cantidad Horas</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -208,11 +181,101 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox19">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Fecha Ejecucion</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox21">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Aceptado</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.38465cm</Height>
+              <Height>2.63419cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="id_ciclo_prueba_detalle">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!id_ciclo_prueba_detalle.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>id_ciclo_prueba_detalle</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="id_ciclo_prueba">
@@ -245,21 +308,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="fecha_inicio_ejecucion">
+                    <Textbox Name="id_caso_prueba">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fecha_inicio_ejecucion.Value</Value>
+                              <Value>=Fields!id_caso_prueba.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>fecha_inicio_ejecucion</rd:DefaultName>
+                      <rd:DefaultName>id_caso_prueba</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -275,21 +338,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="fecha_fin_ejecucion">
+                    <Textbox Name="id_usuario_tester">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fecha_fin_ejecucion.Value</Value>
+                              <Value>=Fields!id_usuario_tester.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>fecha_fin_ejecucion</rd:DefaultName>
+                      <rd:DefaultName>id_usuario_tester</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -305,21 +368,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_responsable">
+                    <Textbox Name="cantidad_horas">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_responsable.Value</Value>
+                              <Value>=Fields!cantidad_horas.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_responsable</rd:DefaultName>
+                      <rd:DefaultName>cantidad_horas</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -335,21 +398,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_plan_prueba">
+                    <Textbox Name="fecha_ejecucion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_plan_prueba.Value</Value>
+                              <Value>=Fields!fecha_ejecucion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_plan_prueba</rd:DefaultName>
+                      <rd:DefaultName>fecha_ejecucion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -405,6 +468,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -418,9 +482,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.94028cm</Top>
-        <Height>2.79577cm</Height>
-        <Width>18.47703cm</Width>
+        <Top>2.90724cm</Top>
+        <Height>5.26838cm</Height>
+        <Width>20.14063cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -442,7 +506,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>0.63927cm</Top>
-        <Left>0.9402cm</Left>
+        <Left>2.05965cm</Left>
         <Height>0.6cm</Height>
         <Width>5.80729cm</Width>
         <ZIndex>1</ZIndex>
@@ -474,7 +538,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>0.63927cm</Top>
-        <Left>7.2398cm</Left>
+        <Left>8.35925cm</Left>
         <Height>0.6cm</Height>
         <Width>4.42987cm</Width>
         <ZIndex>2</ZIndex>
@@ -506,7 +570,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>0.63927cm</Top>
-        <Left>12.1557cm</Left>
+        <Left>13.27515cm</Left>
         <Height>0.6cm</Height>
         <Width>0.41138cm</Width>
         <ZIndex>3</ZIndex>
@@ -538,7 +602,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>0.63927cm</Top>
-        <Left>13.10193cm</Left>
+        <Left>14.22138cm</Left>
         <Height>0.6cm</Height>
         <Width>4.46515cm</Width>
         <ZIndex>4</ZIndex>
@@ -556,13 +620,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>1.88542in</Height>
+    <Height>3.21875in</Height>
     <Style />
   </Body>
-  <Width>7.28633in</Width>
+  <Width>7.92938in</Width>
   <Page>
     <PageHeader>
-      <Height>2.01083cm</Height>
+      <Height>2.06375cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -573,7 +637,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de Ciclos de Prueba</Value>
+                  <Value>Reporte de Detalles Ciclos de Prueba</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -584,10 +648,10 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.44662cm</Top>
-          <Left>6.13516cm</Left>
+          <Top>0.79802cm</Top>
+          <Left>6.51584cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.19875cm</Width>
+          <Width>6.60104cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -612,8 +676,8 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.44662cm</Top>
-          <Left>14.54828cm</Left>
+          <Top>0.79802cm</Top>
+          <Left>15.82854cm</Left>
           <Height>0.6cm</Height>
           <Width>3.58479cm</Width>
           <ZIndex>1</ZIndex>
@@ -650,7 +714,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>18df7522-a44e-4430-bf11-1c2eab9136cc</rd:DataSourceID>
+      <rd:DataSourceID>872a6d39-34cc-4764-9e5f-edf08fe7f6ad</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -660,25 +724,29 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="id_ciclo_prueba_detalle">
+          <DataField>id_ciclo_prueba_detalle</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="id_ciclo_prueba">
           <DataField>id_ciclo_prueba</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="fecha_inicio_ejecucion">
-          <DataField>fecha_inicio_ejecucion</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="fecha_fin_ejecucion">
-          <DataField>fecha_fin_ejecucion</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="id_responsable">
-          <DataField>id_responsable</DataField>
+        <Field Name="id_caso_prueba">
+          <DataField>id_caso_prueba</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="id_plan_prueba">
-          <DataField>id_plan_prueba</DataField>
+        <Field Name="id_usuario_tester">
+          <DataField>id_usuario_tester</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cantidad_horas">
+          <DataField>cantidad_horas</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="fecha_ejecucion">
+          <DataField>fecha_ejecucion</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="aceptado">
           <DataField>aceptado</DataField>
@@ -692,13 +760,13 @@
       <rd:DataSetInfo>
         <rd:DataSetName>dstGeneral</rd:DataSetName>
         <rd:SchemaPath>D:\code\ABMC-Clientes\ABMC_Clientes\Data sets\dstGeneral.xsd</rd:SchemaPath>
-        <rd:TableName>CiclosPrueba</rd:TableName>
+        <rd:TableName>CiclosPruebaDetalle</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CiclosPruebaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CiclosPruebaDetalleTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>69d1c593-6056-4346-846a-885beed3b5e7</rd:ReportID>
+  <rd:ReportID>fc0b8076-c7ec-4dbd-ab28-f44fe30b786b</rd:ReportID>
 </Report>

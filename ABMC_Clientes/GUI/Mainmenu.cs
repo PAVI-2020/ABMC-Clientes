@@ -50,5 +50,11 @@ namespace ABMC_Clientes.GUI {
 			frmFacturacion fact = new frmFacturacion(usuario);
 			fact.ShowDialog();			
 		}
-	}
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+			frmSeleccionReportes selec = new frmSeleccionReportes();
+			selec.ShowDialog();
+        }
+    }
 }

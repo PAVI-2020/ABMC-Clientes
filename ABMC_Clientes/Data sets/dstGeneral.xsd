@@ -33,6 +33,32 @@ Join Contactos Co on (Co.id_contacto = c.id_contacto)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturasTableAdapter" GeneratorDataComponentClassName="FacturasTableAdapter" Name="Facturas" UserDataComponentName="FacturasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugsTrackerConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select f.id_factura, f.numero_factura, c.razon_social as cliente, f.fecha, u.usuario as usuario_creador, (SELECT SUM(precio) from FacturasDetalle fd where f.id_factura = fd.id_factura) as Total
+
+from Facturas f
+join Usuarios u on (f.id_usuario_creador = u.id_usuario)
+join clientes c on (f.id_cliente = c.id_cliente)
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_factura" DataSetColumn="id_factura" />
+              <Mapping SourceColumn="numero_factura" DataSetColumn="numero_factura" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="cliente" DataSetColumn="cliente" />
+              <Mapping SourceColumn="usuario_creador" DataSetColumn="usuario_creador" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -91,11 +117,45 @@ Join Contactos Co on (Co.id_contacto = c.id_contacto)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Facturas" msprop:Generator_TableClassName="FacturasDataTable" msprop:Generator_TableVarName="tableFacturas" msprop:Generator_TablePropName="Facturas" msprop:Generator_RowDeletingName="FacturasRowDeleting" msprop:Generator_RowChangingName="FacturasRowChanging" msprop:Generator_RowEvHandlerName="FacturasRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturasRowDeleted" msprop:Generator_UserTableName="Facturas" msprop:Generator_RowChangedName="FacturasRowChanged" msprop:Generator_RowEvArgName="FacturasRowChangeEvent" msprop:Generator_RowClassName="FacturasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_factura" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_factura" msprop:Generator_ColumnPropNameInRow="id_factura" msprop:Generator_ColumnPropNameInTable="id_facturaColumn" msprop:Generator_UserColumnName="id_factura" type="xs:int" />
+              <xs:element name="numero_factura" msprop:Generator_ColumnVarNameInTable="columnnumero_factura" msprop:Generator_ColumnPropNameInRow="numero_factura" msprop:Generator_ColumnPropNameInTable="numero_facturaColumn" msprop:Generator_UserColumnName="numero_factura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cliente" msprop:Generator_ColumnVarNameInTable="columncliente" msprop:Generator_ColumnPropNameInRow="cliente" msprop:Generator_ColumnPropNameInTable="clienteColumn" msprop:Generator_UserColumnName="cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario_creador" msprop:Generator_ColumnVarNameInTable="columnusuario_creador" msprop:Generator_ColumnPropNameInRow="usuario_creador" msprop:Generator_ColumnPropNameInTable="usuario_creadorColumn" msprop:Generator_UserColumnName="usuario_creador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Clientes" />
       <xs:field xpath="mstns:id_cliente" />
+    </xs:unique>
+    <xs:unique name="Facturas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Facturas" />
+      <xs:field xpath="mstns:id_factura" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -140,6 +140,12 @@
     <Compile Include="GUI\frmReporteClientes.Designer.cs">
       <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmReporteFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReporteFacturas.Designer.cs">
+      <DependentUpon>frmReporteFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmSeleccionReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     <EmbeddedResource Include="GUI\frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmReporteFacturas.resx">
+      <DependentUpon>frmReporteFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSeleccionReportes.resx">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +208,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteFacturas.rdlc" />
     <None Include="Data sets\dstGeneral.xsc">
       <DependentUpon>dstGeneral.xsd</DependentUpon>
     </None>

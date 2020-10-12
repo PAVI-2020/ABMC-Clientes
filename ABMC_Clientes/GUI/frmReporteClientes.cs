@@ -37,9 +37,9 @@ namespace ABMC_Clientes.GUI
             {
                 Datos oDat = new Datos();
         
-                clientesBindingSource.DataSource = oDat.ConsultarTabla("c.id_cliente, c.razon_social, c.cuit, c.calle, c.numero, c.fecha_alta, b.nombre as Barrio, Co.nombre + Co.apellido as Contacto",
+                clientesBindingSource.DataSource = oDat.ConsultarTabla("c.id_cliente, c.razon_social, c.cuit, c.calle, c.numero, c.fecha_alta, b.nombre as Barrio, Co.nombre + ' ' + Co.apellido as Contacto",
                                                                        "Clientes c Join Barrios b on(c.id_barrio = b.id_barrio) Join Contactos Co on(Co.id_contacto = c.id_contacto)",
-                                                                       "WHERE borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
+                                                                       "borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
                 this.reportViewer1.RefreshReport();
             }
         }

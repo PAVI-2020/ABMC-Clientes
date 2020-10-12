@@ -2,153 +2,20 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="txtLbl">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Datos de los clientes creados entre</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>0.43188cm</Top>
-        <Left>0.37827cm</Left>
-        <Height>0.6cm</Height>
-        <Width>5.80729cm</Width>
-        <Visibility>
-          <Hidden>true</Hidden>
-        </Visibility>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="txtFecha1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>0.43188cm</Top>
-        <Left>6.67787cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.42987cm</Width>
-        <ZIndex>1</ZIndex>
-        <Visibility>
-          <Hidden>true</Hidden>
-        </Visibility>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="txtLbl3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>y</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>0.43188cm</Top>
-        <Left>11.59377cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.41138cm</Width>
-        <ZIndex>2</ZIndex>
-        <Visibility>
-          <Hidden>true</Hidden>
-        </Visibility>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="txtFecha2">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>0.43188cm</Top>
-        <Left>12.54cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.46515cm</Width>
-        <ZIndex>3</ZIndex>
-        <Visibility>
-          <Hidden>true</Hidden>
-        </Visibility>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.62687cm</Width>
+              <Width>3.14854cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.23333cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.33058cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.76458cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -159,7 +26,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.67028cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -170,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id cliente</Value>
+                              <Value>ID Ciclo de Prueba</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -200,7 +67,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cuil</Value>
+                              <Value>Fecha Inicio de Ejecucion</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -230,7 +97,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Razon Social</Value>
+                              <Value>Fecha Fin Ejecucion</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -260,7 +127,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Barrio</Value>
+                              <Value>ID Responsable</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -290,7 +157,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Calle</Value>
+                              <Value>ID Plan Prueba</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -320,7 +187,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Numero</Value>
+                              <Value>Aceptado</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -341,88 +208,28 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox19">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Contacto</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox21">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Fecha de Alta</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox21</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.64382cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_cliente">
+                    <Textbox Name="id_ciclo_prueba">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_cliente.Value</Value>
+                              <Value>=Fields!id_ciclo_prueba.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_cliente</rd:DefaultName>
+                      <rd:DefaultName>id_ciclo_prueba</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -438,21 +245,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cuit">
+                    <Textbox Name="fecha_inicio_ejecucion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cuit.Value</Value>
+                              <Value>=Fields!fecha_inicio_ejecucion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cuit</rd:DefaultName>
+                      <rd:DefaultName>fecha_inicio_ejecucion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -468,21 +275,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="razon_social">
+                    <Textbox Name="fecha_fin_ejecucion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!razon_social.Value</Value>
+                              <Value>=Fields!fecha_fin_ejecucion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>razon_social</rd:DefaultName>
+                      <rd:DefaultName>fecha_fin_ejecucion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -498,21 +305,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Barrio">
+                    <Textbox Name="id_responsable">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Barrio.Value</Value>
+                              <Value>=Fields!id_responsable.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Barrio</rd:DefaultName>
+                      <rd:DefaultName>id_responsable</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -528,21 +335,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="calle1">
+                    <Textbox Name="id_plan_prueba">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!calle.Value</Value>
+                              <Value>=Fields!id_plan_prueba.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>calle1</rd:DefaultName>
+                      <rd:DefaultName>id_plan_prueba</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -558,81 +365,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="numero1">
+                    <Textbox Name="aceptado">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!numero.Value</Value>
+                              <Value>=Fields!aceptado.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>numero1</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Contacto">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!Contacto.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Contacto</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="fecha_alta">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!fecha_alta.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>fecha_alta</rd:DefaultName>
+                      <rd:DefaultName>aceptado</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -658,8 +405,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -668,16 +413,14 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Detalles" />
+              <Group Name="Details" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>datosTabla</DataSetName>
-        <Top>1.33146cm</Top>
-        <Left>0.37827cm</Left>
-        <Height>1.2cm</Height>
-        <Width>19.12687cm</Width>
-        <ZIndex>4</ZIndex>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.03528cm</Top>
+        <Height>1.3141cm</Height>
+        <Width>18.47703cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -685,24 +428,24 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.32292in</Height>
+    <Height>3.25in</Height>
     <Style />
   </Body>
-  <Width>7.74342in</Width>
+  <Width>7.28633in</Width>
   <Page>
     <PageHeader>
-      <Height>1.97266cm</Height>
+      <Height>2.01083cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="txtReporteClientes">
+        <Textbox Name="txt1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de clientes</Value>
+                  <Value>Reporte de Ciclos de Prueba</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -713,10 +456,10 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.68474cm</Top>
-          <Left>7.48453cm</Left>
+          <Top>0.44662cm</Top>
+          <Left>6.13516cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.59562cm</Width>
+          <Width>5.19875cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -741,10 +484,10 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.68474cm</Top>
-          <Left>16.71849cm</Left>
+          <Top>0.44662cm</Top>
+          <Left>14.54828cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>3.58479cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -779,59 +522,55 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>ce529978-68b6-4a08-933f-880ab6c3b23f</rd:DataSourceID>
+      <rd:DataSourceID>18df7522-a44e-4430-bf11-1c2eab9136cc</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="datosTabla">
+    <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>dstGeneral</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="id_cliente">
-          <DataField>id_cliente</DataField>
+        <Field Name="id_ciclo_prueba">
+          <DataField>id_ciclo_prueba</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="razon_social">
-          <DataField>razon_social</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cuit">
-          <DataField>cuit</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="calle">
-          <DataField>calle</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="numero">
-          <DataField>numero</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="fecha_alta">
-          <DataField>fecha_alta</DataField>
+        <Field Name="fecha_inicio_ejecucion">
+          <DataField>fecha_inicio_ejecucion</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Barrio">
-          <DataField>Barrio</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="fecha_fin_ejecucion">
+          <DataField>fecha_fin_ejecucion</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Contacto">
-          <DataField>Contacto</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="id_responsable">
+          <DataField>id_responsable</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_plan_prueba">
+          <DataField>id_plan_prueba</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="aceptado">
+          <DataField>aceptado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="borrado">
+          <DataField>borrado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dstGeneral</rd:DataSetName>
-        <rd:SchemaPath>E:\SANTIAGO\Facultad\3k1\Pav\PROYECTOS DE C\tpABMC\ABMC-Clientes\ABMC_Clientes\Data sets\DataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>Clientes</rd:TableName>
+        <rd:SchemaPath>D:\code\ABMC-Clientes\ABMC_Clientes\Data sets\dstGeneral.xsd</rd:SchemaPath>
+        <rd:TableName>CiclosPrueba</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ClientesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CiclosPruebaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>e71d1a88-0d67-469c-af5f-3ea29adfb59a</rd:ReportID>
+  <rd:ReportID>69d1c593-6056-4346-846a-885beed3b5e7</rd:ReportID>
 </Report>

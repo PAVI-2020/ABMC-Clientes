@@ -35,7 +35,7 @@ namespace ABMC_Clientes.GUI {
 
 			Datos oDat = new Datos();
 
-			dstGeneralBindingSource.DataSource = oDat.ConsultarTabla("d.id_ciclo_prueba_detalle, d.id_ciclo_prueba, C.titulo, U.usuario as 'Usuario Tester', d.cantidad_horas, d.fecha_ejecucion, d.aceptado",
+			CiclosPruebaDetalleBindingSource.DataSource = oDat.ConsultarTabla("d.id_ciclo_prueba_detalle, d.id_ciclo_prueba, C.titulo, U.usuario as 'Usuario Tester', d.cantidad_horas, d.fecha_ejecucion, d.aceptado",
 																	   "CiclosPruebaDetalle d Join CasosDePrueba C on(c.id_caso_prueba = d.id_caso_prueba) Join Usuarios U on(c.id_usuario_tester = U.id_usuario)",
 																	   "d.borrado = 0 AND d.fecha_ejecucion = '" + dtpFechaCreacion.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
 			this.reportViewer1.RefreshReport();

@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\CicloPruebaBusiness.cs" />
     <Compile Include="Business\ProyectoBusiness.cs" />
     <Compile Include="Business\ContactosBusiness.cs" />
     <Compile Include="Business\DetalleFacturaBusiness.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Clases\CiclosPrueba.cs" />
+    <Compile Include="Clases\CiclosPruebaDetalle.cs" />
     <Compile Include="Clases\Proyecto.cs" />
     <Compile Include="Clases\Contacto.cs" />
     <Compile Include="Clases\DetalleFactura.cs" />
@@ -100,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstGeneral.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\CicloPruebaDatos.cs" />
     <Compile Include="DataAccess\ProyectoDatos.cs" />
     <Compile Include="DataAccess\ContactoDatos.cs" />
     <Compile Include="DataAccess\DetalleFacturaDatos.cs" />
@@ -110,6 +114,12 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
+    <Compile Include="GUI\frmNuevoCicloPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNuevoCicloPrueba.Designer.cs">
+      <DependentUpon>frmNuevoCicloPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormReporteDetalleCiclo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNuevoCicloPrueba.resx">
+      <DependentUpon>frmNuevoCicloPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.cs</DependentUpon>

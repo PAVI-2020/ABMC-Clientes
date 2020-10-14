@@ -26,6 +26,8 @@
 			this.components = new System.ComponentModel.Container();
 			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteCiclodePrueba));
+			this.CicloPruebaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
 			this.gbFiltrarFechas = new System.Windows.Forms.GroupBox();
 			this.btnFiltrar = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
@@ -33,14 +35,22 @@
 			this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
 			this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
 			this.lblCiclos = new System.Windows.Forms.Label();
-			this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
-			this.CicloPruebaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.ciclosPruebaTableAdapter = new ABMC_Clientes.Data_sets.dstGeneralTableAdapters.CiclosPruebaTableAdapter();
 			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-			this.gbFiltrarFechas.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.CicloPruebaBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).BeginInit();
+			this.gbFiltrarFechas.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// CicloPruebaBindingSource
+			// 
+			this.CicloPruebaBindingSource.DataMember = "CiclosPrueba";
+			this.CicloPruebaBindingSource.DataSource = this.dstGeneral;
+			// 
+			// dstGeneral
+			// 
+			this.dstGeneral.DataSetName = "dstGeneral";
+			this.dstGeneral.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// gbFiltrarFechas
 			// 
@@ -116,16 +126,6 @@
 			this.lblCiclos.TabIndex = 0;
 			this.lblCiclos.Text = "Buscar Ciclos de Pruba creados entre";
 			// 
-			// dstGeneral
-			// 
-			this.dstGeneral.DataSetName = "dstGeneral";
-			this.dstGeneral.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// CicloPruebaBindingSource
-			// 
-			this.CicloPruebaBindingSource.DataMember = "CiclosPrueba";
-			this.CicloPruebaBindingSource.DataSource = this.dstGeneral;
-			// 
 			// ciclosPruebaTableAdapter
 			// 
 			this.ciclosPruebaTableAdapter.ClearBeforeFill = true;
@@ -139,7 +139,7 @@
 			reportDataSource1.Value = this.CicloPruebaBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
 			this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReporteCicloPrueba.rdlc";
-			this.reportViewer1.Location = new System.Drawing.Point(-3, -1);
+			this.reportViewer1.Location = new System.Drawing.Point(-1, -1);
 			this.reportViewer1.Name = "reportViewer1";
 			this.reportViewer1.ServerReport.BearerToken = null;
 			this.reportViewer1.Size = new System.Drawing.Size(700, 262);
@@ -156,10 +156,10 @@
 			this.Name = "FormReporteCiclodePrueba";
 			this.Text = "Reporte Ciclo de Prueba";
 			this.Load += new System.EventHandler(this.FormReporteCiclodePrueba_Load);
+			((System.ComponentModel.ISupportInitialize)(this.CicloPruebaBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();
 			this.gbFiltrarFechas.ResumeLayout(false);
 			this.gbFiltrarFechas.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.CicloPruebaBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}

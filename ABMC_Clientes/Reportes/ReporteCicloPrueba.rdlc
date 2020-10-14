@@ -26,7 +26,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.41111cm</Height>
+              <Height>0.53799cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -38,10 +38,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>ID Ciclo de Prueba</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -50,6 +54,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -68,10 +74,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha Inicio de Ejecucion</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -80,6 +90,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -98,10 +110,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha Fin Ejecucion</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -110,6 +126,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -128,10 +146,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>ID Responsable</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -140,6 +162,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -158,10 +182,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>ID Plan Prueba</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -170,6 +198,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -188,10 +218,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Aceptado</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -200,6 +234,8 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -211,7 +247,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.38465cm</Height>
+              <Height>0.61736cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -418,8 +454,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.94028cm</Top>
-        <Height>2.79577cm</Height>
+        <Top>0.95278cm</Top>
+        <Left>0.03025cm</Left>
+        <Height>1.15534cm</Height>
         <Width>18.47703cm</Width>
         <Style>
           <Border>
@@ -441,7 +478,7 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>0.63927cm</Top>
+        <Top>0.17639cm</Top>
         <Left>0.9402cm</Left>
         <Height>0.6cm</Height>
         <Width>5.80729cm</Width>
@@ -473,7 +510,7 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>0.63927cm</Top>
+        <Top>0.17639cm</Top>
         <Left>7.2398cm</Left>
         <Height>0.6cm</Height>
         <Width>4.42987cm</Width>
@@ -505,7 +542,7 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>0.63927cm</Top>
+        <Top>0.17639cm</Top>
         <Left>12.1557cm</Left>
         <Height>0.6cm</Height>
         <Width>0.41138cm</Width>
@@ -537,7 +574,7 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>0.63927cm</Top>
+        <Top>0.17639cm</Top>
         <Left>13.10193cm</Left>
         <Height>0.6cm</Height>
         <Width>4.46515cm</Width>

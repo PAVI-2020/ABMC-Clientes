@@ -30,6 +30,7 @@
         {
 			this.components = new System.ComponentModel.Container();
 			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteClientes));
 			this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,7 +67,7 @@
 			this.groupBox1.Controls.Add(this.dtpFechaHasta);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.dtpFechaDesde);
-			this.groupBox1.Location = new System.Drawing.Point(12, 313);
+			this.groupBox1.Location = new System.Drawing.Point(12, 311);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(661, 100);
 			this.groupBox1.TabIndex = 2;
@@ -108,6 +109,7 @@
 			// dtpFechaHasta
 			// 
 			this.dtpFechaHasta.CustomFormat = "";
+			this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			this.dtpFechaHasta.Location = new System.Drawing.Point(408, 27);
 			this.dtpFechaHasta.Name = "dtpFechaHasta";
 			this.dtpFechaHasta.Size = new System.Drawing.Size(211, 20);
@@ -125,6 +127,7 @@
 			// dtpFechaDesde
 			// 
 			this.dtpFechaDesde.CustomFormat = "";
+			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			this.dtpFechaDesde.Location = new System.Drawing.Point(159, 28);
 			this.dtpFechaDesde.Name = "dtpFechaDesde";
 			this.dtpFechaDesde.Size = new System.Drawing.Size(211, 20);
@@ -139,10 +142,10 @@
 			reportDataSource1.Value = this.clientesBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
 			this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReporteClientes.rdlc";
-			this.reportViewer1.Location = new System.Drawing.Point(2, 2);
+			this.reportViewer1.Location = new System.Drawing.Point(0, 0);
 			this.reportViewer1.Name = "reportViewer1";
 			this.reportViewer1.ServerReport.BearerToken = null;
-			this.reportViewer1.Size = new System.Drawing.Size(681, 305);
+			this.reportViewer1.Size = new System.Drawing.Size(678, 303);
 			this.reportViewer1.TabIndex = 3;
 			// 
 			// clientesTableAdapter
@@ -153,11 +156,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(678, 450);
+			this.ClientSize = new System.Drawing.Size(678, 423);
 			this.Controls.Add(this.reportViewer1);
 			this.Controls.Add(this.groupBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmReporteClientes";
-			this.Text = "frmReporteClientes";
+			this.Text = "Reporte Clientes";
 			this.Load += new System.EventHandler(this.frmReporteClientes_Load);
 			((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();

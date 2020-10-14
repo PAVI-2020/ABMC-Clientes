@@ -30,6 +30,7 @@
         {
 			this.components = new System.ComponentModel.Container();
 			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteFacturas));
 			this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
 			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -65,7 +66,7 @@
 			reportDataSource1.Value = this.facturasBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
 			this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReporteFacturas.rdlc";
-			this.reportViewer1.Location = new System.Drawing.Point(-1, -1);
+			this.reportViewer1.Location = new System.Drawing.Point(0, 0);
 			this.reportViewer1.Name = "reportViewer1";
 			this.reportViewer1.ServerReport.BearerToken = null;
 			this.reportViewer1.Size = new System.Drawing.Size(663, 298);
@@ -85,9 +86,9 @@
 			this.groupBox1.Controls.Add(this.dtpFechaHasta);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.dtpFechaDesde);
-			this.groupBox1.Location = new System.Drawing.Point(1, 294);
+			this.groupBox1.Location = new System.Drawing.Point(12, 304);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(661, 100);
+			this.groupBox1.Size = new System.Drawing.Size(642, 90);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Filtrar por fechas";
@@ -105,7 +106,7 @@
 			// btnSalir
 			// 
 			this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnSalir.Location = new System.Drawing.Point(30, 63);
+			this.btnSalir.Location = new System.Drawing.Point(30, 53);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(75, 31);
 			this.btnSalir.TabIndex = 4;
@@ -116,7 +117,7 @@
 			// btnImprimir
 			// 
 			this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnImprimir.Location = new System.Drawing.Point(544, 63);
+			this.btnImprimir.Location = new System.Drawing.Point(525, 53);
 			this.btnImprimir.Name = "btnImprimir";
 			this.btnImprimir.Size = new System.Drawing.Size(75, 31);
 			this.btnImprimir.TabIndex = 3;
@@ -156,8 +157,9 @@
 			this.ClientSize = new System.Drawing.Size(666, 406);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.reportViewer1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmReporteFacturas";
-			this.Text = "frmReporteFacturas";
+			this.Text = "Reporte Facturas";
 			this.Load += new System.EventHandler(this.frmReporteFacturas_Load);
 			((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();

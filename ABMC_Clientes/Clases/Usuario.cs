@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ABMC_Clientes.Clases {
+﻿namespace ABMC_Clientes.Clases {
 	public class Usuario {
 		private int idUsuario;
 		private string n_usuario;
@@ -12,6 +6,7 @@ namespace ABMC_Clientes.Clases {
 		private string mail;
 		private string estado;
 		private int idPerfil;
+		private bool borrado;
 
 		public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 		public string N_usuario { get => n_usuario; set => n_usuario = value; }
@@ -19,5 +14,6 @@ namespace ABMC_Clientes.Clases {
 		public string Mail { get => mail; set => mail = value; }
 		public int IdPerfil { get => idPerfil; set => idPerfil = value; }
 		public string Estado { get => estado; set => estado = value; }
+		public bool Borrado { get => borrado; set => borrado = value; }
 	}
 }

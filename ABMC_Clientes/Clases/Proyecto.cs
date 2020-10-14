@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ABMC_Clientes.Clases
-{
-    class Proyecto
-    {
+﻿namespace ABMC_Clientes.Clases {
+    public class Proyecto {
         private int id_proyecto;
         private int id_producto;
         private string descripcion;
@@ -16,8 +8,7 @@ namespace ABMC_Clientes.Clases
         private int id_responsable;
         private bool borrado;
 
-        public Proyecto(int id_proyecto, int id_producto, string descripcion, string version, string alcance, int id_responsable, bool borrado)
-        {
+        public Proyecto(int id_proyecto, int id_producto, string descripcion, string version, string alcance, int id_responsable, bool borrado) {
             this.Id_proyecto = id_proyecto;
             this.Id_producto = id_producto;
             this.Descripcion = descripcion;

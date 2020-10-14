@@ -53,12 +53,15 @@ namespace ABMC_Clientes.DataAccess {
 			Desconectar();
         }
 
-		public DataTable ConsultarTabla(string columnas, string tabla, string condicion = "") {
+		public DataTable ConsultarTabla(string columnas, string tabla, params string[] condiciones) {
 			try {
 				DataTable retTable = new DataTable();
 				Conectar();
-				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + (condicion == "" ? "":(" WHERE " + condicion));
+
+				string condicionString = condiciones.Length == 0 ? "":(" WHERE " + string.Join(" AND ", condiciones));
+				comando.CommandText = "SELECT " + columnas + " FROM " + tabla + condicionString;
 				retTable.Load(comando.ExecuteReader());
+
 				Desconectar();
 				return retTable;
 			} catch (SqlException e) {

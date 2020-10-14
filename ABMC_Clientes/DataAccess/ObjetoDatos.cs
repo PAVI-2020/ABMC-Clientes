@@ -13,7 +13,17 @@ namespace ABMC_Clientes.DataAccess {
 			DataTable tabla = datos.ConsultarTabla(FieldSQL, TABLE);
 
 			if (tabla.Rows.Count <= 0)
-				return null;
+				return new T[0];
+
+			return BatchConvertir(tabla);
+		}
+
+		public T[] RecuperarCondicion(params string[] condiciones) {
+			Datos datos = new Datos();
+			DataTable tabla = datos.ConsultarTabla(FieldSQL, TABLE, condiciones);
+
+			if (tabla.Rows.Count <= 0)
+				return new T[0];
 
 			return BatchConvertir(tabla);
 		}

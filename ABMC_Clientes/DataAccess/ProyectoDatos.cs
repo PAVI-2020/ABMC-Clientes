@@ -1,31 +1,16 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using ABMC_Clientes.Clases;
 
-namespace ABMC_Clientes.DataAccess
-{
-    class ProyectoDatos
-    {
-		public static Proyecto[] RecuperarProyecto()
-		{
-			string consultaSQL = "P.id_proyecto, P.id_producto, P.descripcion, P.version, P.alcance, P.id_responsable, P.borrado";
-			string tablasConsulta = "Proyectos P";
+namespace ABMC_Clientes.DataAccess {
+    public class ProyectoDatos : ObjetoDatos<Proyecto> {
 
-			Datos datos = new Datos();
-			DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "P.borrado = 0");
-
-			if (tablas.Rows.Count <= 0)
-				return null;
-
-			return ConvertirProyectos(tablas);
+		public ProyectoDatos() {
+			TABLE = "Proyectos";
+			FIELDS = new string[] { "id_proyecto", "id_producto", "descripcion", "version", "alcance", "id_responsable", "borrado" };
+			PRIMARYKEY = "id_proyeco";
 		}
 
-		public static Proyecto ConvertirProyecto(DataRow input)
-		{
+		protected override Proyecto Convertir(DataRow input) {
 			Proyecto p = new Proyecto(
 				id_proyecto: (int)input["id_proyecto"],
 				id_producto: (int)input["id_producto"],
@@ -39,16 +24,18 @@ namespace ABMC_Clientes.DataAccess
 			return p;
 		}
 
-		public static Proyecto[] ConvertirProyectos(DataTable input)
-		{
-			Proyecto[] ret = new Proyecto[input.Rows.Count];
+		protected override string GetValuesSQL(Proyecto input) {
+			string[] values = {
+				input.Id_proyecto.ToString(),
+				input.Id_producto.ToString(),
+				input.Descripcion,
+				input.Version,
+				input.Alcance,
+				input.Id_responsable.ToString(),
+				input.Borrado.ToString()
+			};
 
-			for (int i = 0; i < ret.Length; i++)
-			{
-				ret[i] = ConvertirProyecto(input.Rows[i]);
-			}
-
-			return ret;
+			return string.Join(", ", values);
 		}
 
 	}

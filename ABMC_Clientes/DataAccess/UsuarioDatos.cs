@@ -2,26 +2,19 @@
 using System.Data;
 
 namespace ABMC_Clientes.DataAccess {
-	public class UsuarioDatos {
-		const string TABLA = "Usuarios";
-
-		public Usuario GetUsuario(string nombre) {
-			Usuario ret = new Usuario();
-
-			string columnas = "id_usuario, usuario, password, email, estado";
-			string condiciones = "borrado = 0";
-
-			Datos datos = new Datos();
-			DataTable tablas = datos.ConsultarTabla(columnas, TABLA, condiciones);
-
-			if (tablas.Rows.Count <= 0)
-				return null;
-
-			return ConvertirUsuario(tablas.Rows[0]);
+	public class UsuarioDatos : ObjetoDatos<Usuario> {
+		public UsuarioDatos() {
+			TABLE = "Usuarios";
+			FIELDS = new string[] { "id_usuario", "usuario", "password", "email", "estado", "borrado" };
+			PRIMARYKEY = "id_usuario";
 		}
 
-		private Usuario ConvertirUsuario(DataRow input) {
-			Usuario res = new Usuario {
+		public Usuario GetUsuario(string username) {
+			return RecuperarCondicion("usuario = '" + username + "'")[0];
+		}
+
+		protected override Usuario Convertir(DataRow input) {
+			Usuario u = new Usuario {
 				IdUsuario = int.Parse(input["id_usuario"].ToString()),
 				N_usuario = input["usuario"].ToString(),
 				Mail = input["email"].ToString(),
@@ -29,7 +22,20 @@ namespace ABMC_Clientes.DataAccess {
 				Password = input["password"].ToString()
 			};
 
-			return res;
+			return u;
+		}
+
+		protected override string GetValuesSQL(Usuario input) {
+			string[] values = {
+				input.IdUsuario.ToString(),
+				input.N_usuario,
+				input.Password,
+				input.Mail,
+				input.Estado,
+				input.Borrado.ToString()
+			};
+
+			return string.Join(", ", values);
 		}
 	}
 }

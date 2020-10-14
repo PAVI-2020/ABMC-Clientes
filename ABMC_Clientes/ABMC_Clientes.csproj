@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="DataAccess\CicloPruebaDatos.cs" />
     <Compile Include="DataAccess\CicloPruebaDetalleDatos.cs" />
+    <Compile Include="DataAccess\ObjetoDatos.cs" />
     <Compile Include="DataAccess\ProyectoDatos.cs" />
     <Compile Include="DataAccess\ContactoDatos.cs" />
     <Compile Include="DataAccess\DetalleFacturaDatos.cs" />

@@ -34,7 +34,7 @@
 			this.txtUsuario = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.txtIdCliente = new System.Windows.Forms.TextBox();
+			this.txtIdUsuario = new System.Windows.Forms.TextBox();
 			this.txtNumeroCiclo = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -47,19 +47,19 @@
 			this.label12 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.txtIDDetalleCiclo = new System.Windows.Forms.TextBox();
 			this.grdDetalle = new System.Windows.Forms.DataGridView();
-			this.IDDetalleCicloPrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.IDCiclodePrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.IDCasodePrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.IDUsuarioTester = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CantidadHoras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.FechaEjecucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.txtTotal = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.btnSalir = new System.Windows.Forms.Button();
 			this.btnSolicitar = new System.Windows.Forms.Button();
+			this.txtIdCasoPrueba = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.IDDetalleCicloPrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.IDCasodePrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.IDUsuarioTester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.CantidadHoras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.FechaEjecucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.IdCasoPrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.gbCicloPrueba.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).BeginInit();
@@ -78,14 +78,14 @@
 			this.gbCicloPrueba.Controls.Add(this.txtUsuario);
 			this.gbCicloPrueba.Controls.Add(this.label6);
 			this.gbCicloPrueba.Controls.Add(this.label2);
-			this.gbCicloPrueba.Controls.Add(this.txtIdCliente);
+			this.gbCicloPrueba.Controls.Add(this.txtIdUsuario);
 			this.gbCicloPrueba.Controls.Add(this.txtNumeroCiclo);
 			this.gbCicloPrueba.Controls.Add(this.label4);
 			this.gbCicloPrueba.Controls.Add(this.label3);
 			this.gbCicloPrueba.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.gbCicloPrueba.Location = new System.Drawing.Point(12, 12);
 			this.gbCicloPrueba.Name = "gbCicloPrueba";
-			this.gbCicloPrueba.Size = new System.Drawing.Size(551, 129);
+			this.gbCicloPrueba.Size = new System.Drawing.Size(565, 129);
 			this.gbCicloPrueba.TabIndex = 12;
 			this.gbCicloPrueba.TabStop = false;
 			this.gbCicloPrueba.Text = "Ciclo de Prueba";
@@ -105,7 +105,6 @@
 			this.txtNumeroPlanPrueba.Name = "txtNumeroPlanPrueba";
 			this.txtNumeroPlanPrueba.Size = new System.Drawing.Size(100, 20);
 			this.txtNumeroPlanPrueba.TabIndex = 16;
-			this.txtNumeroPlanPrueba.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
 			// dtpFinEjecucion
 			// 
@@ -167,13 +166,13 @@
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Numero de Ciclo de Prueba";
 			// 
-			// txtIdCliente
+			// txtIdUsuario
 			// 
-			this.txtIdCliente.Enabled = false;
-			this.txtIdCliente.Location = new System.Drawing.Point(147, 48);
-			this.txtIdCliente.Name = "txtIdCliente";
-			this.txtIdCliente.Size = new System.Drawing.Size(45, 20);
-			this.txtIdCliente.TabIndex = 8;
+			this.txtIdUsuario.Enabled = false;
+			this.txtIdUsuario.Location = new System.Drawing.Point(147, 48);
+			this.txtIdUsuario.Name = "txtIdUsuario";
+			this.txtIdUsuario.Size = new System.Drawing.Size(45, 20);
+			this.txtIdUsuario.TabIndex = 8;
 			// 
 			// txtNumeroCiclo
 			// 
@@ -204,6 +203,8 @@
 			// 
 			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox2.Controls.Add(this.txtIdCasoPrueba);
+			this.groupBox2.Controls.Add(this.label11);
 			this.groupBox2.Controls.Add(this.dtpFechaEjecucion);
 			this.groupBox2.Controls.Add(this.btnQuitar);
 			this.groupBox2.Controls.Add(this.btnAgregar);
@@ -212,11 +213,9 @@
 			this.groupBox2.Controls.Add(this.label12);
 			this.groupBox2.Controls.Add(this.label10);
 			this.groupBox2.Controls.Add(this.label9);
-			this.groupBox2.Controls.Add(this.label8);
-			this.groupBox2.Controls.Add(this.txtIDDetalleCiclo);
 			this.groupBox2.Location = new System.Drawing.Point(12, 147);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(551, 163);
+			this.groupBox2.Size = new System.Drawing.Size(565, 163);
 			this.groupBox2.TabIndex = 13;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Detalle Ciclo de Prueba";
@@ -232,7 +231,7 @@
 			// btnQuitar
 			// 
 			this.btnQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnQuitar.Location = new System.Drawing.Point(57, 99);
+			this.btnQuitar.Location = new System.Drawing.Point(15, 117);
 			this.btnQuitar.Name = "btnQuitar";
 			this.btnQuitar.Size = new System.Drawing.Size(102, 40);
 			this.btnQuitar.TabIndex = 15;
@@ -242,7 +241,7 @@
 			// btnAgregar
 			// 
 			this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnAgregar.Location = new System.Drawing.Point(368, 99);
+			this.btnAgregar.Location = new System.Drawing.Point(450, 117);
 			this.btnAgregar.Name = "btnAgregar";
 			this.btnAgregar.Size = new System.Drawing.Size(104, 40);
 			this.btnAgregar.TabIndex = 14;
@@ -291,47 +290,91 @@
 			this.label9.TabIndex = 4;
 			this.label9.Text = "Fecha Ejecución";
 			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(12, 32);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(130, 13);
-			this.label8.TabIndex = 3;
-			this.label8.Text = "Id Detalle Ciclo de Prueba";
-			// 
-			// txtIDDetalleCiclo
-			// 
-			this.txtIDDetalleCiclo.Location = new System.Drawing.Point(145, 29);
-			this.txtIDDetalleCiclo.Name = "txtIDDetalleCiclo";
-			this.txtIDDetalleCiclo.Size = new System.Drawing.Size(47, 20);
-			this.txtIDDetalleCiclo.TabIndex = 2;
-			// 
 			// grdDetalle
 			// 
+			this.grdDetalle.AllowUserToAddRows = false;
+			this.grdDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.grdDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDDetalleCicloPrueba,
-            this.IDCiclodePrueba,
             this.IDCasodePrueba,
             this.IDUsuarioTester,
             this.CantidadHoras,
-            this.FechaEjecucion});
+            this.FechaEjecucion,
+            this.IdCasoPrueba});
 			this.grdDetalle.Location = new System.Drawing.Point(12, 316);
 			this.grdDetalle.Name = "grdDetalle";
-			this.grdDetalle.Size = new System.Drawing.Size(540, 150);
+			this.grdDetalle.RowHeadersVisible = false;
+			this.grdDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.grdDetalle.Size = new System.Drawing.Size(554, 150);
 			this.grdDetalle.TabIndex = 14;
 			this.grdDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			// 
+			// txtTotal
+			// 
+			this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtTotal.Location = new System.Drawing.Point(436, 472);
+			this.txtTotal.Name = "txtTotal";
+			this.txtTotal.ReadOnly = true;
+			this.txtTotal.Size = new System.Drawing.Size(130, 20);
+			this.txtTotal.TabIndex = 17;
+			this.txtTotal.Text = "0";
+			this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// label14
+			// 
+			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(335, 475);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(95, 13);
+			this.label14.TabIndex = 16;
+			this.label14.Text = "Cantidad de Horas";
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSalir.Location = new System.Drawing.Point(378, 498);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(91, 34);
+			this.btnSalir.TabIndex = 19;
+			this.btnSalir.Text = "Salir";
+			this.btnSalir.UseVisualStyleBackColor = true;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+			// 
+			// btnSolicitar
+			// 
+			this.btnSolicitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnSolicitar.Location = new System.Drawing.Point(475, 498);
+			this.btnSolicitar.Name = "btnSolicitar";
+			this.btnSolicitar.Size = new System.Drawing.Size(91, 34);
+			this.btnSolicitar.TabIndex = 18;
+			this.btnSolicitar.Text = "Solicitar";
+			this.btnSolicitar.UseVisualStyleBackColor = true;
+			this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
+			// 
+			// txtIdCasoPrueba
+			// 
+			this.txtIdCasoPrueba.Location = new System.Drawing.Point(145, 29);
+			this.txtIdCasoPrueba.Name = "txtIdCasoPrueba";
+			this.txtIdCasoPrueba.Size = new System.Drawing.Size(47, 20);
+			this.txtIdCasoPrueba.TabIndex = 18;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(44, 32);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(95, 13);
+			this.label11.TabIndex = 17;
+			this.label11.Text = "Id Caso de Prueba";
 			// 
 			// IDDetalleCicloPrueba
 			// 
 			this.IDDetalleCicloPrueba.HeaderText = "ID Detalle Ciclo de Prueba";
 			this.IDDetalleCicloPrueba.Name = "IDDetalleCicloPrueba";
-			// 
-			// IDCiclodePrueba
-			// 
-			this.IDCiclodePrueba.HeaderText = "ID Ciclo de Prueba";
-			this.IDCiclodePrueba.Name = "IDCiclodePrueba";
 			// 
 			// IDCasodePrueba
 			// 
@@ -353,54 +396,16 @@
 			this.FechaEjecucion.HeaderText = "Fecha Ejecucion";
 			this.FechaEjecucion.Name = "FechaEjecucion";
 			// 
-			// txtTotal
+			// IdCasoPrueba
 			// 
-			this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtTotal.Location = new System.Drawing.Point(422, 472);
-			this.txtTotal.Name = "txtTotal";
-			this.txtTotal.ReadOnly = true;
-			this.txtTotal.Size = new System.Drawing.Size(130, 20);
-			this.txtTotal.TabIndex = 17;
-			this.txtTotal.Text = "0";
-			this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// label14
-			// 
-			this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(321, 475);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(95, 13);
-			this.label14.TabIndex = 16;
-			this.label14.Text = "Cantidad de Horas";
-			// 
-			// btnSalir
-			// 
-			this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnSalir.Location = new System.Drawing.Point(364, 498);
-			this.btnSalir.Name = "btnSalir";
-			this.btnSalir.Size = new System.Drawing.Size(91, 34);
-			this.btnSalir.TabIndex = 19;
-			this.btnSalir.Text = "Salir";
-			this.btnSalir.UseVisualStyleBackColor = true;
-			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-			// 
-			// btnSolicitar
-			// 
-			this.btnSolicitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnSolicitar.Location = new System.Drawing.Point(461, 498);
-			this.btnSolicitar.Name = "btnSolicitar";
-			this.btnSolicitar.Size = new System.Drawing.Size(91, 34);
-			this.btnSolicitar.TabIndex = 18;
-			this.btnSolicitar.Text = "Solicitar";
-			this.btnSolicitar.UseVisualStyleBackColor = true;
-			this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
+			this.IdCasoPrueba.HeaderText = "Id Caso de Prueba";
+			this.IdCasoPrueba.Name = "IdCasoPrueba";
 			// 
 			// frmNuevoCicloPrueba
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(564, 544);
+			this.ClientSize = new System.Drawing.Size(578, 544);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnSolicitar);
 			this.Controls.Add(this.txtTotal);
@@ -410,7 +415,7 @@
 			this.Controls.Add(this.gbCicloPrueba);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmNuevoCicloPrueba";
-			this.Text = "Form1";
+			this.Text = "Solicitar Ciclo de Prueba";
 			this.gbCicloPrueba.ResumeLayout(false);
 			this.gbCicloPrueba.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -428,7 +433,7 @@
 		private System.Windows.Forms.TextBox txtUsuario;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox txtIdCliente;
+		private System.Windows.Forms.TextBox txtIdUsuario;
 		private System.Windows.Forms.TextBox txtNumeroCiclo;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
@@ -446,18 +451,18 @@
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox txtIDDetalleCiclo;
 		private System.Windows.Forms.DataGridView grdDetalle;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDDetalleCicloPrueba;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDCiclodePrueba;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDCasodePrueba;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDUsuarioTester;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CantidadHoras;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FechaEjecucion;
 		private System.Windows.Forms.TextBox txtTotal;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Button btnSalir;
 		private System.Windows.Forms.Button btnSolicitar;
+		private System.Windows.Forms.TextBox txtIdCasoPrueba;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.DataGridViewTextBoxColumn IDDetalleCicloPrueba;
+		private System.Windows.Forms.DataGridViewTextBoxColumn IDCasodePrueba;
+		private System.Windows.Forms.DataGridViewTextBoxColumn IDUsuarioTester;
+		private System.Windows.Forms.DataGridViewTextBoxColumn CantidadHoras;
+		private System.Windows.Forms.DataGridViewTextBoxColumn FechaEjecucion;
+		private System.Windows.Forms.DataGridViewTextBoxColumn IdCasoPrueba;
 	}
 }

@@ -35,7 +35,6 @@ namespace ABMC_Clientes.Clases
 			this.borrado = borrado;
 		}
 
-
 		public int Id_factura { get => id_factura; set => id_factura = value; }
 		public string Numero_factura { get => numero_factura; set => numero_factura = value; }
 		public int Id_cliente { get => id_cliente; set => id_cliente = value; }

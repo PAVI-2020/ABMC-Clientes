@@ -49,12 +49,12 @@ namespace ABMC_Clientes.DataAccess {
 				datos.Open();
 				datos.BeginTransaction();
 
-				string insercion = "INSERT INTO CiclosPrueba (fecha_incio_ejecucion, fecha_fin_ejecucion, id_responsable, id_plan_prueba, aceptado, borrado) VALUES ('" +
-									ciclosPrueba.Fecha_inicio_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
-									ciclosPrueba.Fecha_fin_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + ", '" +
-									ciclosPrueba.Id_responsable.ToString() + "', " +
+				string insercion = "INSERT INTO CiclosPrueba (fecha_inicio_ejecucion, fecha_fin_ejecucion, id_responsable, id_plan_prueba, aceptado, borrado) VALUES ('" +
+									ciclosPrueba.Fecha_inicio_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + "', '" +
+									ciclosPrueba.Fecha_fin_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
+									ciclosPrueba.Id_responsable.ToString() + ", " +
 									ciclosPrueba.Id_plan_prueba.ToString() + ", " +
-									ciclosPrueba.Aceptado.ToString() + ", " +
+									(ciclosPrueba.Aceptado ? "1":"0") + ", " +
 									"0)";
 
 				datos.EjecutarSQLConTransaccion(insercion);

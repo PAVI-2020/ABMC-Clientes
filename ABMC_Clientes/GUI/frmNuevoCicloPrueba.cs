@@ -12,22 +12,20 @@ namespace ABMC_Clientes.GUI {
 			InitializeComponent();
 			this.usuario = usuario;
 			txtUsuario.Text = usuario.N_usuario;
-		}
-		private void textBox1_TextChanged(object sender, EventArgs e) {
-
+			txtIdUsuario.Text = usuario.IdUsuario.ToString();
 		}
 
 		private void CalcularTotal() {
 			float total = 0;
 			foreach (DataGridViewRow row in grdDetalle.Rows) {
-				total += float.Parse(row.Cells[4].Value.ToString());
+				total += float.Parse(row.Cells[3].Value.ToString());
 			}
 
 			txtTotal.Text = total.ToString();
 		}
 
 		private void ClearFields() {
-			txtIDDetalleCiclo.Text = "";
+			txtIdCasoPrueba.Text = "";
 			txtIdUsuarioTester.Text = "";
 			txtCantidadHoras.Text = "";
 			dtpFechaEjecucion.Value = DateTime.Today;
@@ -43,21 +41,18 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnAgregar_Click(object sender, EventArgs e) {
-			string cobrado = "";
 			if (txtNumeroCiclo.Text == "" ||
 				txtNumeroPlanPrueba.Text == "" ||
-				txtIDDetalleCiclo.Text == "" ||
+				txtIdCasoPrueba.Text == "" ||
 				txtIdUsuarioTester.Text == "" ||
 				txtCantidadHoras.Text == "") {
 				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
 				return;
 			}
 
-			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1);
+			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1, txtNumeroPlanPrueba.Text, txtIdUsuarioTester.Text, txtCantidadHoras.Text, dtpFechaEjecucion.Value.ToString(), txtIdCasoPrueba.Text);
 			CalcularTotal();
-			txtNumeroCiclo.Clear();
-			txtNumeroPlanPrueba.Clear();
-			txtIDDetalleCiclo.Clear();
+			txtIdCasoPrueba.Clear();
 			txtIdUsuarioTester.Clear();
 			txtCantidadHoras.Clear();
 		}
@@ -65,18 +60,17 @@ namespace ABMC_Clientes.GUI {
 		private void btnSolicitar_Click(object sender, EventArgs e) {
 
 			List<CiclosPruebaDetalle> detalles = new List<CiclosPruebaDetalle>();
-			if (
-					grdDetalle.Rows.Count == 0
-			   ) {
+			if (grdDetalle.Rows.Count == 0) {
 				MessageBox.Show("Agregue un ciclo de prueba previamente", "Error", MessageBoxButtons.OK);
 				return;
 			}
+
 			foreach (DataGridViewRow dgrid in grdDetalle.Rows) {
-				detalles.Add(new CiclosPruebaDetalle(0, 0, 0, Convert.ToInt32(txtIdUsuarioTester.Text), Convert.ToInt32(txtCantidadHoras.Text), dtpFechaEjecucion.Value, true, false));
+				detalles.Add(new CiclosPruebaDetalle(0, 0, Convert.ToInt32(dgrid.Cells[5].Value), Convert.ToInt32(dgrid.Cells[2].Value), Convert.ToInt32(dgrid.Cells[3].Value), DateTime.Parse(dgrid.Cells[4].Value.ToString()), true, false));
 			}
 
-
 			CiclosPrueba ciclo = new CiclosPrueba(0, dtpInicioEjecucion.Value, dtpFinEjecucion.Value, usuario.IdUsuario, Convert.ToInt32(txtNumeroPlanPrueba.Text), Convert.ToInt32(txtNumeroPlanPrueba.Text), true, false);
+			ciclo.Detalles = detalles.ToArray();
 			CicloPruebaBusiness fbus = new CicloPruebaBusiness();
 			fbus.CrearCiclo(ciclo);
 

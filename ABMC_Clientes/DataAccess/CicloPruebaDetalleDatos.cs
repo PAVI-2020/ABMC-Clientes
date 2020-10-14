@@ -43,14 +43,14 @@ namespace ABMC_Clientes.DataAccess {
 		}
 
 		public static void InsertarDCiclo(CiclosPruebaDetalle dCiclo, Datos datos) {
-			string insercion = "INSERT INTO CiclosPruebaDetalle (id_ciclo_prueba, caso_prueba, id_usuario_tester, cantidad_horas, fecha_ejecucion, aceptado, borrado) VALUES (" +
+			string insercion = "INSERT INTO CiclosPruebaDetalle (id_ciclo_prueba, id_caso_prueba, id_usuario_tester, cantidad_horas, fecha_ejecucion, aceptado, borrado) VALUES (" +
 								dCiclo.Id_ciclo_prueba.ToString() + ", " +
-								dCiclo.Caso_prueba.ToString() + ", " +
+								dCiclo.Id_Caso_prueba.ToString() + ", " +
 								dCiclo.Id_usuario_tester.ToString() + ", " +
 								dCiclo.Cantidad_horas.ToString() + ", '" +
 								dCiclo.Fecha_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
-								dCiclo.Aceptado.ToString() + ", " +
-								", 0)";
+								(dCiclo.Aceptado ? "1":"0") + ", " +
+								"0)";
 			datos.EjecutarSQLConTransaccion(insercion);
 		}
 	}

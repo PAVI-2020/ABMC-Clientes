@@ -50,6 +50,8 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnSolicitarCicloPrueba_Click(object sender, EventArgs e) {
+			frmNuevoCicloPrueba cic = new frmNuevoCicloPrueba(usuario);
+			cic.ShowDialog();
 		}
 
 		private void btnReportes_Click(object sender, EventArgs e) {

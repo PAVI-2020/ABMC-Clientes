@@ -52,8 +52,6 @@ namespace ABMC_Clientes.DataAccess
 
 			try
 			{
-
-				
 				datos.Open();
 				datos.BeginTransaction();
 
@@ -83,7 +81,6 @@ namespace ABMC_Clientes.DataAccess
 				throw e;
             } finally
             {
-
 				datos.Close();
             }
 

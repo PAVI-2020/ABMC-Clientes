@@ -36,8 +36,8 @@ namespace ABMC_Clientes.GUI
                 Datos oDat = new Datos();
 
                 facturasBindingSource.DataSource = oDat.ConsultarTabla("f.id_factura, f.numero_factura, c.razon_social as cliente, f.fecha, u.usuario as usuario_creador, (SELECT SUM(precio) from FacturasDetalle fd where f.id_factura = fd.id_factura) as Total, f.borrado",
-                                                                       "from Facturas f join Usuarios u on(f.id_usuario_creador = u.id_usuario) join clientes c on(f.id_cliente = c.id_cliente)",
-                                                                       "WHERE f.borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
+                                                                       "Facturas f join Usuarios u on(f.id_usuario_creador = u.id_usuario) join clientes c on(f.id_cliente = c.id_cliente)",
+                                                                       "f.borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
                 this.reportViewer1.RefreshReport();
             }
         }

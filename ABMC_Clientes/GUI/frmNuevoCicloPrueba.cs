@@ -76,7 +76,7 @@ namespace ABMC_Clientes.GUI {
 			}
 
 
-			CiclosPrueba ciclo = new CiclosPrueba(0, dtpInicioEjecucion.Value, dtpFinEjecucion.Value, usuario.IdUsuario, Convert.ToInt32(txtNumeroPlanPrueba.Text), true, false);
+			CiclosPrueba ciclo = new CiclosPrueba(0, dtpInicioEjecucion.Value, dtpFinEjecucion.Value, usuario.IdUsuario, Convert.ToInt32(txtNumeroPlanPrueba.Text), Convert.ToInt32(txtNumeroPlanPrueba.Text), true, false);
 			CicloPruebaBusiness fbus = new CicloPruebaBusiness();
 			fbus.CrearCiclo(ciclo);
 

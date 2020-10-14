@@ -58,6 +58,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.btnSalir);
 			this.groupBox1.Controls.Add(this.btnImprimir);
@@ -83,6 +85,7 @@
 			// 
 			// btnSalir
 			// 
+			this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnSalir.Location = new System.Drawing.Point(30, 63);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(75, 31);
@@ -93,6 +96,7 @@
 			// 
 			// btnImprimir
 			// 
+			this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnImprimir.Location = new System.Drawing.Point(544, 63);
 			this.btnImprimir.Name = "btnImprimir";
 			this.btnImprimir.Size = new System.Drawing.Size(75, 31);
@@ -128,6 +132,9 @@
 			// 
 			// reportViewer1
 			// 
+			this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			reportDataSource1.Name = "datosTabla";
 			reportDataSource1.Value = this.clientesBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);

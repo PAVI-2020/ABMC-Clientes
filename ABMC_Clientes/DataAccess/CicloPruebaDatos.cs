@@ -1,10 +1,6 @@
 ﻿using ABMC_Clientes.Clases;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ABMC_Clientes.DataAccess {
 	class CicloPruebaDatos {
@@ -27,7 +23,7 @@ namespace ABMC_Clientes.DataAccess {
 				fecha_inicio_ejecucion: (DateTime)input["fecha_inicio_ejecucion"],
 				fecha_fin_ejecucion: (DateTime)input["fecha_fin_ejecucion"],
 				id_responsable: (int)input["id_responsable"],
-				usuario: (string)input["usuario"],
+				usuario: (int)input["usuario"],
 				id_plan_prueba: (int)input["id_plan_prueba"],
 				aceptado: (bool)input["aceptado"],
 				borrado: (bool)input["borrado"]
@@ -50,26 +46,25 @@ namespace ABMC_Clientes.DataAccess {
 			Datos datos = new Datos();
 
 			try {
-
-
 				datos.Open();
 				datos.BeginTransaction();
 
-				string insercion = "INSERT INTO CiclosPrueba (id_ciclo_prueba, fecha_incio_ejecucion, fecha_fin_ejecucion, id_responsable, id_plan_prueba, aceptado, borrado) VALUES ('" +
-									ciclosPrueba.Numero_factura.ToString() + "', " +
-									factura.Id_cliente.ToString() + ", '" +
-									factura.Fecha.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
-									factura.Id_usuario_creador.ToString() + ", " +
+				string insercion = "INSERT INTO CiclosPrueba (fecha_incio_ejecucion, fecha_fin_ejecucion, id_responsable, id_plan_prueba, aceptado, borrado) VALUES ('" +
+									ciclosPrueba.Fecha_inicio_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + "', " +
+									ciclosPrueba.Fecha_fin_ejecucion.ToString("yyyy-MM-dd hh:mm:ss") + ", '" +
+									ciclosPrueba.Id_responsable.ToString() + "', " +
+									ciclosPrueba.Id_plan_prueba.ToString() + ", " +
+									ciclosPrueba.Aceptado.ToString() + ", " +
 									"0)";
 
 				datos.EjecutarSQLConTransaccion(insercion);
-				int id_factura = Convert.ToInt32(datos.ConsultaSQLScalar("Select @@IDENTITY"));
+				int id_ciclo = Convert.ToInt32(datos.ConsultaSQLScalar("Select @@IDENTITY"));
 
-				factura.Id_factura = id_factura;
+				ciclosPrueba.Id_ciclo_prueba = id_ciclo;
 
-				foreach (DetalleFactura detf in factura.Detalles) {
-					detf.Id_factura = id_factura;
-					DetalleFacturaDatos.InsertarDFactura(detf, datos);
+				foreach (CiclosPruebaDetalle detC in ciclosPrueba.Detalles) {
+					detC.Id_ciclo_prueba = id_ciclo;
+					CicloPruebaDetalleDatos.InsertarDCiclo(detC, datos);
 				}
 
 				datos.Commit();

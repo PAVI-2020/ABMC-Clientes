@@ -24,6 +24,7 @@ namespace ABMC_Clientes.GUI {
 			this.ciclosPruebaDetalleTableAdapter.Fill(this.dstGeneral.CiclosPruebaDetalle);
 			this.reportViewer1.RefreshReport();
 			this.reportViewer1.RefreshReport();
+			this.reportViewer1.RefreshReport();
 		}
 
 		private void btnExit_Click(object sender, EventArgs e) {

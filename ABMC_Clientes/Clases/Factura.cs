@@ -14,9 +14,7 @@ namespace ABMC_Clientes.Clases
 		private string nombreUsuarioCreador;
 		private DetalleFactura[] detalles;
 
-
-		public Factura(int id_factura, string numero_factura, int id_cliente, DateTime fecha, int id_usuario_creador, bool borrado, string nombreCliente, string nombreUsuarioCreador, DetalleFactura[] det)
-		{
+		public Factura(int id_factura, string numero_factura, int id_cliente, DateTime fecha, int id_usuario_creador, bool borrado, string nombreCliente, string nombreUsuarioCreador, DetalleFactura[] det) {
 			this.id_factura = id_factura;
 			this.numero_factura = numero_factura;
 			this.id_cliente = id_cliente;
@@ -28,8 +26,7 @@ namespace ABMC_Clientes.Clases
 			this.detalles = det;
 		}
 
-		public Factura(int id_factura, string numero_factura, int id_cliente, DateTime fecha, int id_usuario_creador, bool borrado)
-		{
+		public Factura(int id_factura, string numero_factura, int id_cliente, DateTime fecha, int id_usuario_creador, bool borrado) {
 			this.id_factura = id_factura;
 			this.numero_factura = numero_factura;
 			this.id_cliente = id_cliente;

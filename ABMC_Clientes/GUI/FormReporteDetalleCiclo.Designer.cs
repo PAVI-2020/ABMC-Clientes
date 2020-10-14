@@ -32,9 +32,9 @@
 			this.btnExit = new System.Windows.Forms.Button();
 			this.dtpFechaCreacion = new System.Windows.Forms.DateTimePicker();
 			this.lblCiclos = new System.Windows.Forms.Label();
-			this.ciclosPruebaDetalleTableAdapter = new ABMC_Clientes.Data_sets.dstGeneralTableAdapters.CiclosPruebaDetalleTableAdapter();
 			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
 			this.CiclosPruebaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.ciclosPruebaDetalleTableAdapter = new ABMC_Clientes.Data_sets.dstGeneralTableAdapters.CiclosPruebaDetalleTableAdapter();
 			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).BeginInit();
 			this.gbFiltrarFechas.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.CiclosPruebaDetalleBindingSource)).BeginInit();
@@ -100,10 +100,6 @@
 			this.lblCiclos.Text = "Buscar Detalles de Ciclos de Pruba creados en";
 			this.lblCiclos.Click += new System.EventHandler(this.lblCiclos_Click);
 			// 
-			// ciclosPruebaDetalleTableAdapter
-			// 
-			this.ciclosPruebaDetalleTableAdapter.ClearBeforeFill = true;
-			// 
 			// reportViewer1
 			// 
 			this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -112,17 +108,21 @@
 			reportDataSource1.Name = "DataSet1";
 			reportDataSource1.Value = this.CiclosPruebaDetalleBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-			this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.Report1.rdlc";
-			this.reportViewer1.Location = new System.Drawing.Point(10, 1);
+			this.reportViewer1.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReporteDetalleCicloPrueba.rdlc";
+			this.reportViewer1.Location = new System.Drawing.Point(0, 0);
 			this.reportViewer1.Name = "reportViewer1";
 			this.reportViewer1.ServerReport.BearerToken = null;
-			this.reportViewer1.Size = new System.Drawing.Size(635, 310);
+			this.reportViewer1.Size = new System.Drawing.Size(646, 302);
 			this.reportViewer1.TabIndex = 3;
 			// 
 			// CiclosPruebaDetalleBindingSource
 			// 
 			this.CiclosPruebaDetalleBindingSource.DataMember = "CiclosPruebaDetalle";
 			this.CiclosPruebaDetalleBindingSource.DataSource = this.dstGeneral;
+			// 
+			// ciclosPruebaDetalleTableAdapter
+			// 
+			this.ciclosPruebaDetalleTableAdapter.ClearBeforeFill = true;
 			// 
 			// FormReporteDetalleCiclo
 			// 
@@ -150,8 +150,8 @@
 		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.DateTimePicker dtpFechaCreacion;
 		private System.Windows.Forms.Label lblCiclos;
-		private Data_sets.dstGeneralTableAdapters.CiclosPruebaDetalleTableAdapter ciclosPruebaDetalleTableAdapter;
 		private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
 		private System.Windows.Forms.BindingSource CiclosPruebaDetalleBindingSource;
+		private Data_sets.dstGeneralTableAdapters.CiclosPruebaDetalleTableAdapter ciclosPruebaDetalleTableAdapter;
 	}
 }

@@ -1,17 +1,18 @@
 ﻿using ABMC_Clientes.Clases;
+using ABMC_Clientes.DataAccess;
 
 namespace ABMC_Clientes.Business {
 	class CicloPruebaBusiness {
 		public CiclosPrueba[] ConsultarCiclosPrueba() {
-			return CiclosPruebaDatos.RecuperarFactura();
+			return CicloPruebaDatos.RecuperarCicloPrueba();
 		}
 
 		public void Insertar(CiclosPrueba factura) {
-			CiclosPruebaDatos.InsertarFactura(factura);
+			CicloPruebaDatos.InsertarCiclosPrueba(factura);
 		}
 
 		public void CrearCiclo(CiclosPrueba factura) {
-			CiclosPruebaDatos.InsertarFactura(factura);
+			CicloPruebaDatos.InsertarCiclosPrueba(factura);
 		}
 	}
 }

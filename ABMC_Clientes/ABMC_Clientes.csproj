@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\CicloPruebaBusiness.cs" />
+    <Compile Include="Business\CicloPruebaDetalleBusiness.cs" />
     <Compile Include="Business\ProyectoBusiness.cs" />
     <Compile Include="Business\ContactosBusiness.cs" />
     <Compile Include="Business\DetalleFacturaBusiness.cs" />
@@ -104,6 +105,7 @@
       <DependentUpon>dstGeneral.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\CicloPruebaDatos.cs" />
+    <Compile Include="DataAccess\CicloPruebaDetalleDatos.cs" />
     <Compile Include="DataAccess\ProyectoDatos.cs" />
     <Compile Include="DataAccess\ContactoDatos.cs" />
     <Compile Include="DataAccess\DetalleFacturaDatos.cs" />
@@ -244,7 +246,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteDetalleCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFacturas.rdlc" />

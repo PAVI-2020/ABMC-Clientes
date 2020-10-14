@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ABMC_Clientes.Clases {
-	class CiclosPruebaDetalle {
+	public class CiclosPruebaDetalle {
 		private  int id_ciclo_prueba_detalle;
 		private  int id_ciclo_prueba;
 		private  int caso_prueba;

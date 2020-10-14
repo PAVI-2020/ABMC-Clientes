@@ -1,30 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using ABMC_Clientes.Clases;
 
-namespace ABMC_Clientes.DataAccess
-{
-    class ProductoDatos
-    {
-        public static Producto[] recuperarProductos()
-        {
-            string consultaSQL = "P.id_producto, P.nombre, P.borrado";
-            string tablasConsulta = "Productos P";
+namespace ABMC_Clientes.DataAccess {
+    public class ProductoDatos : ObjetoDatos<Producto> {
 
-            Datos datos = new Datos();
-            DataTable tablas = datos.ConsultarTabla(consultaSQL, tablasConsulta, "P.borrado = 0");
-
-            if (tablas.Rows.Count <= 0)
-                return null;
-
-            return ConvertirProductos(tablas);
+        public ProductoDatos() {
+            TABLE = "Productos";
+            FIELDS = new string[]{ "id_producto", "nombre", "borrado" };
+            PRIMARYKEY = "id_producto";
         }
-        public static Producto ConvertirProducto(DataRow input)
-        {
+
+        protected override Producto Convertir(DataRow input) {
             Producto p = new Producto {
                 Id_producto = (int)input["id_producto"],
                 Nombre = (string)input["nombre"]
@@ -33,17 +19,13 @@ namespace ABMC_Clientes.DataAccess
             return p;
         }
 
-        public static Producto[] ConvertirProductos(DataTable input)
-        {
-            Producto[] ret = new Producto[input.Rows.Count];
+		protected override string GetValuesSQL(Producto input) {
+            string[] values = {
+                input.Id_producto.ToString(),
+                input.Nombre.ToString()
+            };
 
-            for (int i = 0; i < ret.Length; i++)
-            {
-                ret[i] = ConvertirProducto(input.Rows[i]);
-            }
-
-            return ret;
-        }
-
-    }
+            return string.Join(", ", values);
+		}
+	}
 }

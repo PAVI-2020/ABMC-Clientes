@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ABMC_Clientes.Clases
-{
-    public class Producto
-    {
+﻿namespace ABMC_Clientes.Clases {
+    public class Producto {
         int id_producto;
         string nombre;
 

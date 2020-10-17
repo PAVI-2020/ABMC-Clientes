@@ -4,7 +4,8 @@ using ABMC_Clientes.DataAccess;
 namespace ABMC_Clientes.Business {
 	public class CicloPruebaDetalleBusiness {
 		public CiclosPruebaDetalle[] ConsultarCiclosPruebaDetalle() {
-			return CicloPruebaDetalleDatos.RecuperarDCiclo();
+			CicloPruebaDetalleDatos cicloPruebaDetalleDatos = new CicloPruebaDetalleDatos();
+			return cicloPruebaDetalleDatos.Recuperar();
 		}
 	}
 }

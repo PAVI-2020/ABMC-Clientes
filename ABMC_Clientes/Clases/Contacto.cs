@@ -8,6 +8,8 @@
         private string telefono;
         private bool borrado;
 
+        public Contacto() { }
+
         public Contacto(int id_contacto, string nombre, string apellido, string email, string telefono, bool borrado) {
             this.id_contacto = id_contacto;
             this.nombre = nombre;

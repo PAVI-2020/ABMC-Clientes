@@ -3,7 +3,7 @@
 namespace ABMC_Clientes.Clases {
 	[SQLTable("Clientes")]
 	[SQLSecondaryTable("Barrios", "Clientes.id_barrio = Barrios.id_barrio")]
-	[SQLSecondaryTable("Contactos", "Clientes.id_barrio = Contactos.id_barrio")]
+	[SQLSecondaryTable("Contactos", "Clientes.id_contacto = Contactos.id_contacto")]
 	public class Cliente {
 		private int id;
 		private string cuit;
@@ -34,7 +34,7 @@ namespace ABMC_Clientes.Clases {
 		}
 
 		[SQLPrimaryKey]
-		[SQLField("id")]			public int Id { get => id; set => id = value; }
+		[SQLField("id_cliente")]	public int Id { get => id; set => id = value; }
 		[SQLField("cuit")]			public string Cuit { get => cuit; set => cuit = value; }
 		[SQLField("razon_social")]	public string RazonSocial { get => razonSocial; set => razonSocial = value; }
 		[SQLField("borrado")]		public bool Borrado { get => borrado; set => borrado = value; }
@@ -44,7 +44,7 @@ namespace ABMC_Clientes.Clases {
 		[SQLField("id_barrio")]		public int IdBarrio { get => idBarrio; set => idBarrio = value; }
 		[SQLField("id_contacto")]	public int IdContacto { get => idContacto; set => idContacto = value; }
 
-		[SQLSecondaryField("Barrio.nombre", "barrio")]		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
-		[SQLSecondaryField("Contacto.nombre", "contacto")]	public string Contacto { get => nombreContacto; set => nombreContacto = value; }
+		[SQLSecondaryField("Barrios.nombre", "barrio")]		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
+		[SQLSecondaryField("Contactos.nombre", "contacto")]	public string Contacto { get => nombreContacto; set => nombreContacto = value; }
 	}
 }

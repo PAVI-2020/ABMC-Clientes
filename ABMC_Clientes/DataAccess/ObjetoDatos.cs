@@ -14,20 +14,45 @@ namespace ABMC_Clientes.DataAccess {
 		public ObjetoDatos() {
 			table = typeof(T).GetCustomAttribute<SQLTableAttribute>().table;
 			List<string> fieldNames = new List<string>();
+
 			foreach (PropertyInfo p in typeof(T).GetProperties())
 				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
 					fieldNames.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName);
+
 			fields = fieldNames.ToArray();
 		}
 
 		public T[] Recuperar() {
 			Datos datos = new Datos();
-			DataTable tabla = datos.ConsultarTabla(FieldSQL, table);
+			DataTable tabla = datos.ConsultarTabla(GetSelectSQL(), GetSelectTable());
 
 			if (tabla.Rows.Count <= 0)
 				return new T[0];
 
 			return BatchConvertir(tabla);
+
+			string GetSelectSQL() {
+				List<string> fields = new List<string>();
+				foreach (PropertyInfo p in typeof(T).GetProperties())
+					if (p.GetCustomAttribute<SQLFieldAttribute>() != null) {
+						SQLFieldAttribute attr = p.GetCustomAttribute<SQLFieldAttribute>();
+						fields.Add(table + "." + attr.sqlName);
+					} else if (p.GetCustomAttribute<SQLSecondaryFieldAttribute>() != null) {
+						SQLSecondaryFieldAttribute attr = p.GetCustomAttribute<SQLSecondaryFieldAttribute>();
+						fields.Add(attr.table + " as '" + attr.sqlName + "'");
+					}
+
+				return string.Join(", ", fields);
+			}
+
+			string GetSelectTable() {
+				string ret = table;
+				foreach (SQLSecondaryTableAttribute attr in typeof(T).GetCustomAttributes<SQLSecondaryTableAttribute>()) {
+					ret += " JOIN " + attr.table + " ON (" + attr.joinCondition + ")";
+				}
+
+				return ret;
+			}
 		}
 
 		public T[] RecuperarCondicion(params string[] condiciones) {
@@ -55,6 +80,8 @@ namespace ABMC_Clientes.DataAccess {
 			foreach (PropertyInfo p in typeof(T).GetProperties())
 				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
 					p.SetValue(ret, input[p.GetCustomAttribute<SQLFieldAttribute>().sqlName]);
+				else if (p.GetCustomAttribute<SQLSecondaryFieldAttribute>() != null)
+					p.SetValue(ret, input[p.GetCustomAttribute<SQLSecondaryFieldAttribute>().sqlName]);
 
 			return ret;
 		}

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ABMC_Clientes.Clases {
+	[SQLTable("CiclosPruebaDetalle")]
 	public class CiclosPruebaDetalle {
 		private int id_ciclo_prueba_detalle;
 		private int id_ciclo_prueba;
@@ -14,6 +11,8 @@ namespace ABMC_Clientes.Clases {
 		private DateTime fecha_ejecucion;
 		private bool aceptado;
 		private bool borrado;
+
+		public CiclosPruebaDetalle() { }
 
 		public CiclosPruebaDetalle(int id_ciclo_prueba_detalle, int id_ciclo_prueba, int caso_prueba, int id_usuario_tester, int cantidad_horas, DateTime fecha_ejecucion, bool aceptado, bool borrado) {
 			this.Id_ciclo_prueba_detalle = id_ciclo_prueba_detalle;
@@ -26,13 +25,13 @@ namespace ABMC_Clientes.Clases {
 			this.Borrado = borrado;
 		}
 
-		public int Id_ciclo_prueba_detalle { get => id_ciclo_prueba_detalle; set => id_ciclo_prueba_detalle = value; }
-		public int Id_ciclo_prueba { get => id_ciclo_prueba; set => id_ciclo_prueba = value; }
-		public int Id_Caso_prueba { get => id_caso_prueba; set => id_caso_prueba = value; }
-		public int Id_usuario_tester { get => id_usuario_tester; set => id_usuario_tester = value; }
-		public int Cantidad_horas { get => cantidad_horas; set => cantidad_horas = value; }
-		public DateTime Fecha_ejecucion { get => fecha_ejecucion; set => fecha_ejecucion = value; }
-		public bool Aceptado { get => aceptado; set => aceptado = value; }
-		public bool Borrado { get => borrado; set => borrado = value; }
+		[SQLField("id_ciclo_prueba_detalle")]	public int Id_ciclo_prueba_detalle { get => id_ciclo_prueba_detalle; set => id_ciclo_prueba_detalle = value; }
+		[SQLField("id_ciclo_prueba")]			public int Id_ciclo_prueba { get => id_ciclo_prueba; set => id_ciclo_prueba = value; }
+		[SQLField("id_caso_prueba")]			public int Id_Caso_prueba { get => id_caso_prueba; set => id_caso_prueba = value; }
+		[SQLField("id_usuario_tester")]			public int Id_usuario_tester { get => id_usuario_tester; set => id_usuario_tester = value; }
+		[SQLField("cantidad_horas")]			public int Cantidad_horas { get => cantidad_horas; set => cantidad_horas = value; }
+		[SQLField("fecha_ejecucion")]			public DateTime Fecha_ejecucion { get => fecha_ejecucion; set => fecha_ejecucion = value; }
+		[SQLField("aceptado")]					public bool Aceptado { get => aceptado; set => aceptado = value; }
+		[SQLField("borrado")]					public bool Borrado { get => borrado; set => borrado = value; }
 	}
 }

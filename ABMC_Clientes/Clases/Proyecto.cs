@@ -8,6 +8,8 @@
         private int id_responsable;
         private bool borrado;
 
+        public Proyecto() { }
+
         public Proyecto(int id_proyecto, int id_producto, string descripcion, string version, string alcance, int id_responsable, bool borrado) {
             this.Id_proyecto = id_proyecto;
             this.Id_producto = id_producto;

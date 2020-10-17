@@ -1,44 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ABMC_Clientes.Clases;
+﻿using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
 
-namespace ABMC_Clientes.Business
-{
-    class ContactosBusiness
-    {
-        public DataTable mostrarTodos()
-        {
-            ContactoDatos cDatos = new ContactoDatos();
-            return cDatos.mostrarTodos();
-        }
+namespace ABMC_Clientes.Business {
+    public class ContactosBusiness {
+		public Contacto[] Recuperar() {
+			ContactoDatos contactoDatos = new ContactoDatos();
+			return contactoDatos.Recuperar();
+		}
 
-        public void Agregar(Contacto c)
-        {
-            ContactoDatos cDatos = new ContactoDatos();
-            cDatos.insertarContacto(c);
-        }
+		public void Eliminar(int id_Contacto) {
+			ContactoDatos contactoDatos = new ContactoDatos();
+			contactoDatos.Eliminar(id_Contacto);
+		}
 
-        public DataTable consultar(Contacto c)
-        {
-            ContactoDatos cDatos = new ContactoDatos();
-            return cDatos.consultarFiltrados(c.Id_contacto, c.Nombre, c.Apellido, c.Email, c.Telefono);
-        }
+		public void Insertar(Contacto Contacto) {
+			ContactoDatos contactoDatos = new ContactoDatos();
+			contactoDatos.Insertar(Contacto);
+		}
 
-        public void modificar(Contacto c)
-        {
-            ContactoDatos cDatos = new ContactoDatos();
-            cDatos.modificarContacto(c);
-        }
-
-        public void eliminar(int id)
-        {
-            ContactoDatos cDatos = new ContactoDatos();
-            cDatos.eliminarContacto(id);
-        }
-    }
+		public void Actualizar(Contacto Contacto) {
+			ContactoDatos contactoDatos = new ContactoDatos();
+			contactoDatos.Actualizar(Contacto);
+		}
+	}
 }

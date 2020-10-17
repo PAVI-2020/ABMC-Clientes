@@ -1,31 +1,32 @@
 ﻿using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ABMC_Clientes.Business {
-	public class BarrioBusiness{
+	public class BarrioBusiness {
 		public Barrio[] ConsultarBarrios() {
-			return BarrioDatos.RecuperarBarrio();
+			BarrioDatos barrioDatos = new BarrioDatos();
+			return barrioDatos.Recuperar();
 		}
 
 		public Barrio[] ConsultarBarriosFiltrado(int id_barrio = -1, string nombre = "") {
-			return BarrioDatos.RecuperarBarrioFiltrado(id_barrio, nombre);
+			BarrioDatos barrioDatos = new BarrioDatos();
+			//return barrioDatos.RecuperarFiltrado(id_barrio, nombre);
+			return barrioDatos.Recuperar();
 		}
 
 		public void Eliminar(int id_barrio) {
-			BarrioDatos.EliminarBarrio(id_barrio);
+			BarrioDatos barrioDatos = new BarrioDatos();
+			barrioDatos.Eliminar(id_barrio);
 		}
 
 		public void Insertar(Barrio barrio) {
-			BarrioDatos.InsertarBarrio(barrio);
+			BarrioDatos barrioDatos = new BarrioDatos();
+			barrioDatos.Insertar(barrio);
 		}
 
 		public void ActualizarBarrio(Barrio barrio) {
-			BarrioDatos.ActualizarBarrio(barrio);
+			BarrioDatos barrioDatos = new BarrioDatos();
+			barrioDatos.Actualizar(barrio);
 		}
 	}
 }

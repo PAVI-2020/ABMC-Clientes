@@ -1,16 +1,28 @@
-﻿using System.Data;
+﻿using ABMC_Clientes.Clases;
+using System.Collections.Generic;
+using System.Data;
+using System.Reflection;
 
 namespace ABMC_Clientes.DataAccess {
-	public abstract class ObjetoDatos<T> {
-		protected string TABLE;
-		protected string[] FIELDS;
-		protected string PRIMARYKEY; // Estos valores deben ser seteados en el constructor de los derivados
+	public abstract class ObjetoDatos<T> where T : new() {
+		protected string table;
+		protected string[] fields;
+		protected string primaryKey; // Estos valores deben ser seteados en el constructor de los derivados
 
-		string FieldSQL => string.Join(", ", FIELDS);
+		string FieldSQL => string.Join(", ", fields);
+
+		public ObjetoDatos() {
+			table = typeof(T).GetCustomAttribute<SQLTableAttribute>().table;
+			List<string> fieldNames = new List<string>();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+					fieldNames.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName);
+			fields = fieldNames.ToArray();
+		}
 
 		public T[] Recuperar() {
 			Datos datos = new Datos();
-			DataTable tabla = datos.ConsultarTabla(FieldSQL, TABLE);
+			DataTable tabla = datos.ConsultarTabla(FieldSQL, table);
 
 			if (tabla.Rows.Count <= 0)
 				return new T[0];
@@ -20,7 +32,7 @@ namespace ABMC_Clientes.DataAccess {
 
 		public T[] RecuperarCondicion(params string[] condiciones) {
 			Datos datos = new Datos();
-			DataTable tabla = datos.ConsultarTabla(FieldSQL, TABLE, condiciones);
+			DataTable tabla = datos.ConsultarTabla(FieldSQL, table, condiciones);
 
 			if (tabla.Rows.Count <= 0)
 				return new T[0];
@@ -38,21 +50,80 @@ namespace ABMC_Clientes.DataAccess {
 			return ret;
 		}
 
-		public void Eliminar(int keyValue) {
+		protected T Convertir(DataRow input) {
+			T ret = new T();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+					p.SetValue(ret, input[p.GetCustomAttribute<SQLFieldAttribute>().sqlName]);
+
+			return ret;
+		}
+
+		public void Eliminar(params object[] keyValues) {
 			Datos datos = new Datos();
-			string eliminacion = "UPDATE " + TABLE + " SET borrado = 1 WHERE " + PRIMARYKEY + " = " + keyValue;
+			string eliminacion = "UPDATE " + table + " SET borrado = 1 WHERE " + GetPrimaryKeyCondition(keyValues);
 
 			datos.Actualizar(eliminacion);
 		}
 
 		public void Insertar(T objeto) {
 			Datos datos = new Datos();
-			string insercion = "INSERT INTO " + TABLE + " (" + FieldSQL + ") VALUES (" +
-								GetValuesSQL(objeto) + ")";
+			string insercion = "INSERT INTO " + table + " (" + FieldSQL + ") VALUES (" + GetValuesSQL(objeto) + ")";
 			datos.Actualizar(insercion);
 		}
 
-		protected abstract T Convertir(DataRow input);
-		protected abstract string GetValuesSQL(T input);
+		public void Actualizar(T objeto) {
+			Datos datos = new Datos();
+			string actualizacion = "UPDATE " + table + " (" + FieldSQL + ") VALUES (" + GetUpdateValuesSQL(objeto) + ") WHERE " + GetPrimaryKeyCondition(objeto);
+			datos.Actualizar(actualizacion);
+		}
+
+		protected string GetFieldsSQL() {
+			List<string> fields = new List<string>();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName);
+
+			return string.Join(", ", fields);
+		}
+
+		protected string GetValuesSQL(T input) {
+			List<string> fields = new List<string>();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+					fields.Add(p.GetValue(input).ToString());
+
+			return string.Join(", ", fields);
+		}
+
+		protected string GetUpdateValuesSQL(T input) {
+			List<string> fields = new List<string>();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + p.GetValue(input).ToString() + "'");
+
+			return string.Join(", ", fields);
+		}
+
+		protected string GetPrimaryKeyCondition(T input) {
+			List<string> fields = new List<string>();
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.PropertyType.GetCustomAttribute<SQLPrimaryKey>() != null)
+					fields.Add(p.PropertyType.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + p.GetValue(input).ToString() + "'");
+
+			return string.Join(", ", fields);
+		}
+
+		protected string GetPrimaryKeyCondition(params object[] keyValues) {
+			List<string> fields = new List<string>();
+			int i = 0;
+			foreach (PropertyInfo p in typeof(T).GetProperties())
+				if (p.PropertyType.GetCustomAttribute<SQLPrimaryKey>() != null) {
+					fields.Add(p.PropertyType.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + keyValues[i].ToString() + "'");
+					i++;
+				}
+
+			return string.Join(", ", fields);
+		}
 	}
 }

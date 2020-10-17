@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace ABMC_Clientes.Clases {
+	[SQLTable("Clientes")]
+	[SQLSecondaryTable("Barrios", "Clientes.id_barrio = Barrios.id_barrio")]
+	[SQLSecondaryTable("Contactos", "Clientes.id_barrio = Contactos.id_barrio")]
 	public class Cliente {
 		private int id;
 		private string cuit;
@@ -30,16 +33,18 @@ namespace ABMC_Clientes.Clases {
 			this.IdContacto = idContacto;
 		}
 
-		public int Id { get => id; set => id = value; }
-		public string Cuit { get => cuit; set => cuit = value; }
-		public string RazonSocial { get => razonSocial; set => razonSocial = value; }
-		public bool Borrado { get => borrado; set => borrado = value; }
-		public string Calle { get => calle; set => calle = value; }
-		public string Numero { get => numero; set => numero = value; }
-		public DateTime FechaAlta { get => fechaAlta; set => fechaAlta = value; }
-		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
-		public string Contacto { get => nombreContacto; set => nombreContacto = value; }
-		public int IdBarrio { get => idBarrio; set => idBarrio = value; }
-		public int IdContacto { get => idContacto; set => idContacto = value; }
+		[SQLPrimaryKey]
+		[SQLField("id")]			public int Id { get => id; set => id = value; }
+		[SQLField("cuit")]			public string Cuit { get => cuit; set => cuit = value; }
+		[SQLField("razon_social")]	public string RazonSocial { get => razonSocial; set => razonSocial = value; }
+		[SQLField("borrado")]		public bool Borrado { get => borrado; set => borrado = value; }
+		[SQLField("calle")]			public string Calle { get => calle; set => calle = value; }
+		[SQLField("numero")]		public string Numero { get => numero; set => numero = value; }
+		[SQLField("fecha_alta")]	public DateTime FechaAlta { get => fechaAlta; set => fechaAlta = value; }
+		[SQLField("id_barrio")]		public int IdBarrio { get => idBarrio; set => idBarrio = value; }
+		[SQLField("id_contacto")]	public int IdContacto { get => idContacto; set => idContacto = value; }
+
+		[SQLSecondaryField("Barrio.nombre", "barrio")]		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
+		[SQLSecondaryField("Contacto.nombre", "contacto")]	public string Contacto { get => nombreContacto; set => nombreContacto = value; }
 	}
 }

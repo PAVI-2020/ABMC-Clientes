@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ABMC_Clientes.Clases {
+﻿namespace ABMC_Clientes.Clases {
+	[SQLTable("Barrios")]
 	public class Barrio {
 		private int id_barrio;
 		private string nombre;
 		private bool borrado;
 
-		public int Id_barrio { get => id_barrio; set => id_barrio = value; }
-		public string Nombre { get => nombre; set => nombre = value; }
-		public bool Borrado { get => borrado; set => borrado = value; }
+		[SQLPrimaryKey]
+		[SQLField("id_barrio")]	public int Id_barrio { get => id_barrio; set => id_barrio = value; }
+		[SQLField("nombre")]	public string Nombre { get => nombre; set => nombre = value; }
+		[SQLField("borrado")]	public bool Borrado { get => borrado; set => borrado = value; }
 
 		public Barrio() {}
 

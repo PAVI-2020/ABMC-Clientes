@@ -1,4 +1,5 @@
-﻿using ABMC_Clientes.Clases;
+﻿using ABMC_Clientes.Business;
+using ABMC_Clientes.Clases;
 using System;
 using System.Windows.Forms;
 
@@ -61,7 +62,7 @@ namespace ABMC_Clientes.GUI {
 
 		private void frmMainMenu_Load(object sender, EventArgs e) {
 			usuario = LogUser();
-			if (usuario == null) {
+			while (usuario == null) {
 				MessageBox.Show("Acceso denegado");
 				usuario = LogUser();
 			}

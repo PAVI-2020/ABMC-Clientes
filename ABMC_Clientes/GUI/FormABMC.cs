@@ -216,9 +216,8 @@ namespace ABMC_Clientes {
 			operacion = State.None;
 		}
 
-        private void FormABMC_Load(object sender, EventArgs e)
-        {
+		private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e) {
 
-        }
-    }
+		}
+	}
 }

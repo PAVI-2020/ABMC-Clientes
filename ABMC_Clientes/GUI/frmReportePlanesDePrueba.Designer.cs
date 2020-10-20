@@ -24,6 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePlanesDePrueba));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnSalir = new System.Windows.Forms.Button();
 			this.btnImprimir = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
 			this.groupBox1.Size = new System.Drawing.Size(776, 117);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Filtrar por fechas";
+			this.groupBox1.Text = "Filtrar por Usuarios";
 			// 
 			// btnSalir
 			// 
@@ -150,8 +151,9 @@
 			this.Controls.Add(this.rpvPlanesDePrueba);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.groupBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmReportePlanesDePrueba";
-			this.Text = "Form1";
+			this.Text = "Reporte Planes de Prueba por Usuario";
 			this.Load += new System.EventHandler(this.frmReportePlanesDePrueba_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();

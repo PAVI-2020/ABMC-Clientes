@@ -48,5 +48,11 @@ namespace ABMC_Clientes.GUI
             repo.ShowDialog();
             Close();
         }
+
+		private void btnReporteProyectos_Click(object sender, EventArgs e) {
+            frmReporteProyectos repo = new frmReporteProyectos();
+            repo.ShowDialog();
+            Close();
+        }
 	}
 }

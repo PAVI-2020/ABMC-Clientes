@@ -35,6 +35,7 @@
 			this.btnDetalleCiclo = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnReportesPlanDePrueba = new System.Windows.Forms.Button();
+			this.btnReporteProyectos = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -98,6 +99,7 @@
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Controls.Add(this.btnReporteProyectos, 0, 2);
 			this.tableLayoutPanel1.Controls.Add(this.btnReporteClientes, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btnDetalleCiclo, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.btnReporteCiclos, 0, 1);
@@ -126,6 +128,19 @@
 			this.btnReportesPlanDePrueba.UseVisualStyleBackColor = true;
 			this.btnReportesPlanDePrueba.Click += new System.EventHandler(this.btnReportesPlanDePrueba_Click);
 			// 
+			// btnReporteProyectos
+			// 
+			this.btnReporteProyectos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnReporteProyectos.Location = new System.Drawing.Point(3, 141);
+			this.btnReporteProyectos.Name = "btnReporteProyectos";
+			this.btnReporteProyectos.Size = new System.Drawing.Size(252, 58);
+			this.btnReporteProyectos.TabIndex = 5;
+			this.btnReporteProyectos.Text = "Reporte de Proyectos";
+			this.btnReporteProyectos.UseVisualStyleBackColor = true;
+			this.btnReporteProyectos.Click += new System.EventHandler(this.btnReporteProyectos_Click);
+			// 
 			// frmSeleccionReportes
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,5 +163,6 @@
 		private System.Windows.Forms.Button btnDetalleCiclo;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button btnReportesPlanDePrueba;
+		private System.Windows.Forms.Button btnReporteProyectos;
 	}
 }

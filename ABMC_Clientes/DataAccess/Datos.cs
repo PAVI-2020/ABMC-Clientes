@@ -8,7 +8,7 @@ namespace ABMC_Clientes.DataAccess {
 		private SqlCommand comando = new SqlCommand();
 		private SqlTransaction transaccion;
 
-		private string cadenaConexion = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=BugsTracker;Integrated Security=True";
+		private string cadenaConexion = @"Data Source=DESKTOP-99GR7DT\SQLEXPRESS;Initial Catalog=master;Integrated Security=True";
 
 		public string CadenaConexion { get => cadenaConexion; set => cadenaConexion = value; }
 

@@ -1,5 +1,7 @@
 ﻿using ABMC_Clientes.DataAccess;
+using Microsoft.Reporting.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
@@ -28,6 +30,9 @@ namespace ABMC_Clientes.GUI {
 				CicloPruebaBindingSource.DataSource = oDat.ConsultarTabla("c.id_ciclo_prueba, c.fecha_inicio_ejecucion, c.fecha_fin_ejecucion, U.usuario, P.nombre, c.aceptado",
 																	   "CiclosPrueba c Join PlanesDePrueba P on(c.id_plan_prueba = P.id_plan_prueba) Join Usuarios U on(c.id_responsable = U.id_usuario)",
 																	   "c.borrado = 0 AND c.fecha_inicio_ejecucion BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
+				List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };
+
+				reportViewer1.LocalReport.SetParameters(parameters);
 				this.reportViewer1.RefreshReport();
 			}
 		}

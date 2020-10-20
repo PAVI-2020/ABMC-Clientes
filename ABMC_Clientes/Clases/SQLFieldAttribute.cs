@@ -23,6 +23,10 @@ namespace ABMC_Clientes.Clases {
 		public SQLPrimaryKey() { }
 	}
 
+	public class SQLDependency : System.Attribute {
+		public SQLDependency() { }
+	}
+
 	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 	public class SQLTableAttribute : System.Attribute {
 		public string table;

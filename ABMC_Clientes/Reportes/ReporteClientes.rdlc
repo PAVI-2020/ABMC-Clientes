@@ -672,10 +672,6 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>[</Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
                     <Value>=Parameters!prFiltros.Value</Value>
                     <Style />
                   </TextRun>

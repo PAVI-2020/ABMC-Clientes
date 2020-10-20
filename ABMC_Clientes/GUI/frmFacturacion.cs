@@ -194,5 +194,15 @@ namespace ABMC_Clientes.GUI {
         {
             grdDetallesFactura.Rows.Remove(grdDetallesFactura.SelectedRows[0]);
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

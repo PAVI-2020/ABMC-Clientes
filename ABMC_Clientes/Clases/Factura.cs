@@ -46,6 +46,6 @@ namespace ABMC_Clientes.Clases {
 
 		[SQLSecondaryField("Clientes.razon_social", "nombre_cliente")]	public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
 		[SQLSecondaryField("Usuario.usuario", "nombre_creador")]		public string NombreUsuarioCreador { get => nombreUsuarioCreador; set => nombreUsuarioCreador = value; }
-		public DetalleFactura[] Detalles { get => detalles; set => detalles = value; }
+		[SQLDependency]	public DetalleFactura[] Detalles { get => detalles; set => detalles = value; }
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace ABMC_Clientes.GUI
 {
-    partial class frmReporteClientes
+    partial class FormCantidadFacturadaMes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteClientes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -38,13 +35,8 @@
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.rpvClientes = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
-            this.clientesTableAdapter = new ABMC_Clientes.Data_sets.dstGeneralTableAdapters.ClientesTableAdapter();
+            this.rpvCantidadMes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,13 +49,12 @@
             this.groupBox1.Controls.Add(this.dtpFechaHasta);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpFechaDesde);
-            this.groupBox1.Location = new System.Drawing.Point(12, 311);
+            this.groupBox1.Location = new System.Drawing.Point(-2, 350);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(661, 100);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.Size = new System.Drawing.Size(640, 100);
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por fechas";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 
@@ -83,12 +74,11 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnImprimir
             // 
             this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImprimir.Location = new System.Drawing.Point(544, 63);
+            this.btnImprimir.Location = new System.Drawing.Point(523, 63);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 31);
             this.btnImprimir.TabIndex = 3;
@@ -123,50 +113,27 @@
             this.dtpFechaDesde.Size = new System.Drawing.Size(211, 20);
             this.dtpFechaDesde.TabIndex = 0;
             // 
-            // rpvClientes
+            // rpvCantidadMes
             // 
-            this.rpvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "datosTabla";
-            reportDataSource1.Value = this.clientesBindingSource;
-            this.rpvClientes.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpvClientes.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReporteClientes.rdlc";
-            this.rpvClientes.Location = new System.Drawing.Point(0, 0);
-            this.rpvClientes.Name = "rpvClientes";
-            this.rpvClientes.ServerReport.BearerToken = null;
-            this.rpvClientes.Size = new System.Drawing.Size(678, 303);
-            this.rpvClientes.TabIndex = 3;
+            this.rpvCantidadMes.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.CantidadFacturadaMes.rdlc";
+            this.rpvCantidadMes.Location = new System.Drawing.Point(-2, 0);
+            this.rpvCantidadMes.Name = "rpvCantidadMes";
+            this.rpvCantidadMes.ServerReport.BearerToken = null;
+            this.rpvCantidadMes.Size = new System.Drawing.Size(640, 344);
+            this.rpvCantidadMes.TabIndex = 7;
             // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.dstGeneral;
-            // 
-            // dstGeneral
-            // 
-            this.dstGeneral.DataSetName = "dstGeneral";
-            this.dstGeneral.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // frmReporteClientes
+            // FormCantidadFacturadaMes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 423);
-            this.Controls.Add(this.rpvClientes);
+            this.ClientSize = new System.Drawing.Size(638, 450);
+            this.Controls.Add(this.rpvCantidadMes);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmReporteClientes";
-            this.Text = "Reporte Clientes";
-            this.Load += new System.EventHandler(this.frmReporteClientes_Load);
+            this.Name = "FormCantidadFacturadaMes";
+            this.Text = "Cantidad facturada por mes";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,9 +147,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        private Microsoft.Reporting.WinForms.ReportViewer rpvClientes;
-        private Data_sets.dstGeneral dstGeneral;
-        private System.Windows.Forms.BindingSource clientesBindingSource;
-        private Data_sets.dstGeneralTableAdapters.ClientesTableAdapter clientesTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvCantidadMes;
     }
 }

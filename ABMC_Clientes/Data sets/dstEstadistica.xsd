@@ -24,6 +24,61 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProyectosTableAdapter" GeneratorDataComponentClassName="ProyectosTableAdapter" Name="Proyectos" UserDataComponentName="ProyectosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugsTrackerConnectionString1 (Settings)" DbObjectName="BugsTracker.dbo.Proyectos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT P.descripcion, (CONVERT(float, COUNT(P.id_responsable)) / (SELECT(CONVERT(float, COUNT(*))) FROM Proyectos)) * 100 AS Porcentaje FROM dbo.Proyectos P JOIN Usuarios U on (U.id_usuario = P.id_responsable) GROUP BY P.descripcion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="Porcentaje" DataSetColumn="Porcentaje" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturasDetalleTableAdapter" GeneratorDataComponentClassName="FacturasDetalleTableAdapter" Name="FacturasDetalle" UserDataComponentName="FacturasDetalleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugsTrackerConnectionString1 (Settings)" DbObjectName="BugsTracker.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT U.usuario, SUM(FD.precio) as 'Total' FROM dbo.FacturasDetalle FD
+JOIN Facturas F on (FD.id_factura = F.id_factura)
+JOIN Usuarios U on (U.id_usuario = F.id_usuario_creador)
+GROUP BY U.usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturasDetalleTipoCobroTableAdapter" GeneratorDataComponentClassName="FacturasDetalleTipoCobroTableAdapter" Name="FacturasDetalleTipoCobro" UserDataComponentName="FacturasDetalleTipoCobroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugsTrackerConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT (CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))) as 'ciclos', (CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))) as productos, (CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))) as proyectos FROM FacturasDetalle F</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ciclos" DataSetColumn="ciclos" />
+              <Mapping SourceColumn="productos" DataSetColumn="productos" />
+              <Mapping SourceColumn="proyectos" DataSetColumn="proyectos" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -43,6 +98,43 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Total_horas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal_horas" msprop:Generator_ColumnPropNameInRow="Total_horas" msprop:Generator_ColumnPropNameInTable="Total_horasColumn" msprop:Generator_UserColumnName="Total_horas" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proyectos" msprop:Generator_TableClassName="ProyectosDataTable" msprop:Generator_TableVarName="tableProyectos" msprop:Generator_TablePropName="Proyectos" msprop:Generator_RowDeletingName="ProyectosRowDeleting" msprop:Generator_RowChangingName="ProyectosRowChanging" msprop:Generator_RowEvHandlerName="ProyectosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProyectosRowDeleted" msprop:Generator_UserTableName="Proyectos" msprop:Generator_RowChangedName="ProyectosRowChanged" msprop:Generator_RowEvArgName="ProyectosRowChangeEvent" msprop:Generator_RowClassName="ProyectosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Porcentaje" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPorcentaje" msprop:Generator_ColumnPropNameInRow="Porcentaje" msprop:Generator_ColumnPropNameInTable="PorcentajeColumn" msprop:Generator_UserColumnName="Porcentaje" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FacturasDetalle" msprop:Generator_TableClassName="FacturasDetalleDataTable" msprop:Generator_TableVarName="tableFacturasDetalle" msprop:Generator_TablePropName="FacturasDetalle" msprop:Generator_RowDeletingName="FacturasDetalleRowDeleting" msprop:Generator_RowChangingName="FacturasDetalleRowChanging" msprop:Generator_RowEvHandlerName="FacturasDetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturasDetalleRowDeleted" msprop:Generator_UserTableName="FacturasDetalle" msprop:Generator_RowChangedName="FacturasDetalleRowChanged" msprop:Generator_RowEvArgName="FacturasDetalleRowChangeEvent" msprop:Generator_RowClassName="FacturasDetalleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FacturasDetalleTipoCobro" msprop:Generator_TableClassName="FacturasDetalleTipoCobroDataTable" msprop:Generator_TableVarName="tableFacturasDetalleTipoCobro" msprop:Generator_TablePropName="FacturasDetalleTipoCobro" msprop:Generator_RowDeletingName="FacturasDetalleTipoCobroRowDeleting" msprop:Generator_RowChangingName="FacturasDetalleTipoCobroRowChanging" msprop:Generator_RowEvHandlerName="FacturasDetalleTipoCobroRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturasDetalleTipoCobroRowDeleted" msprop:Generator_UserTableName="FacturasDetalleTipoCobro" msprop:Generator_RowChangedName="FacturasDetalleTipoCobroRowChanged" msprop:Generator_RowEvArgName="FacturasDetalleTipoCobroRowChangeEvent" msprop:Generator_RowClassName="FacturasDetalleTipoCobroRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ciclos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnciclos" msprop:Generator_ColumnPropNameInRow="ciclos" msprop:Generator_ColumnPropNameInTable="ciclosColumn" msprop:Generator_UserColumnName="ciclos" type="xs:double" minOccurs="0" />
+              <xs:element name="productos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnproductos" msprop:Generator_ColumnPropNameInRow="productos" msprop:Generator_ColumnPropNameInTable="productosColumn" msprop:Generator_UserColumnName="productos" type="xs:double" minOccurs="0" />
+              <xs:element name="proyectos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnproyectos" msprop:Generator_ColumnPropNameInRow="proyectos" msprop:Generator_ColumnPropNameInTable="proyectosColumn" msprop:Generator_UserColumnName="proyectos" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -65,6 +65,7 @@
 			this.btnDistribucionFacturasporTipoDeCobro.TabIndex = 5;
 			this.btnDistribucionFacturasporTipoDeCobro.Text = "Distribucion de Facturas por Tipo de Cobro";
 			this.btnDistribucionFacturasporTipoDeCobro.UseVisualStyleBackColor = true;
+			this.btnDistribucionFacturasporTipoDeCobro.Click += new System.EventHandler(this.btnDistribucionFacturasporTipoDeCobro_Click);
 			// 
 			// button5
 			// 
@@ -77,6 +78,7 @@
 			this.button5.TabIndex = 4;
 			this.button5.Text = "Cantidad Dinero Facturado por Usuario Responsable";
 			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// btnPorcentajeProyectosUsuario
 			// 
@@ -89,6 +91,7 @@
 			this.btnPorcentajeProyectosUsuario.TabIndex = 3;
 			this.btnPorcentajeProyectosUsuario.Text = "Porcentaje de Proyectos por Usuario";
 			this.btnPorcentajeProyectosUsuario.UseVisualStyleBackColor = true;
+			this.btnPorcentajeProyectosUsuario.Click += new System.EventHandler(this.btnPorcentajeProyectosUsuario_Click);
 			// 
 			// btnHorasUsuarioTester
 			// 

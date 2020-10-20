@@ -31,5 +31,23 @@ namespace ABMC_Clientes.GUI {
 			repo.ShowDialog();
 			Close();
 		}
+
+		private void btnPorcentajeProyectosUsuario_Click(object sender, EventArgs e) {
+			frmEstadisticaPorcentajeUsuariosProyectos repo = new frmEstadisticaPorcentajeUsuariosProyectos();
+			repo.ShowDialog();
+			Close();
+		}
+
+		private void button5_Click(object sender, EventArgs e) {
+			frmEstadisticaCantidadRecaudadoUsuario repo = new frmEstadisticaCantidadRecaudadoUsuario();
+			repo.ShowDialog();
+			Close();
+		}
+
+		private void btnDistribucionFacturasporTipoDeCobro_Click(object sender, EventArgs e) {
+			frmEstadisticaPorcentajeTipoCobros repo = new frmEstadisticaPorcentajeTipoCobros();
+			repo.ShowDialog();
+			Close();
+		}
 	}
 }

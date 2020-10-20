@@ -133,6 +133,24 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
+    <Compile Include="GUI\frmEstadisticaPorcentajeTipoCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaPorcentajeTipoCobros.Designer.cs">
+      <DependentUpon>frmEstadisticaPorcentajeTipoCobros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaCantidadRecaudadoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaCantidadRecaudadoUsuario.Designer.cs">
+      <DependentUpon>frmEstadisticaCantidadRecaudadoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaPorcentajeUsuariosProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaPorcentajeUsuariosProyectos.Designer.cs">
+      <DependentUpon>frmEstadisticaPorcentajeUsuariosProyectos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmEstadisticaCantHorasUsuarioTester.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +268,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\frmEstadisticaPorcentajeTipoCobros.resx">
+      <DependentUpon>frmEstadisticaPorcentajeTipoCobros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormCantidadFacturadaMes.resx">
       <DependentUpon>FormCantidadFacturadaMes.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmEstadisticaCantHorasUsuarioTester.resx">
       <DependentUpon>frmEstadisticaCantHorasUsuarioTester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEstadisticaCantidadRecaudadoUsuario.resx">
+      <DependentUpon>frmEstadisticaCantidadRecaudadoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEstadisticaPorcentajeUsuariosProyectos.resx">
+      <DependentUpon>frmEstadisticaPorcentajeUsuariosProyectos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
@@ -320,6 +347,9 @@
     <EmbeddedResource Include="Reportes\PorcentajeClientesBarrio.rdlc" />
     <EmbeddedResource Include="Reportes\CantidadFacturadaMes.rdlc" />
     <EmbeddedResource Include="Reportes\EstadisticaCantidadHorasporUsuarioTester.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticaPorcentajeProyectosUsuario.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticaCantidadRecaudadaporUsuario.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticasPorcentajeTipoDeCobro.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDetalleCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />

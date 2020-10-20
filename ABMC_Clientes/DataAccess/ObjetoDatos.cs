@@ -8,7 +8,7 @@ namespace ABMC_Clientes.DataAccess {
 	public abstract class ObjetoDatos<T> where T : new() {
 		protected string table;
 		protected string[] fields;
-		protected string primaryKey; // Estos valores deben ser seteados en el constructor de los derivados
+		protected string primaryKey;
 
 		string FieldSQL => string.Join(", ", fields);
 

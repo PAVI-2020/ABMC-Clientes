@@ -454,20 +454,51 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>tablaFactura</DataSetName>
-        <Top>0.10583cm</Top>
+        <Top>1.40229cm</Top>
+        <Left>0.21018cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.99204cm</Width>
+        <Width>18.99205cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>[@prFiltros]</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.3525cm</Top>
+        <Left>0.21018cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.72091cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.47718in</Width>
+  <Width>7.55993in</Width>
   <Page>
     <PageHeader>
       <Height>1.57578cm</Height>

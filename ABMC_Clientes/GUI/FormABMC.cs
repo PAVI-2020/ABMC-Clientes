@@ -2,7 +2,6 @@
 using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -14,6 +13,8 @@ namespace ABMC_Clientes {
 		bool nuevo { get { return operacion == State.Nuevo; } }
 		bool consultar { get { return operacion == State.Consultar; } }
 
+		Verificador verificador = new Verificador();
+
 		public FormABMC() {
 			InitializeComponent();
 		}
@@ -22,6 +23,12 @@ namespace ABMC_Clientes {
 			Habilitar(false);
 			RefreshData();
 			ActualizarCampos();
+			verificador.Agregar("Calle", txtCalle);
+			verificador.Agregar("Cuit", txtCuit);
+			verificador.Agregar("Numero", txtNumero);
+			verificador.Agregar("Razon Social", txtRazonSocial);
+			verificador.Agregar("Barrio", cboBarrio);
+			verificador.Agregar("Contacto", cboContacto);
 		}
 
 		void RefreshData() {
@@ -83,7 +90,6 @@ namespace ABMC_Clientes {
 			txtNumero.Text = "";
 			cboBarrio.SelectedIndex = -1;
 			cboContacto.SelectedIndex = -1;
-
 		}
 
 		public void CargarComboOptions(string tabla, string columnas, ComboBox cmb) {
@@ -125,27 +131,21 @@ namespace ABMC_Clientes {
         }
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
-			if (nuevo) {
-				AgregarCliente();
-			} else if (consultar) {
-				ConsultarClientes();
-			}
-			else {
-				ActualizarCliente();
-            }
+			if(verificador.Verificar())
+				if (nuevo) {
+					AgregarCliente();
+				} else if (consultar) {
+					ConsultarClientes();
+				}
+				else {
+					ActualizarCliente();
+				}
 
 			Habilitar(false);
 		}
 
 		void AgregarCliente() {
 			ClienteBusiness cBusiness = new ClienteBusiness();
-			if (txtCuit.Text == "" || txtCalle.Text == "" || txtRazonSocial.Text == "" ||
-				txtNumero.Text == "" || cboBarrio.SelectedIndex == -1 || cboContacto.SelectedIndex == -1) {
-
-				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
-				txtId.Focus();
-				return;
-			}
 
 			Cliente cliente = new Cliente {
 				Id = 0,

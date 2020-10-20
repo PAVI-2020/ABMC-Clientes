@@ -23,73 +23,73 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormABMC));
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtCalle = new System.Windows.Forms.TextBox();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.txtCuit = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_alta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdClientes = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.cboContacto = new System.Windows.Forms.ComboBox();
-            this.cboBarrio = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.grdClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormABMC));
+			this.btnConsultar = new System.Windows.Forms.Button();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtNumero = new System.Windows.Forms.TextBox();
+			this.txtCalle = new System.Windows.Forms.TextBox();
+			this.txtRazonSocial = new System.Windows.Forms.TextBox();
+			this.txtCuit = new System.Windows.Forms.TextBox();
+			this.txtId = new System.Windows.Forms.TextBox();
+			this.btnCancelar = new System.Windows.Forms.Button();
+			this.btnAceptar = new System.Windows.Forms.Button();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnEditar = new System.Windows.Forms.Button();
+			this.btnAgregar = new System.Windows.Forms.Button();
+			this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Fecha_alta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.grdClientes = new System.Windows.Forms.DataGridView();
+			this.btnSalir = new System.Windows.Forms.Button();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+			this.cboBarrio = new System.Windows.Forms.ComboBox();
+			this.cboContacto = new System.Windows.Forms.ComboBox();
+			this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+			((System.ComponentModel.ISupportInitialize)(this.grdClientes)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.tableLayoutPanel1.SuspendLayout();
+			this.tableLayoutPanel2.SuspendLayout();
+			this.tableLayoutPanel3.SuspendLayout();
+			this.tableLayoutPanel4.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// btnConsultar
+			// 
+			this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnConsultar.Location = new System.Drawing.Point(303, 3);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(94, 44);
-            this.btnConsultar.TabIndex = 49;
-            this.btnConsultar.Text = "Consultar Cliente";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnConsultar.FlatAppearance.BorderSize = 0;
+			this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnConsultar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConsultar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnConsultar.Location = new System.Drawing.Point(303, 3);
+			this.btnConsultar.Name = "btnConsultar";
+			this.btnConsultar.Size = new System.Drawing.Size(94, 44);
+			this.btnConsultar.TabIndex = 49;
+			this.btnConsultar.Text = "Consultar Cliente";
+			this.btnConsultar.UseVisualStyleBackColor = false;
+			this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+			// 
+			// label8
+			// 
+			this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
@@ -276,142 +276,142 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelar.Location = new System.Drawing.Point(643, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 44);
-            this.btnCancelar.TabIndex = 31;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
+			this.btnCancelar.FlatAppearance.BorderSize = 0;
+			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCancelar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnCancelar.Location = new System.Drawing.Point(643, 3);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Size = new System.Drawing.Size(94, 44);
+			this.btnCancelar.TabIndex = 31;
+			this.btnCancelar.Text = "Cancelar";
+			this.btnCancelar.UseVisualStyleBackColor = false;
+			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+			// 
+			// btnAceptar
+			// 
+			this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(209)))), ((int)(((byte)(53)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAceptar.Location = new System.Drawing.Point(543, 3);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 44);
-            this.btnAceptar.TabIndex = 30;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(209)))), ((int)(((byte)(53)))));
+			this.btnAceptar.FlatAppearance.BorderSize = 0;
+			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAceptar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnAceptar.Location = new System.Drawing.Point(543, 3);
+			this.btnAceptar.Name = "btnAceptar";
+			this.btnAceptar.Size = new System.Drawing.Size(94, 44);
+			this.btnAceptar.TabIndex = 30;
+			this.btnAceptar.Text = "Aceptar";
+			this.btnAceptar.UseVisualStyleBackColor = false;
+			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+			// 
+			// btnEliminar
+			// 
+			this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEliminar.Location = new System.Drawing.Point(203, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 44);
-            this.btnEliminar.TabIndex = 29;
-            this.btnEliminar.Text = "Eliminar Cliente";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnEliminar.FlatAppearance.BorderSize = 0;
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnEliminar.Location = new System.Drawing.Point(203, 3);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(94, 44);
+			this.btnEliminar.TabIndex = 29;
+			this.btnEliminar.Text = "Eliminar Cliente";
+			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+			// 
+			// btnEditar
+			// 
+			this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEditar.Location = new System.Drawing.Point(103, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(94, 44);
-            this.btnEditar.TabIndex = 28;
-            this.btnEditar.Text = "Editar Cliente";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnEditar.FlatAppearance.BorderSize = 0;
+			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEditar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnEditar.Location = new System.Drawing.Point(103, 3);
+			this.btnEditar.Name = "btnEditar";
+			this.btnEditar.Size = new System.Drawing.Size(94, 44);
+			this.btnEditar.TabIndex = 28;
+			this.btnEditar.Text = "Editar Cliente";
+			this.btnEditar.UseVisualStyleBackColor = false;
+			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+			// 
+			// btnAgregar
+			// 
+			this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAgregar.Location = new System.Drawing.Point(3, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(94, 44);
-            this.btnAgregar.TabIndex = 27;
-            this.btnAgregar.Text = "Agregar Cliente";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // Contacto
-            // 
-            this.Contacto.HeaderText = "Contacto";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.Width = 150;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.Width = 115;
-            // 
-            // Fecha_alta
-            // 
-            this.Fecha_alta.HeaderText = "Fecha de alta";
-            this.Fecha_alta.Name = "Fecha_alta";
-            this.Fecha_alta.Width = 150;
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "Numero";
-            this.Numero.Name = "Numero";
-            // 
-            // Calle
-            // 
-            this.Calle.HeaderText = "Calle";
-            this.Calle.Name = "Calle";
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.HeaderText = "Razon Social";
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.Width = 150;
-            // 
-            // Cuit
-            // 
-            this.Cuit.HeaderText = "Cuit";
-            this.Cuit.Name = "Cuit";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Width = 50;
-            // 
-            // grdClientes
-            // 
-            this.grdClientes.AllowUserToAddRows = false;
-            this.grdClientes.AllowUserToDeleteRows = false;
-            this.grdClientes.AllowUserToResizeRows = false;
-            this.grdClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnAgregar.FlatAppearance.BorderSize = 0;
+			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnAgregar.Location = new System.Drawing.Point(3, 3);
+			this.btnAgregar.Name = "btnAgregar";
+			this.btnAgregar.Size = new System.Drawing.Size(94, 44);
+			this.btnAgregar.TabIndex = 27;
+			this.btnAgregar.Text = "Agregar Cliente";
+			this.btnAgregar.UseVisualStyleBackColor = false;
+			this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+			// 
+			// Contacto
+			// 
+			this.Contacto.HeaderText = "Contacto";
+			this.Contacto.Name = "Contacto";
+			this.Contacto.Width = 150;
+			// 
+			// Barrio
+			// 
+			this.Barrio.HeaderText = "Barrio";
+			this.Barrio.Name = "Barrio";
+			this.Barrio.Width = 115;
+			// 
+			// Fecha_alta
+			// 
+			this.Fecha_alta.HeaderText = "Fecha de alta";
+			this.Fecha_alta.Name = "Fecha_alta";
+			this.Fecha_alta.Width = 150;
+			// 
+			// Numero
+			// 
+			this.Numero.HeaderText = "Numero";
+			this.Numero.Name = "Numero";
+			// 
+			// Calle
+			// 
+			this.Calle.HeaderText = "Calle";
+			this.Calle.Name = "Calle";
+			// 
+			// Razon_Social
+			// 
+			this.Razon_Social.HeaderText = "Razon Social";
+			this.Razon_Social.Name = "Razon_Social";
+			this.Razon_Social.Width = 150;
+			// 
+			// Cuit
+			// 
+			this.Cuit.HeaderText = "Cuit";
+			this.Cuit.Name = "Cuit";
+			// 
+			// Id
+			// 
+			this.Id.HeaderText = "Id";
+			this.Id.Name = "Id";
+			this.Id.Width = 50;
+			// 
+			// grdClientes
+			// 
+			this.grdClientes.AllowUserToAddRows = false;
+			this.grdClientes.AllowUserToDeleteRows = false;
+			this.grdClientes.AllowUserToResizeRows = false;
+			this.grdClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -439,22 +439,22 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSalir.Location = new System.Drawing.Point(883, 3);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(94, 44);
-            this.btnSalir.TabIndex = 32;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
+			this.btnSalir.FlatAppearance.BorderSize = 0;
+			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalir.Font = new System.Drawing.Font("Liberation Sans", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnSalir.Location = new System.Drawing.Point(883, 3);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(94, 44);
+			this.btnSalir.TabIndex = 32;
+			this.btnSalir.Text = "Salir";
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -492,107 +492,107 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dtpFecha, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cboContacto, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.cboBarrio, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtId, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtCuit, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtRazonSocial, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(980, 120);
-            this.tableLayoutPanel2.TabIndex = 1;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.tableLayoutPanel2.ColumnCount = 5;
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+			this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this.dtpFecha, 4, 0);
+			this.tableLayoutPanel2.Controls.Add(this.cboContacto, 4, 2);
+			this.tableLayoutPanel2.Controls.Add(this.cboBarrio, 4, 1);
+			this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.label2, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.label3, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtId, 2, 0);
+			this.tableLayoutPanel2.Controls.Add(this.label7, 3, 2);
+			this.tableLayoutPanel2.Controls.Add(this.txtCuit, 2, 1);
+			this.tableLayoutPanel2.Controls.Add(this.label6, 3, 1);
+			this.tableLayoutPanel2.Controls.Add(this.txtRazonSocial, 2, 2);
+			this.tableLayoutPanel2.Controls.Add(this.label5, 3, 0);
+			this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 3);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+			this.tableLayoutPanel2.RowCount = 4;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(980, 120);
+			this.tableLayoutPanel2.TabIndex = 1;
+			this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+			// 
+			// tableLayoutPanel3
+			// 
+			this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.CustomFormat = "yyyy-MM-dd hh:mm:ss";
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(717, 3);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(260, 20);
-            this.dtpFecha.TabIndex = 50;
-            // 
-            // cboContacto
-            // 
-            this.cboContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.tableLayoutPanel3.ColumnCount = 5;
+			this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel3, 4);
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+			this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+			this.tableLayoutPanel3.Controls.Add(this.txtCalle, 1, 0);
+			this.tableLayoutPanel3.Controls.Add(this.label8, 2, 0);
+			this.tableLayoutPanel3.Controls.Add(this.txtNumero, 3, 0);
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(228, 90);
+			this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+			this.tableLayoutPanel3.RowCount = 1;
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(752, 30);
+			this.tableLayoutPanel3.TabIndex = 52;
+			// 
+			// cboBarrio
+			// 
+			this.cboBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboContacto.BackColor = System.Drawing.SystemColors.Window;
-            this.cboContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboContacto.FormattingEnabled = true;
-            this.cboContacto.Location = new System.Drawing.Point(717, 63);
-            this.cboContacto.Name = "cboContacto";
-            this.cboContacto.Size = new System.Drawing.Size(260, 24);
-            this.cboContacto.TabIndex = 48;
-            // 
-            // cboBarrio
-            // 
-            this.cboBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.cboBarrio.BackColor = System.Drawing.SystemColors.Window;
+			this.cboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cboBarrio.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboBarrio.FormattingEnabled = true;
+			this.cboBarrio.Location = new System.Drawing.Point(717, 33);
+			this.cboBarrio.Name = "cboBarrio";
+			this.cboBarrio.Size = new System.Drawing.Size(260, 23);
+			this.cboBarrio.TabIndex = 47;
+			// 
+			// cboContacto
+			// 
+			this.cboContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboBarrio.BackColor = System.Drawing.SystemColors.Window;
-            this.cboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(717, 33);
-            this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(260, 24);
-            this.cboBarrio.TabIndex = 47;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.cboContacto.BackColor = System.Drawing.SystemColors.Window;
+			this.cboContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cboContacto.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboContacto.FormattingEnabled = true;
+			this.cboContacto.Location = new System.Drawing.Point(717, 63);
+			this.cboContacto.Name = "cboContacto";
+			this.cboContacto.Size = new System.Drawing.Size(260, 23);
+			this.cboContacto.TabIndex = 48;
+			// 
+			// dtpFecha
+			// 
+			this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel3, 4);
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtCalle, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtNumero, 3, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(228, 90);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(752, 30);
-            this.tableLayoutPanel3.TabIndex = 52;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.dtpFecha.CalendarFont = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFecha.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+			this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dtpFecha.Location = new System.Drawing.Point(717, 3);
+			this.dtpFecha.Name = "dtpFecha";
+			this.dtpFecha.Size = new System.Drawing.Size(260, 20);
+			this.dtpFecha.TabIndex = 50;
+			// 
+			// tableLayoutPanel4
+			// 
+			this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 9;

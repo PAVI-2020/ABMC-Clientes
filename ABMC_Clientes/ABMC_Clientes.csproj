@@ -98,6 +98,14 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\SQLFieldAttribute.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Data sets\dstEstadisticas.cs">
+      <DependentUpon>dstEstadisticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data sets\dstEstadisticas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstEstadisticas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data sets\dstGeneral.cs">
       <DependentUpon>dstGeneral.xsd</DependentUpon>
     </Compile>
@@ -119,6 +127,12 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
+    <Compile Include="GUI\FormPorcClientesBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPorcClientesBarrio.Designer.cs">
+      <DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmNuevoCicloPrueba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +214,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\FormPorcClientesBarrio.resx">
+      <DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormReporteDetalleCiclo.resx">
       <DependentUpon>FormReporteDetalleCiclo.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,10 +266,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\PorcentajeClientesBarrio.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDetalleCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFacturas.rdlc" />
+    <None Include="Data sets\dstEstadisticas.xsc">
+      <DependentUpon>dstEstadisticas.xsd</DependentUpon>
+    </None>
+    <None Include="Data sets\dstEstadisticas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstEstadisticas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data sets\dstEstadisticas.xss">
+      <DependentUpon>dstEstadisticas.xsd</DependentUpon>
+    </None>
     <None Include="Data sets\dstGeneral.xsc">
       <DependentUpon>dstGeneral.xsd</DependentUpon>
     </None>

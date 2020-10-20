@@ -788,6 +788,7 @@
   <ReportParameters>
     <ReportParameter Name="prFiltros">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

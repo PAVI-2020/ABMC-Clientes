@@ -7,3 +7,10 @@
 
     }
 }
+
+namespace ABMC_Clientes.Data_sets.dstGeneralTableAdapters {
+    
+    
+    public partial class PlanesDePruebaTableAdapter {
+    }
+}

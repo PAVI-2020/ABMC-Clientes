@@ -6,7 +6,7 @@ namespace ABMC_Clientes.Business {
 	public class ClienteBusiness {
 		public Cliente[] ConsultarClientes() {
 			ClienteDatos clienteDatos = new ClienteDatos();
-			return clienteDatos.Recuperar();
+			return clienteDatos.Recuperar("Clientes.borrado = 0");
 		}
 
 		public Cliente[] ConsultarClientesFiltrado(int id = -1, string cuit = "", string razonSocial = "", string calle = "", string numero = "", DateTime fechaAlta = default(DateTime), int idBarrio = -1, int idContacto = -1) {

@@ -5,7 +5,7 @@ namespace ABMC_Clientes.Business {
     public class ContactosBusiness {
 		public Contacto[] Recuperar() {
 			ContactoDatos contactoDatos = new ContactoDatos();
-			return contactoDatos.Recuperar();
+			return contactoDatos.Recuperar("Contactos.borrado = 0");
 		}
 
 		public void Eliminar(int id_Contacto) {

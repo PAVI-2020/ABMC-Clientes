@@ -42,5 +42,11 @@ namespace ABMC_Clientes.GUI
             repo.ShowDialog();
             Close();
         }
+
+		private void btnReportesPlanDePrueba_Click(object sender, EventArgs e) {
+            frmReportePlanesDePrueba repo = new frmReportePlanesDePrueba();
+            repo.ShowDialog();
+            Close();
+        }
 	}
 }

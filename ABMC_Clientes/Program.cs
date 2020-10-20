@@ -12,7 +12,7 @@ namespace ABMC_Clientes {
 		static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormLogin());
+			Application.Run(new frmMainMenu());
 		}
 	}
 }

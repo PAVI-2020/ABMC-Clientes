@@ -7,11 +7,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d0799886-91a7-48c4-a2ac-67e97bdec2d2</rd:DataSourceID>
+      <rd:DataSourceID>ac111fd8-1f0b-4924-b88a-b24057785c96</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dstGeneral">
+    <DataSet Name="PlanesDePrueba">
       <Query>
         <DataSourceName>dstGeneral</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -41,10 +41,14 @@
           <DataField>borrado</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
+        <Field Name="usuario">
+          <DataField>usuario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dstGeneral</rd:DataSetName>
-        <rd:SchemaPath>E:\Maxi\UTN - Sistemas\PAVI\tp\ABMC_Clientes\Data sets\dstGeneral.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\code\ABMC-Clientes\ABMC_Clientes\Data sets\dstGeneral.xsd</rd:SchemaPath>
         <rd:TableName>PlanesDePrueba</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -71,10 +75,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>prFiltros</rd:DefaultName>
-            <Top>0.55245cm</Top>
-            <Left>1.08162cm</Left>
+            <Top>0.36724cm</Top>
+            <Left>0.73766cm</Left>
             <Height>0.6cm</Height>
-            <Width>11.62812cm</Width>
+            <Width>10.27875cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -85,46 +89,43 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Tablix Name="Tablix5">
+          <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>4.52238cm</Width>
+                  <Width>3.51424cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.95587cm</Width>
+                  <Width>3.17028cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.6065cm</Width>
+                  <Width>3.59424cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.95587cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>4.82833cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.34083cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox37">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID Plan De Prueba</Value>
+                                  <Value>ID Plan de Prueba</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox37</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -140,37 +141,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox39">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>ID Proyecto</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox39</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox41">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -184,7 +155,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox41</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -200,21 +171,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox43">
+                        <Textbox Name="Textbox8">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Nombre de Responsable</Value>
+                                  <Value>Usuario Responsable</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -230,7 +201,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox45">
+                        <Textbox Name="Textbox10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -243,17 +214,8 @@
                               </TextRuns>
                               <Style />
                             </Paragraph>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox45</rd:DefaultName>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -270,7 +232,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.34083cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -289,36 +251,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>id_plan_prueba</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="id_proyecto">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!id_proyecto.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>id_proyecto</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -364,21 +296,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox44">
+                        <Textbox Name="usuario">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!usuario.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <rd:DefaultName>usuario</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -432,7 +364,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -441,15 +372,15 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Detalles" />
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>dstGeneral</DataSetName>
-            <Top>2.08703cm</Top>
-            <Left>1.08162cm</Left>
-            <Height>1.2cm</Height>
-            <Width>17.54062cm</Width>
+            <DataSetName>PlanesDePrueba</DataSetName>
+            <Top>1.6637cm</Top>
+            <Left>0.73766cm</Left>
+            <Height>2.68167cm</Height>
+            <Width>15.10708cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -458,13 +389,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.59375in</Height>
+        <Height>2in</Height>
         <Style />
       </Body>
-      <Width>7.87859in</Width>
+      <Width>6.5in</Width>
       <Page>
         <PageHeader>
-          <Height>1.56104cm</Height>
+          <Height>2.54cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -475,7 +406,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte de Planes de Prueba</Value>
+                      <Value>Reporte de Detalles Ciclos de Prueba</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -486,8 +417,8 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>0.52021cm</Top>
-              <Left>5.08709cm</Left>
+              <Top>0.97cm</Top>
+              <Left>5.35167cm</Left>
               <Height>0.6cm</Height>
               <Width>6.60104cm</Width>
               <Style>
@@ -514,8 +445,8 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.52021cm</Top>
-              <Left>15.17417cm</Left>
+              <Top>0.97cm</Top>
+              <Left>12.62708cm</Left>
               <Height>0.6cm</Height>
               <Width>3.58479cm</Width>
               <ZIndex>1</ZIndex>
@@ -569,5 +500,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>71b172de-9e32-4271-8902-3cad3be6069f</rd:ReportID>
+  <rd:ReportID>fdf0f0d0-6252-4a2a-b635-faa571332764</rd:ReportID>
 </Report>

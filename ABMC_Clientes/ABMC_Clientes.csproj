@@ -127,20 +127,25 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
-
+    <Compile Include="GUI\frmReportePlanesDePrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReportePlanesDePrueba.Designer.cs">
+      <DependentUpon>frmReportePlanesDePrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormCantidadFacturadaMes.cs">
-	<SubType>Form</SubType>
-</Compile>
-<Compile Include="GUI\FormCantidadFacturadaMes.Designer.cs">
-	<DependentUpon>FormCantidadFacturadaMes.cs</DependentUpon>
-</Compile>
-<Compile Include="GUI\FormPorcClientesBarrio.cs">
-	<SubType>Form</SubType>
-</Compile>
-<Compile Include="GUI\FormPorcClientesBarrio.Designer.cs">
-	<DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
-</Compile>
-	<Compile Include="GUI\frmNuevoCicloPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCantidadFacturadaMes.Designer.cs">
+      <DependentUpon>FormCantidadFacturadaMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormPorcClientesBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPorcClientesBarrio.Designer.cs">
+      <DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNuevoCicloPrueba.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmNuevoCicloPrueba.Designer.cs">
@@ -257,8 +262,8 @@
     <EmbeddedResource Include="GUI\frmReporteFacturas.resx">
       <DependentUpon>frmReporteFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmReportePlanesPrueba.resx">
-      <DependentUpon>frmReportePlanesPrueba.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmReportePlanesDePrueba.resx">
+      <DependentUpon>frmReportePlanesDePrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSeleccionReportes.resx">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>
@@ -279,13 +284,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-	  
-	<EmbeddedResource Include="Reportes\PorcentajeClientesBarrio.rdlc" />
-	<EmbeddedResource Include="Reportes\CantidadFacturadaMes.rdlc" />
+    <EmbeddedResource Include="Reportes\PorcentajeClientesBarrio.rdlc" />
+    <EmbeddedResource Include="Reportes\CantidadFacturadaMes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDetalleCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFacturas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteProyectos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportesPlanesDePrueba.rdlc" />
     <None Include="Data sets\dstEstadisticas.xsc">
       <DependentUpon>dstEstadisticas.xsd</DependentUpon>
     </None>

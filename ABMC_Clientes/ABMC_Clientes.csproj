@@ -63,6 +63,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +99,11 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\SQLFieldAttribute.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Data sets\dstEstadistica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstEstadistica.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data sets\dstEstadisticas.cs">
       <DependentUpon>dstEstadisticas.xsd</DependentUpon>
     </Compile>
@@ -127,6 +133,18 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
+    <Compile Include="GUI\frmEstadisticaCantHorasUsuarioTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEstadisticaCantHorasUsuarioTester.Designer.cs">
+      <DependentUpon>frmEstadisticaCantHorasUsuarioTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSeleccionEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSeleccionEstadisticas.Designer.cs">
+      <DependentUpon>frmSeleccionEstadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmReporteProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +274,9 @@
     <EmbeddedResource Include="GUI\FormReporteCiclodePrueba.resx">
       <DependentUpon>FormReporteCiclodePrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEstadisticaCantHorasUsuarioTester.resx">
+      <DependentUpon>frmEstadisticaCantHorasUsuarioTester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmReporteProyectos.resx">
       <DependentUpon>frmReporteProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSeleccionEstadisticas.resx">
+      <DependentUpon>frmSeleccionEstadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSeleccionReportes.resx">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>
@@ -295,12 +319,24 @@
     </Compile>
     <EmbeddedResource Include="Reportes\PorcentajeClientesBarrio.rdlc" />
     <EmbeddedResource Include="Reportes\CantidadFacturadaMes.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticaCantidadHorasporUsuarioTester.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDetalleCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCicloPrueba.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteClientes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFacturas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteProyectos.rdlc" />
     <EmbeddedResource Include="Reportes\ReportesPlanesDePrueba.rdlc" />
+    <None Include="Data sets\dstEstadistica.xsc">
+      <DependentUpon>dstEstadistica.xsd</DependentUpon>
+    </None>
+    <None Include="Data sets\dstEstadistica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstEstadistica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data sets\dstEstadistica.xss">
+      <DependentUpon>dstEstadistica.xsd</DependentUpon>
+    </None>
     <None Include="Data sets\dstEstadisticas.xsc">
       <DependentUpon>dstEstadisticas.xsd</DependentUpon>
     </None>

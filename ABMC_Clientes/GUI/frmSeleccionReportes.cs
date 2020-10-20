@@ -54,5 +54,9 @@ namespace ABMC_Clientes.GUI
             repo.ShowDialog();
             Close();
         }
+
+		private void frmSeleccionReportes_Load(object sender, EventArgs e) {
+
+		}
 	}
 }

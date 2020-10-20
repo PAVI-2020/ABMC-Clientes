@@ -34,8 +34,8 @@
 			this.btnReporteCiclos = new System.Windows.Forms.Button();
 			this.btnDetalleCiclo = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.btnReportesPlanDePrueba = new System.Windows.Forms.Button();
 			this.btnReporteProyectos = new System.Windows.Forms.Button();
+			this.btnReportesPlanDePrueba = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -115,19 +115,6 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 202);
 			this.tableLayoutPanel1.TabIndex = 4;
 			// 
-			// btnReportesPlanDePrueba
-			// 
-			this.btnReportesPlanDePrueba.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnReportesPlanDePrueba.Location = new System.Drawing.Point(261, 141);
-			this.btnReportesPlanDePrueba.Name = "btnReportesPlanDePrueba";
-			this.btnReportesPlanDePrueba.Size = new System.Drawing.Size(252, 58);
-			this.btnReportesPlanDePrueba.TabIndex = 4;
-			this.btnReportesPlanDePrueba.Text = "Reporte de Plan de Prueba";
-			this.btnReportesPlanDePrueba.UseVisualStyleBackColor = true;
-			this.btnReportesPlanDePrueba.Click += new System.EventHandler(this.btnReportesPlanDePrueba_Click);
-			// 
 			// btnReporteProyectos
 			// 
 			this.btnReporteProyectos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -141,6 +128,19 @@
 			this.btnReporteProyectos.UseVisualStyleBackColor = true;
 			this.btnReporteProyectos.Click += new System.EventHandler(this.btnReporteProyectos_Click);
 			// 
+			// btnReportesPlanDePrueba
+			// 
+			this.btnReportesPlanDePrueba.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnReportesPlanDePrueba.Location = new System.Drawing.Point(261, 141);
+			this.btnReportesPlanDePrueba.Name = "btnReportesPlanDePrueba";
+			this.btnReportesPlanDePrueba.Size = new System.Drawing.Size(252, 58);
+			this.btnReportesPlanDePrueba.TabIndex = 4;
+			this.btnReportesPlanDePrueba.Text = "Reporte de Plan de Prueba";
+			this.btnReportesPlanDePrueba.UseVisualStyleBackColor = true;
+			this.btnReportesPlanDePrueba.Click += new System.EventHandler(this.btnReportesPlanDePrueba_Click);
+			// 
 			// frmSeleccionReportes
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +150,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmSeleccionReportes";
 			this.Text = "Realizar un Reporte";
+			this.Load += new System.EventHandler(this.frmSeleccionReportes_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

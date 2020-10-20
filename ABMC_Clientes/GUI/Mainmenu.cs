@@ -67,5 +67,10 @@ namespace ABMC_Clientes.GUI {
 				usuario = LogUser();
 			}
 		}
+
+		private void btnEstadisticas_Click(object sender, EventArgs e) {
+			frmSeleccionEstadisticas frmEs = new frmSeleccionEstadisticas();
+			frmEs.ShowDialog();
+		}
 	}
 }

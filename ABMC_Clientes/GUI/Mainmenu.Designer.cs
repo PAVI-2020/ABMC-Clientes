@@ -34,6 +34,7 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btnReportes = new System.Windows.Forms.Button();
 			this.btnSolicitarCiclo = new System.Windows.Forms.Button();
+			this.btnEstadisticas = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -107,9 +108,9 @@
 			this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnExit.Location = new System.Drawing.Point(231, 135);
+			this.btnExit.Location = new System.Drawing.Point(231, 157);
 			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(223, 27);
+			this.btnExit.Size = new System.Drawing.Size(223, 26);
 			this.btnExit.TabIndex = 5;
 			this.btnExit.Text = "Salir";
 			this.btnExit.UseVisualStyleBackColor = true;
@@ -137,23 +138,25 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.Controls.Add(this.btnAdmClientes, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.btnExit, 1, 5);
 			this.tableLayoutPanel1.Controls.Add(this.btnTransaccion, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btnAdmContactos, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.btnAdmBarrios, 0, 2);
 			this.tableLayoutPanel1.Controls.Add(this.btnAdmPruebas, 0, 3);
 			this.tableLayoutPanel1.Controls.Add(this.btnReportes, 1, 2);
 			this.tableLayoutPanel1.Controls.Add(this.btnSolicitarCiclo, 1, 1);
+			this.tableLayoutPanel1.Controls.Add(this.btnEstadisticas, 1, 3);
+			this.tableLayoutPanel1.Controls.Add(this.btnExit, 1, 6);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 141);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 6;
+			this.tableLayoutPanel1.RowCount = 7;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 165);
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 186);
 			this.tableLayoutPanel1.TabIndex = 7;
 			// 
 			// btnReportes
@@ -182,11 +185,24 @@
 			this.btnSolicitarCiclo.UseVisualStyleBackColor = true;
 			this.btnSolicitarCiclo.Click += new System.EventHandler(this.btnSolicitarCicloPrueba_Click);
 			// 
+			// btnEstadisticas
+			// 
+			this.btnEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnEstadisticas.Location = new System.Drawing.Point(231, 102);
+			this.btnEstadisticas.Name = "btnEstadisticas";
+			this.btnEstadisticas.Size = new System.Drawing.Size(223, 27);
+			this.btnEstadisticas.TabIndex = 9;
+			this.btnEstadisticas.Text = "Estadísticas";
+			this.btnEstadisticas.UseVisualStyleBackColor = true;
+			this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
+			// 
 			// frmMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(456, 318);
+			this.ClientSize = new System.Drawing.Size(456, 331);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.pictureBox1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -212,5 +228,6 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnReportes;
 		private System.Windows.Forms.Button btnSolicitarCiclo;
+		private System.Windows.Forms.Button btnEstadisticas;
 	}
 }

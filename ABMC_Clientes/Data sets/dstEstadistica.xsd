@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstEstadistica" targetNamespace="http://tempuri.org/dstEstadistica.xsd" xmlns:mstns="http://tempuri.org/dstEstadistica.xsd" xmlns="http://tempuri.org/dstEstadistica.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BugsTrackerConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BugsTrackerConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ABMC_Clientes.Properties.Settings.GlobalReference.Default.BugsTrackerConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CiclosPruebaDetalleTableAdapter" GeneratorDataComponentClassName="CiclosPruebaDetalleTableAdapter" Name="CiclosPruebaDetalle" UserDataComponentName="CiclosPruebaDetalleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugsTrackerConnectionString1 (Settings)" DbObjectName="BugsTracker.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  U.usuario, SUM(C.cantidad_horas) AS "Total_horas" FROM dbo.CiclosPruebaDetalle C JOIN Usuarios U on (C.id_usuario_tester = U.id_usuario) GROUP BY U.usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="Total_horas" DataSetColumn="Total_horas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstEstadistica" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dstEstadistica" msprop:Generator_UserDSName="dstEstadistica">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CiclosPruebaDetalle" msprop:Generator_TableClassName="CiclosPruebaDetalleDataTable" msprop:Generator_TableVarName="tableCiclosPruebaDetalle" msprop:Generator_RowChangedName="CiclosPruebaDetalleRowChanged" msprop:Generator_TablePropName="CiclosPruebaDetalle" msprop:Generator_RowDeletingName="CiclosPruebaDetalleRowDeleting" msprop:Generator_RowChangingName="CiclosPruebaDetalleRowChanging" msprop:Generator_RowEvHandlerName="CiclosPruebaDetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="CiclosPruebaDetalleRowDeleted" msprop:Generator_RowClassName="CiclosPruebaDetalleRow" msprop:Generator_UserTableName="CiclosPruebaDetalle" msprop:Generator_RowEvArgName="CiclosPruebaDetalleRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total_horas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal_horas" msprop:Generator_ColumnPropNameInRow="Total_horas" msprop:Generator_ColumnPropNameInTable="Total_horasColumn" msprop:Generator_UserColumnName="Total_horas" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -74,9 +74,9 @@
 			this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnConsultar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnConsultar.FlatAppearance.BorderSize = 0;
-			this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnConsultar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnConsultar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnConsultar.Location = new System.Drawing.Point(303, 3);
@@ -276,9 +276,9 @@
 			this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
+			this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnCancelar.FlatAppearance.BorderSize = 0;
-			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnCancelar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnCancelar.Location = new System.Drawing.Point(643, 3);
@@ -294,9 +294,9 @@
 			this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(209)))), ((int)(((byte)(53)))));
+			this.btnAceptar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnAceptar.FlatAppearance.BorderSize = 0;
-			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnAceptar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnAceptar.Location = new System.Drawing.Point(543, 3);
@@ -312,9 +312,9 @@
 			this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnEliminar.FlatAppearance.BorderSize = 0;
-			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnEliminar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnEliminar.Location = new System.Drawing.Point(203, 3);
@@ -330,9 +330,9 @@
 			this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnEditar.FlatAppearance.BorderSize = 0;
-			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnEditar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEditar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnEditar.Location = new System.Drawing.Point(103, 3);
@@ -348,9 +348,9 @@
 			this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(148)))), ((int)(((byte)(209)))));
+			this.btnAgregar.BackColor = System.Drawing.SystemColors.Control;
 			this.btnAgregar.FlatAppearance.BorderSize = 0;
-			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnAgregar.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAgregar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnAgregar.Location = new System.Drawing.Point(3, 3);
@@ -439,9 +439,9 @@
 			this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
+			this.btnSalir.BackColor = System.Drawing.SystemColors.Control;
 			this.btnSalir.FlatAppearance.BorderSize = 0;
-			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnSalir.Font = new System.Drawing.Font("Liberation Sans", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnSalir.Location = new System.Drawing.Point(883, 3);

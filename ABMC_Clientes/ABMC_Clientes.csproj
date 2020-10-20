@@ -85,6 +85,7 @@
     <Compile Include="Business\BarrioBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Business\Verificador.cs" />
     <Compile Include="Clases\CiclosPrueba.cs" />
     <Compile Include="Clases\CiclosPruebaDetalle.cs" />
     <Compile Include="Clases\Proyecto.cs" />

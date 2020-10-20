@@ -174,5 +174,10 @@ namespace ABMC_Clientes.GUI {
 		private void grdPruebas_SelectionChanged(object sender, EventArgs e) {
 			ActualizarCampos();
 		}
-	}
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -34,6 +34,6 @@ namespace ABMC_Clientes.Clases {
 		[SQLField("aceptado")] public bool Aceptado { get => aceptado; set => aceptado = value; }
 		[SQLField("borrado")] public bool Borrado { get => borrado; set => borrado = value; }
 		public int Usuario { get => usuario; set => usuario = value; }
-		public CiclosPruebaDetalle[] Detalles { get => detalles; set => detalles = value; }
+		[SQLDependency]	public CiclosPruebaDetalle[] Detalles { get => detalles; set => detalles = value; }
 	}
 }

@@ -100,7 +100,7 @@ namespace ABMC_Clientes.DataAccess {
 			List<string> fields = new List<string>();
 			foreach (PropertyInfo p in typeof(T).GetProperties())
 				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
-					fields.Add(p.GetValue(input).ToString());
+					fields.Add("'" + GetValueForSQL(p.GetValue(input)) + "'");
 
 			return string.Join(", ", fields);
 		}

@@ -2,9 +2,10 @@
 <xs:schema id="dstGeneral" targetNamespace="http://tempuri.org/dstGeneral.xsd" xmlns:mstns="http://tempuri.org/dstGeneral.xsd" xmlns="http://tempuri.org/dstGeneral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BugsTrackerConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BugsTrackerConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ABMC_Clientes.Properties.Settings.GlobalReference.Default.BugsTrackerConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="masterConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="masterConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ABMC_Clientes.Properties.Settings.GlobalReference.Default.masterConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClientesTableAdapter" GeneratorDataComponentClassName="ClientesTableAdapter" Name="Clientes" UserDataComponentName="ClientesTableAdapter">
@@ -235,6 +236,27 @@ SELECT id_ciclo_prueba_detalle, id_ciclo_prueba, id_caso_prueba, id_usuario_test
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlanesDePruebaTableAdapter" GeneratorDataComponentClassName="PlanesDePruebaTableAdapter" Name="PlanesDePrueba" UserDataComponentName="PlanesDePruebaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="masterConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id_plan_prueba, id_proyecto, nombre, id_responsable, U.usuario, descripcion, borrado FROM dbo.PlanesDePrueba JOIN Usuarios U on (id_responsable = U.id_usuario)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_plan_prueba" DataSetColumn="id_plan_prueba" />
+              <Mapping SourceColumn="id_proyecto" DataSetColumn="id_proyecto" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="id_responsable" DataSetColumn="id_responsable" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="borrado" DataSetColumn="borrado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -354,6 +376,30 @@ SELECT id_ciclo_prueba_detalle, id_ciclo_prueba, id_caso_prueba, id_usuario_test
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="PlanesDePrueba" msprop:Generator_TableClassName="PlanesDePruebaDataTable" msprop:Generator_TableVarName="tablePlanesDePrueba" msprop:Generator_RowChangedName="PlanesDePruebaRowChanged" msprop:Generator_TablePropName="PlanesDePrueba" msprop:Generator_RowDeletingName="PlanesDePruebaRowDeleting" msprop:Generator_RowChangingName="PlanesDePruebaRowChanging" msprop:Generator_RowEvHandlerName="PlanesDePruebaRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanesDePruebaRowDeleted" msprop:Generator_RowClassName="PlanesDePruebaRow" msprop:Generator_UserTableName="PlanesDePrueba" msprop:Generator_RowEvArgName="PlanesDePruebaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_plan_prueba" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_plan_prueba" msprop:Generator_ColumnPropNameInRow="id_plan_prueba" msprop:Generator_ColumnPropNameInTable="id_plan_pruebaColumn" msprop:Generator_UserColumnName="id_plan_prueba" type="xs:int" />
+              <xs:element name="id_proyecto" msprop:Generator_ColumnVarNameInTable="columnid_proyecto" msprop:Generator_ColumnPropNameInRow="id_proyecto" msprop:Generator_ColumnPropNameInTable="id_proyectoColumn" msprop:Generator_UserColumnName="id_proyecto" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_responsable" msprop:Generator_ColumnVarNameInTable="columnid_responsable" msprop:Generator_ColumnPropNameInRow="id_responsable" msprop:Generator_ColumnPropNameInTable="id_responsableColumn" msprop:Generator_UserColumnName="id_responsable" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="borrado" msprop:Generator_ColumnVarNameInTable="columnborrado" msprop:Generator_ColumnPropNameInRow="borrado" msprop:Generator_ColumnPropNameInTable="borradoColumn" msprop:Generator_UserColumnName="borrado" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -371,6 +417,10 @@ SELECT id_ciclo_prueba_detalle, id_ciclo_prueba, id_caso_prueba, id_usuario_test
     <xs:unique name="CiclosPruebaDetalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:CiclosPruebaDetalle" />
       <xs:field xpath="mstns:id_ciclo_prueba_detalle" />
+    </xs:unique>
+    <xs:unique name="PlanesDePrueba_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlanesDePrueba" />
+      <xs:field xpath="mstns:id_plan_prueba" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

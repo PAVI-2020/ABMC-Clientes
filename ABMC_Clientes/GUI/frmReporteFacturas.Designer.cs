@@ -1,4 +1,5 @@
-﻿namespace ABMC_Clientes.GUI
+﻿
+namespace ABMC_Clientes.GUI
 {
     partial class frmReporteFacturas
     {

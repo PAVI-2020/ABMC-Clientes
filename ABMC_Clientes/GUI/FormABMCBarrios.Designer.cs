@@ -61,9 +61,9 @@
             this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtras.Location = new System.Drawing.Point(466, 3);
+            this.btnAtras.Location = new System.Drawing.Point(465, 3);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(88, 61);
+            this.btnAtras.Size = new System.Drawing.Size(89, 61);
             this.btnAtras.TabIndex = 1;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(3, 3);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(87, 61);
+            this.btnAgregar.Size = new System.Drawing.Size(86, 61);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar Barrio";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(96, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(95, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 61);
             this.btnEliminar.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.Location = new System.Drawing.Point(202, 3);
+            this.btnEditar.Location = new System.Drawing.Point(201, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(96, 61);
             this.btnEditar.TabIndex = 6;
@@ -139,7 +139,7 @@
             this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.Location = new System.Drawing.Point(304, 3);
+            this.btnConsultar.Location = new System.Drawing.Point(303, 3);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(95, 61);
             this.btnConsultar.TabIndex = 7;
@@ -221,7 +221,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.Controls.Add(this.btnAgregar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEliminar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEditar, 2, 0);
@@ -259,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 436);
+            this.ClientSize = new System.Drawing.Size(576, 429);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.grdBarrios);

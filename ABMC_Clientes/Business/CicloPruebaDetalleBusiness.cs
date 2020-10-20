@@ -5,7 +5,7 @@ namespace ABMC_Clientes.Business {
 	public class CicloPruebaDetalleBusiness {
 		public CiclosPruebaDetalle[] ConsultarCiclosPruebaDetalle() {
 			CicloPruebaDetalleDatos cicloPruebaDetalleDatos = new CicloPruebaDetalleDatos();
-			return cicloPruebaDetalleDatos.Recuperar();
+			return cicloPruebaDetalleDatos.Recuperar("CiclosPruebaDetalle.borrado = 0");
 		}
 	}
 }

@@ -5,7 +5,7 @@ namespace ABMC_Clientes.Business {
 	class CicloPruebaBusiness {
 		public CiclosPrueba[] ConsultarCiclosPrueba() {
 			CicloPruebaDatos cicloPruebaDatos = new CicloPruebaDatos();
-			return cicloPruebaDatos.Recuperar();
+			return cicloPruebaDatos.Recuperar("CiclosPrueba.borrado = 0");
 		}
 
 		public void Insertar(CiclosPrueba factura) {

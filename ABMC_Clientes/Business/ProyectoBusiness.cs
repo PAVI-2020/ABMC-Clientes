@@ -5,7 +5,7 @@ namespace ABMC_Clientes.Business {
     public class ProyectoBusiness {
 		public Proyecto[] ConsultarProyectos() {
 			ProyectoDatos datos = new ProyectoDatos();
-			return datos.Recuperar();
+			return datos.Recuperar("Proyectos.borrado = 0");
 		}
 	}
 }

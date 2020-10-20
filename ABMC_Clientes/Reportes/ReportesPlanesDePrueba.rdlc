@@ -102,12 +102,12 @@
                   <Width>3.59424cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.82833cm</Width>
+                  <Width>5.19545cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.34083cm</Height>
+                  <Height>0.6cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -119,7 +119,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>ID Plan de Prueba</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -131,6 +133,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -149,7 +152,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Nombre</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -161,6 +166,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -179,7 +185,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Usuario Responsable</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -191,6 +199,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -209,7 +218,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Descripcion</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -221,6 +232,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>CornflowerBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -232,7 +244,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>1.34083cm</Height>
+                  <Height>0.57354cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -378,9 +390,9 @@
             </TablixRowHierarchy>
             <DataSetName>PlanesDePrueba</DataSetName>
             <Top>1.6637cm</Top>
-            <Left>0.73766cm</Left>
-            <Height>2.68167cm</Height>
-            <Width>15.10708cm</Width>
+            <Left>0.44662cm</Left>
+            <Height>1.17354cm</Height>
+            <Width>15.47421cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -406,7 +418,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte de Detalles Ciclos de Prueba</Value>
+                      <Value>Reporte de Planes de Prueba</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>

@@ -10,5 +10,10 @@ namespace ABMC_Clientes.Business {
 
 			return (ret != null && ret.Password == pass) ? ret : null;
 		}
+
+		public Usuario[] Recuperar() {
+			UsuarioDatos usuarioDatos = new UsuarioDatos();
+			return usuarioDatos.Recuperar("Usuarios.borrado = '0'");
+		}
 	}
 }

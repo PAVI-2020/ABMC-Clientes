@@ -127,6 +127,12 @@
     <Compile Include="DataAccess\ClienteDatos.cs" />
     <Compile Include="DataAccess\Datos.cs" />
     <Compile Include="DataAccess\UsuarioDatos.cs" />
+    <Compile Include="GUI\frmReporteProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmReporteProyectos.Designer.cs">
+      <DependentUpon>frmReporteProyectos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmReportePlanesDePrueba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmReportePlanesDePrueba.resx">
       <DependentUpon>frmReportePlanesDePrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmReporteProyectos.resx">
+      <DependentUpon>frmReporteProyectos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSeleccionReportes.resx">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>

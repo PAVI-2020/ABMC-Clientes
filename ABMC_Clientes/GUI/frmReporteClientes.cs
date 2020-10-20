@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ABMC_Clientes.DataAccess;
-
+using Microsoft.Reporting.WinForms;
 namespace ABMC_Clientes.GUI
 {
     public partial class frmReporteClientes : Form
@@ -16,7 +17,7 @@ namespace ABMC_Clientes.GUI
             // TODO: esta línea de código carga datos en la tabla 'dstGeneral.Clientes' Puede moverla o quitarla según sea necesario.
             this.clientesTableAdapter.Fill(this.dstGeneral.Clientes);
 
-            this.reportViewer1.RefreshReport();
+            this.rpvClientes.RefreshReport();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -33,7 +34,12 @@ namespace ABMC_Clientes.GUI
                 clientesBindingSource.DataSource = oDat.ConsultarTabla("c.id_cliente, c.razon_social, c.cuit, c.calle, c.numero, c.fecha_alta, b.nombre as Barrio, Co.nombre + ' ' + Co.apellido as Contacto, c.borrado",
                                                                        "Clientes c Join Barrios b on(c.id_barrio = b.id_barrio) Join Contactos Co on(Co.id_contacto = c.id_contacto)",
                                                                        "c.borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
-                this.reportViewer1.RefreshReport();
+
+                List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };
+
+                rpvClientes.LocalReport.SetParameters(parameters);
+
+                this.rpvClientes.RefreshReport();
             }
         }
 

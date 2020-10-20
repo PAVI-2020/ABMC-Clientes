@@ -4,7 +4,7 @@ using System.Data;
 namespace ABMC_Clientes.DataAccess {
 	public class UsuarioDatos : ObjetoDatos<Usuario> {
 		public Usuario GetUsuario(string username) {
-			return RecuperarCondicion("usuario = '" + username + "'")[0];
+			return Recuperar("usuario = '" + username + "'")[0];
 		}
 	}
 }

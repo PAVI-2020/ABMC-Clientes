@@ -96,7 +96,6 @@
     <Compile Include="Clases\Prueba.cs" />
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Cliente.cs" />
-    <Compile Include="Clases\SQLClasses.cs" />
     <Compile Include="Clases\SQLFieldAttribute.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Data sets\dstGeneral.cs">

@@ -16,7 +16,7 @@ namespace ABMC_Clientes.DataAccess {
 
 			condiciones = condiciones.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
-			return RecuperarCondicion(condiciones);
+			return Recuperar(condiciones);
 		}
 	}
 }

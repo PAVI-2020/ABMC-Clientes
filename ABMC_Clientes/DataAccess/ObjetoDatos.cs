@@ -1,4 +1,5 @@
 ﻿using ABMC_Clientes.Clases;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
@@ -22,9 +23,9 @@ namespace ABMC_Clientes.DataAccess {
 			fields = fieldNames.ToArray();
 		}
 
-		public T[] Recuperar() {
+		public T[] Recuperar(params string[] condiciones) {
 			Datos datos = new Datos();
-			DataTable tabla = datos.ConsultarTabla(GetSelectSQL(), GetSelectTable());
+			DataTable tabla = datos.ConsultarTabla(GetSelectSQL(), GetSelectTable(), condiciones);
 
 			if (tabla.Rows.Count <= 0)
 				return new T[0];
@@ -53,16 +54,6 @@ namespace ABMC_Clientes.DataAccess {
 
 				return ret;
 			}
-		}
-
-		public T[] RecuperarCondicion(params string[] condiciones) {
-			Datos datos = new Datos();
-			DataTable tabla = datos.ConsultarTabla(FieldSQL, table, condiciones);
-
-			if (tabla.Rows.Count <= 0)
-				return new T[0];
-
-			return BatchConvertir(tabla);
 		}
 
 		public T[] BatchConvertir(DataTable input) {
@@ -101,17 +92,8 @@ namespace ABMC_Clientes.DataAccess {
 
 		public void Actualizar(T objeto) {
 			Datos datos = new Datos();
-			string actualizacion = "UPDATE " + table + " (" + FieldSQL + ") VALUES (" + GetUpdateValuesSQL(objeto) + ") WHERE " + GetPrimaryKeyCondition(objeto);
+			string actualizacion = "UPDATE " + table + " SET " + GetUpdateValuesSQL(objeto) + " WHERE " + GetPrimaryKeyCondition(objeto);
 			datos.Actualizar(actualizacion);
-		}
-
-		protected string GetFieldsSQL() {
-			List<string> fields = new List<string>();
-			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
-					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName);
-
-			return string.Join(", ", fields);
 		}
 
 		protected string GetValuesSQL(T input) {
@@ -126,8 +108,8 @@ namespace ABMC_Clientes.DataAccess {
 		protected string GetUpdateValuesSQL(T input) {
 			List<string> fields = new List<string>();
 			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
-					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + p.GetValue(input).ToString() + "'");
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null && p.GetCustomAttribute<SQLPrimaryKey>() == null)
+					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + GetValueForSQL(p.GetValue(input)) + "'");
 
 			return string.Join(", ", fields);
 		}
@@ -135,8 +117,8 @@ namespace ABMC_Clientes.DataAccess {
 		protected string GetPrimaryKeyCondition(T input) {
 			List<string> fields = new List<string>();
 			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.PropertyType.GetCustomAttribute<SQLPrimaryKey>() != null)
-					fields.Add(p.PropertyType.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + p.GetValue(input).ToString() + "'");
+				if (p.GetCustomAttribute<SQLPrimaryKey>() != null)
+					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + p.GetValue(input).ToString() + "'");
 
 			return string.Join(", ", fields);
 		}
@@ -151,6 +133,15 @@ namespace ABMC_Clientes.DataAccess {
 				}
 
 			return string.Join(", ", fields);
+		}
+
+		protected string GetValueForSQL(object from) {
+			if (from.GetType() == typeof(DateTime))
+				return ((DateTime)from).ToString("yyyy-MM-dd hh:mm:ss");
+			else if (from.GetType() == typeof(bool))
+				return ((bool)from) ? "1" : "0";
+
+			return from.ToString();
 		}
 	}
 }

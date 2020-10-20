@@ -56,10 +56,10 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-			this.cboBarrio = new System.Windows.Forms.ComboBox();
-			this.cboContacto = new System.Windows.Forms.ComboBox();
 			this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+			this.cboContacto = new System.Windows.Forms.ComboBox();
+			this.cboBarrio = new System.Windows.Forms.ComboBox();
+			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
 			((System.ComponentModel.ISupportInitialize)(this.grdClientes)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -525,6 +525,47 @@
 			this.tableLayoutPanel2.TabIndex = 1;
 			this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
 			// 
+			// dtpFecha
+			// 
+			this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dtpFecha.CalendarFont = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFecha.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+			this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dtpFecha.Location = new System.Drawing.Point(717, 3);
+			this.dtpFecha.Name = "dtpFecha";
+			this.dtpFecha.Size = new System.Drawing.Size(260, 20);
+			this.dtpFecha.TabIndex = 50;
+			// 
+			// cboContacto
+			// 
+			this.cboContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.cboContacto.BackColor = System.Drawing.SystemColors.Window;
+			this.cboContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cboContacto.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboContacto.FormattingEnabled = true;
+			this.cboContacto.Location = new System.Drawing.Point(717, 63);
+			this.cboContacto.Name = "cboContacto";
+			this.cboContacto.Size = new System.Drawing.Size(260, 23);
+			this.cboContacto.TabIndex = 48;
+			// 
+			// cboBarrio
+			// 
+			this.cboBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.cboBarrio.BackColor = System.Drawing.SystemColors.Window;
+			this.cboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cboBarrio.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboBarrio.FormattingEnabled = true;
+			this.cboBarrio.Location = new System.Drawing.Point(717, 33);
+			this.cboBarrio.Name = "cboBarrio";
+			this.cboBarrio.Size = new System.Drawing.Size(260, 23);
+			this.cboBarrio.TabIndex = 47;
+			// 
 			// tableLayoutPanel3
 			// 
 			this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -548,47 +589,6 @@
 			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel3.Size = new System.Drawing.Size(752, 30);
 			this.tableLayoutPanel3.TabIndex = 52;
-			// 
-			// cboBarrio
-			// 
-			this.cboBarrio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.cboBarrio.BackColor = System.Drawing.SystemColors.Window;
-			this.cboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cboBarrio.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cboBarrio.FormattingEnabled = true;
-			this.cboBarrio.Location = new System.Drawing.Point(717, 33);
-			this.cboBarrio.Name = "cboBarrio";
-			this.cboBarrio.Size = new System.Drawing.Size(260, 23);
-			this.cboBarrio.TabIndex = 47;
-			// 
-			// cboContacto
-			// 
-			this.cboContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.cboContacto.BackColor = System.Drawing.SystemColors.Window;
-			this.cboContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cboContacto.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cboContacto.FormattingEnabled = true;
-			this.cboContacto.Location = new System.Drawing.Point(717, 63);
-			this.cboContacto.Name = "cboContacto";
-			this.cboContacto.Size = new System.Drawing.Size(260, 23);
-			this.cboContacto.TabIndex = 48;
-			// 
-			// dtpFecha
-			// 
-			this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.dtpFecha.CalendarFont = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtpFecha.CustomFormat = "yyyy-MM-dd hh:mm:ss";
-			this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpFecha.Location = new System.Drawing.Point(717, 3);
-			this.dtpFecha.Name = "dtpFecha";
-			this.dtpFecha.Size = new System.Drawing.Size(260, 20);
-			this.dtpFecha.TabIndex = 50;
 			// 
 			// tableLayoutPanel4
 			// 

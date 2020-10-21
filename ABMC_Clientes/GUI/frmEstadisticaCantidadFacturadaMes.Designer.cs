@@ -1,6 +1,6 @@
 ﻿namespace ABMC_Clientes.GUI
 {
-    partial class FormCantidadFacturadaMes
+    partial class frmEstadisticaCantidadFacturadaMes
     {
         /// <summary>
         /// Required designer variable.

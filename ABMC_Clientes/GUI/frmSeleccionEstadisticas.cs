@@ -15,13 +15,13 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnEstadisticaPorcentajeBarrios_Click(object sender, EventArgs e) {
-			FormPorcClientesBarrio repo = new FormPorcClientesBarrio();
+			frmEstadisticaPorcClientesBarrio repo = new frmEstadisticaPorcClientesBarrio();
 			repo.ShowDialog();
 			Close();
 		}
 
 		private void btnCantHorasMes_Click(object sender, EventArgs e) {
-			FormCantidadFacturadaMes repo = new FormCantidadFacturadaMes();
+			frmEstadisticaCantidadFacturadaMes repo = new frmEstadisticaCantidadFacturadaMes();
 			repo.ShowDialog();
 			Close();
 		}

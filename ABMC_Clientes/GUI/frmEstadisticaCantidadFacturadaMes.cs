@@ -12,9 +12,9 @@ using Microsoft.Reporting.WinForms;
 
 namespace ABMC_Clientes.GUI
 {
-    public partial class FormCantidadFacturadaMes : Form
+    public partial class frmEstadisticaCantidadFacturadaMes : Form
     {
-        public FormCantidadFacturadaMes()
+        public frmEstadisticaCantidadFacturadaMes()
         {
             InitializeComponent();
         }

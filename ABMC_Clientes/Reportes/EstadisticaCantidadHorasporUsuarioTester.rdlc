@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="HorasPorUsuarioTester">
+    <DataSet Name="dstEstadistica">
       <Query>
         <DataSourceName>dstEstadistica</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -28,7 +28,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dstEstadistica</rd:DataSetName>
-        <rd:SchemaPath>D:\code\ABMC-Clientes\ABMC_Clientes\Data sets\dstEstadistica.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\SANTIAGO\Facultad\3k1\Pav\PROYECTOS DE C\tpABMC\ABMC-Clientes\ABMC_Clientes\Data sets\dstEstadistica.xsd</rd:SchemaPath>
         <rd:TableName>CiclosPruebaDetalle</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -413,7 +413,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>HorasPorUsuarioTester</DataSetName>
+            <DataSetName>dstEstadistica</DataSetName>
             <Top>1.13771cm</Top>
             <Left>4.62468cm</Left>
             <Height>5cm</Height>

@@ -1,6 +1,6 @@
 ﻿namespace ABMC_Clientes.GUI
 {
-    partial class FormPorcClientesBarrio
+    partial class frmEstadisticaPorcClientesBarrio
     {
         /// <summary>
         /// Required designer variable.

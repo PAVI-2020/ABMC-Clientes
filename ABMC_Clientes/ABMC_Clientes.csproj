@@ -175,17 +175,17 @@
     <Compile Include="GUI\frmReportePlanesDePrueba.Designer.cs">
       <DependentUpon>frmReportePlanesDePrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormCantidadFacturadaMes.cs">
+    <Compile Include="GUI\frmEstadisticaCantidadFacturadaMes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormCantidadFacturadaMes.Designer.cs">
-      <DependentUpon>FormCantidadFacturadaMes.cs</DependentUpon>
+    <Compile Include="GUI\frmEstadisticaCantidadFacturadaMes.Designer.cs">
+      <DependentUpon>frmEstadisticaCantidadFacturadaMes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormPorcClientesBarrio.cs">
+    <Compile Include="GUI\frmEstadisticaPorcClientesBarrio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormPorcClientesBarrio.Designer.cs">
-      <DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
+    <Compile Include="GUI\frmEstadisticaPorcClientesBarrio.Designer.cs">
+      <DependentUpon>frmEstadisticaPorcClientesBarrio.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmNuevoCicloPrueba.cs">
       <SubType>Form</SubType>
@@ -271,11 +271,11 @@
     <EmbeddedResource Include="GUI\frmEstadisticaPorcentajeTipoCobros.resx">
       <DependentUpon>frmEstadisticaPorcentajeTipoCobros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormCantidadFacturadaMes.resx">
-      <DependentUpon>FormCantidadFacturadaMes.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmEstadisticaCantidadFacturadaMes.resx">
+      <DependentUpon>frmEstadisticaCantidadFacturadaMes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormPorcClientesBarrio.resx">
-      <DependentUpon>FormPorcClientesBarrio.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmEstadisticaPorcClientesBarrio.resx">
+      <DependentUpon>frmEstadisticaPorcClientesBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormReporteDetalleCiclo.resx">
       <DependentUpon>FormReporteDetalleCiclo.cs</DependentUpon>

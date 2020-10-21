@@ -60,7 +60,7 @@
             </Paragraphs>
             <rd:DefaultName>prFiltros</rd:DefaultName>
             <Top>0.24694cm</Top>
-            <Left>4.52438cm</Left>
+            <Left>5.79438cm</Left>
             <Height>0.6cm</Height>
             <Width>7.5cm</Width>
             <Style>
@@ -105,6 +105,8 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -427,6 +429,9 @@
                     </ChartAxisScaleBreak>
                   </ChartAxis>
                 </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
@@ -453,7 +458,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Chart Title</Caption>
+                <Caption />
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -484,7 +489,7 @@
             </ChartNoDataMessage>
             <DataSetName>PorcentajeTipoCobro</DataSetName>
             <Top>0.88222cm</Top>
-            <Left>4.52438cm</Left>
+            <Left>5.79438cm</Left>
             <Height>5.13229cm</Height>
             <Width>7.5cm</Width>
             <ZIndex>1</ZIndex>
@@ -498,10 +503,10 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.46736in</Height>
+        <Height>2.59236in</Height>
         <Style />
       </Body>
-      <Width>6.5in</Width>
+      <Width>7.33333in</Width>
       <Page>
         <PageHeader>
           <Height>2.54cm</Height>
@@ -531,7 +536,7 @@
               <Top>0.46729cm</Top>
               <Left>3.76386cm</Left>
               <Height>1.49945cm</Height>
-              <Width>8.98229cm</Width>
+              <Width>9.90422cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -557,10 +562,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox10</rd:DefaultName>
-              <Top>0.86416cm</Top>
+              <Top>0.46729cm</Top>
               <Left>13.73864cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
+              <Width>4.43146cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>

@@ -135,6 +135,7 @@
 			this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			reportDataSource1.Name = "DataSet1";
 			reportDataSource1.Value = this.CicloPruebaBindingSource;
 			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);

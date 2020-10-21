@@ -16,5 +16,9 @@ namespace ABMC_Clientes.GUI {
 			reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("PorcentajeTipoCobro", Odato.ConsultarTabla("(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))) as 'ciclos', (CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))) as productos, (CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))) as proyectos", "FacturasDetalle F")));
 			this.reportViewer1.RefreshReport();
 		}
+
+		private void btnFiltrar_Click(object sender, EventArgs e) {
+
+		}
 	}
 }

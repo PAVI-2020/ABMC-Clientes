@@ -16,6 +16,9 @@ namespace ABMC_Clientes.GUI {
 
         public frmFacturacion(Usuario usuario) {
             InitializeComponent();
+            cboCiclo.Enabled = false;
+            cboProducto.Enabled = false;
+            cboProyecto.Enabled = false;
             CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
             CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
             CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
@@ -41,6 +44,10 @@ namespace ABMC_Clientes.GUI {
             txtPrecio.Text = "";
             txtNumeroFactura.Text = "";
             grdDetallesFactura.Rows.Clear();
+            cboCiclo.Enabled = false;
+            cboProducto.Enabled = false;
+            cboProyecto.Enabled = false;
+
         }
 
         private void cboTipoCobro_SelectedIndexChanged(object sender, EventArgs e) {

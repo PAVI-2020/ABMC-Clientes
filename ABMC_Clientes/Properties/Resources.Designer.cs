@@ -143,6 +143,16 @@ namespace ABMC_Clientes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icn_print {
+            get {
+                object obj = ResourceManager.GetObject("icn-print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap outline_delete_forever_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("outline_delete_forever_white_36dp", resourceCulture);

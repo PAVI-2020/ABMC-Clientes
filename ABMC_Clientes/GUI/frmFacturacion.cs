@@ -1,7 +1,9 @@
 ﻿using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
+using ABMC_Clientes.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
@@ -74,9 +76,9 @@ namespace ABMC_Clientes.GUI {
         }
 
         private void cboTipoCobro_SelectedIndexChanged(object sender, EventArgs e) {
-            txtIdProducto.Enabled = (cboTipoCobro.SelectedIndex == 0);
-            txtIdProyecto.Enabled = (cboTipoCobro.SelectedIndex == 1);
-            txtIdCiclo.Enabled = (cboTipoCobro.SelectedIndex == 2);
+            cboProducto.Enabled = (cboTipoCobro.SelectedIndex == 0);
+            cboProyecto.Enabled = (cboTipoCobro.SelectedIndex == 1);
+            cboCiclo.Enabled = (cboTipoCobro.SelectedIndex == 2);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -86,8 +88,9 @@ namespace ABMC_Clientes.GUI {
 
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
-            txtNombreProd.Enabled = false;
-            txtNombreProy.Enabled = false;
+            CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
+            CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
+            CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
             txtRazonSocial.Enabled = false;
             txtUsuario.Enabled = false;
             txtFecha.Text = DateTime.Now.ToString();
@@ -97,9 +100,9 @@ namespace ABMC_Clientes.GUI {
 		private void btnAgregar_Click(object sender, EventArgs e) {
             string cobrado = "";
             if (
-                (txtIdProducto.Enabled && txtIdProducto.Text == "") || 
-                (txtIdProyecto.Enabled && txtIdProyecto.Text == "") || 
-                (txtIdCiclo.Enabled && txtIdCiclo.Text == "") || 
+                (cboProducto.Enabled && cboProducto.SelectedIndex == -1) || 
+                (cboProyecto.Enabled && cboProyecto.SelectedIndex == -1) || 
+                (cboCiclo.Enabled && cboCiclo.SelectedIndex == -1) || 
                 (txtPrecio.Text == "") ||
                 (txtNumeroFactura.Text == "") ||
                 (txtIdCliente.Text == "") ||
@@ -111,24 +114,23 @@ namespace ABMC_Clientes.GUI {
                 }
             switch (cboTipoCobro.SelectedIndex) {
                 case 0:
-                    cobrado = txtIdProducto.Text;
+                    cobrado = cboProducto.SelectedValue.ToString();
                     break;
                 case 1:
-                    cobrado = txtIdProyecto.Text;
+                    cobrado = cboProyecto.SelectedValue.ToString();
                     break;
                 case 2:
-                    cobrado = txtIdCiclo.Text;
+                    cobrado = cboCiclo.SelectedValue.ToString();
                     break;
             }
 
             grdDetallesFactura.Rows.Add(grdDetallesFactura.Rows.Count + 1, cboTipoCobro.Text, cobrado, txtPrecio.Text);
             CalcularTotal();
-            txtIdCiclo.Clear();
-            txtIdProducto.Clear();
-            txtIdProyecto.Clear();
-            txtNombreProd.Clear();
-            txtNombreProy.Clear();
-		}
+            cboProducto.SelectedIndex = -1;
+            cboProyecto.SelectedIndex = -1;
+            cboCiclo.SelectedIndex = -1;
+
+        }
 
 		private void btnFacturar_Click(object sender, EventArgs e) {
 
@@ -166,22 +168,6 @@ namespace ABMC_Clientes.GUI {
             ClearFields();
 		}
 
-		private void txtIdProyecto_TextChanged(object sender, EventArgs e) {
-            int id;
-            if (int.TryParse(txtIdProyecto.Text, out id) && proyectosName.ContainsKey(id))
-                txtNombreProy.Text = proyectosName[id];
-            else
-                txtNombreProy.Text = "-";
-		}
-
-		private void txtIdProducto_TextChanged(object sender, EventArgs e) {
-            int id;
-            if (int.TryParse(txtIdProducto.Text, out id) && productosName.ContainsKey(id))
-                txtNombreProd.Text = productosName[id];
-            else
-                txtNombreProd.Text = "-";
-        }
-
 		private void txtIdCliente_TextChanged(object sender, EventArgs e) {
             int id;
             if (int.TryParse(txtIdCliente.Text, out id) && razonesSociales.ContainsKey(id))
@@ -204,5 +190,20 @@ namespace ABMC_Clientes.GUI {
         {
 
         }
+
+        public void CargarComboOptions(string tabla, string columnas, ComboBox cmb)
+        {
+            Datos datos = new Datos();
+
+            DataTable table = datos.ConsultarTabla(columnas, tabla);
+            cmb.DataSource = table;
+            cmb.DisplayMember = table.Columns[1].ColumnName;
+            cmb.ValueMember = table.Columns[0].ColumnName;
+
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb.SelectedIndex = -1;
+            cmb.SelectedValue = -1;
+        }
+
     }
 }

@@ -2,12 +2,9 @@
 using System;
 using System.Data;
 
-namespace ABMC_Clientes.DataAccess
-{
-	public class FacturaDatos
-	{
-		public static Factura[] RecuperarFactura()
-		{
+namespace ABMC_Clientes.DataAccess {
+	public class FacturaDatos {
+		public static Factura[] RecuperarFactura() {
 			string consultaSQL = "F.id_factura, F.numero_factura, F.id_cliente, F.fecha, F.id_usuario_creador, F.borrado, C.razon_social as 'nombre_cliente', U.usuario as 'nombre_usuario' ";
 			string tablasConsulta = "Facturas F JOIN Clientes C on (F.id_cliente = C.id_cliente) JOIN Usuarios U on (F.id_usuario_creador = U.id_usuario)";
 
@@ -20,8 +17,7 @@ namespace ABMC_Clientes.DataAccess
 			return ConvertirFacturas(tablas);
 		}
 
-		public static Factura ConvertirFactura(DataRow input)
-		{
+		public static Factura ConvertirFactura(DataRow input) {
 			Factura f = new Factura(
 				id_factura: (int)input["id_factura"],
 				numero_factura: (string)input["numero_factura"],
@@ -34,24 +30,20 @@ namespace ABMC_Clientes.DataAccess
 			return f;
 		}
 
-		public static Factura[] ConvertirFacturas(DataTable input)
-		{
+		public static Factura[] ConvertirFacturas(DataTable input) {
 			Factura[] ret = new Factura[input.Rows.Count];
 
-			for (int i = 0; i < ret.Length; i++)
-			{
+			for (int i = 0; i < ret.Length; i++) {
 				ret[i] = ConvertirFactura(input.Rows[i]);
 			}
 
 			return ret;
 		}
 
-		public static void InsertarFactura(Factura factura)
-		{
+		public static void InsertarFactura(Factura factura) {
 			Datos datos = new Datos();
 
-			try
-			{
+			try {
 				datos.Open();
 				datos.BeginTransaction();
 
@@ -67,20 +59,17 @@ namespace ABMC_Clientes.DataAccess
 
 				factura.Id_factura = id_factura;
 
-				foreach (DetalleFactura detf in factura.Detalles)
-				{
+				foreach (DetalleFactura detf in factura.Detalles) {
 					detf.Id_factura = id_factura;
 					DetalleFacturaDatos.InsertarDFactura(detf, datos);
 				}
 
 				datos.Commit();
 
-			} catch(Exception e)
-            {
+			} catch(Exception e) {
 				datos.Rollback();
 				throw e;
-            } finally
-            {
+            } finally {
 				datos.Close();
             }
 

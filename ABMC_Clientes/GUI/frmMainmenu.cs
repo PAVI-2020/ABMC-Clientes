@@ -14,7 +14,7 @@ namespace ABMC_Clientes.GUI {
 		private Usuario LogUser() {
 			Usuario currentUsuario = this.usuario;
 			if (currentUsuario == null) {
-				FormLogin login = new FormLogin();
+				frmLogin login = new frmLogin();
 				if (login.ShowDialog() == DialogResult.OK)
 					currentUsuario = login.usuario;
 			}
@@ -32,7 +32,7 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnAdmPruebas_Click(object sender, EventArgs e) {
-			FormABMCPruebas abmcPruebas = new FormABMCPruebas();
+			frmABMCPruebas abmcPruebas = new frmABMCPruebas();
 			abmcPruebas.ShowDialog();
 		}
 
@@ -41,7 +41,7 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void btnAdmContactos_Click(object sender, EventArgs e) {
-			FormABMCContactos abmcContactos = new FormABMCContactos();
+			frmABMCContactos abmcContactos = new frmABMCContactos();
 			abmcContactos.ShowDialog();
 		}
 

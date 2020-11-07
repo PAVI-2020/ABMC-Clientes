@@ -1,5 +1,5 @@
 ﻿namespace ABMC_Clientes.GUI {
-	partial class FormReporteDetalleCiclo {
+	partial class frmReporteDetalleCiclo {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -25,7 +25,7 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteDetalleCiclo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteDetalleCiclo));
             this.CiclosPruebaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dstGeneral = new ABMC_Clientes.Data_sets.dstGeneral();
             this.gbFiltrarFechas = new System.Windows.Forms.GroupBox();

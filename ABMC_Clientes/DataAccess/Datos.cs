@@ -8,7 +8,7 @@ namespace ABMC_Clientes.DataAccess {
 		private SqlCommand comando = new SqlCommand();
 		private SqlTransaction transaccion;
 
-		private string cadenaConexion = @"Data Source=DESKTOP-TPLIF3M\SQLEXPRESS;Initial Catalog=BugsTracker;Persist Security Info=True;User ID=sa;Password=pav";
+		private string cadenaConexion = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=BugsTracker;Integrated Security=True";
 
 		public string CadenaConexion { get => cadenaConexion; set => cadenaConexion = value; }
 
@@ -23,20 +23,17 @@ namespace ABMC_Clientes.DataAccess {
 			conexion.Close();
 		}
 
-		public void BeginTransaction()
-		{
+		public void BeginTransaction() {
 			if (conexion.State == ConnectionState.Open)
 				transaccion = conexion.BeginTransaction();
 		}
 
-		public void Commit()
-		{
+		public void Commit() {
 			if (transaccion != null)
 				transaccion.Commit();
 		}
 
-		public void Rollback()
-		{
+		public void Rollback() {
 			if (transaccion != null)
 				transaccion.Rollback();
 		}
@@ -48,8 +45,7 @@ namespace ABMC_Clientes.DataAccess {
 			Desconectar();
 		}
 
-		public void Close()
-        {
+		public void Close() {
 			Desconectar();
         }
 
@@ -77,13 +73,11 @@ namespace ABMC_Clientes.DataAccess {
 				Conectar();
 		}
 
-		public int EjecutarSQLConTransaccion(string strSQL)
-        {
+		public int EjecutarSQLConTransaccion(string strSQL) {
 			SqlCommand cmd = new SqlCommand();
 
 			int rtdo = 0;
-			try
-			{
+			try {
 				cmd.Connection = conexion;
 				cmd.Transaction = transaccion;
 				cmd.CommandType = CommandType.Text;
@@ -91,26 +85,22 @@ namespace ABMC_Clientes.DataAccess {
 
 				rtdo = cmd.ExecuteNonQuery();
 			}
-			catch (Exception ex)
-			{
+			catch (Exception ex) {
 				throw ex;
 			}
 			return rtdo;
 		}
 
-		public object ConsultaSQLScalar(string strSql)
-		{
+		public object ConsultaSQLScalar(string strSql) {
 			SqlCommand cmd = new SqlCommand();
-			try
-			{
+			try {
 				cmd.Connection = conexion;
 				cmd.Transaction = transaccion;
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = strSql;
 				return cmd.ExecuteScalar();
 			}
-			catch (SqlException ex)
-			{
+			catch (SqlException ex) {
 				throw (ex);
 			}
 		}

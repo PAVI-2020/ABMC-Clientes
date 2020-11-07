@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
-	public partial class FormReporteDetalleCiclo : Form {
-		public FormReporteDetalleCiclo() {
+	public partial class frmReporteDetalleCiclo : Form {
+		public frmReporteDetalleCiclo() {
 			InitializeComponent();
 		}
 

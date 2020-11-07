@@ -1,5 +1,5 @@
 ﻿namespace ABMC_Clientes.GUI {
-	partial class FormLogin {
+	partial class frmLogin {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -23,7 +23,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtUsuario = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();

@@ -4,7 +4,7 @@ using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
 
 namespace ABMC_Clientes.GUI {
-    public partial class FormABMCContactos : Form {
+    public partial class frmABMCContactos : Form {
         ContactosBusiness cBus = new ContactosBusiness();
 
         enum State { None, Nuevo, Consultar }
@@ -13,7 +13,7 @@ namespace ABMC_Clientes.GUI {
         bool nuevo { get { return operacion == State.Nuevo; } }
         bool consultar { get { return operacion == State.Consultar; } }
 
-        public FormABMCContactos() {
+        public frmABMCContactos() {
             InitializeComponent();
         }
 

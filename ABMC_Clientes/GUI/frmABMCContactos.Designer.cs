@@ -1,6 +1,6 @@
 ﻿namespace ABMC_Clientes.GUI
 {
-    partial class FormABMCContactos
+    partial class frmABMCContactos
     {
         /// <summary>
         /// Required designer variable.

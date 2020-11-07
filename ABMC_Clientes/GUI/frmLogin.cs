@@ -4,10 +4,10 @@ using System;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
-	public partial class FormLogin : Form {
+	public partial class frmLogin : Form {
 		public Usuario usuario;
 
-		public FormLogin() {
+		public frmLogin() {
 			InitializeComponent();
 		}
 

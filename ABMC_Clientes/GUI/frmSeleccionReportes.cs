@@ -26,7 +26,7 @@ namespace ABMC_Clientes.GUI
         }
 
 		private void btnReporteCiclos_Click(object sender, EventArgs e) {
-           FormReporteCiclodePrueba repo = new FormReporteCiclodePrueba();
+           frmReporteCiclodePrueba repo = new frmReporteCiclodePrueba();
             repo.ShowDialog();
             this.Close();
         }
@@ -38,7 +38,7 @@ namespace ABMC_Clientes.GUI
 		}
 
 		private void btnDetalleCiclo_Click(object sender, EventArgs e) {
-           FormReporteDetalleCiclo repo = new FormReporteDetalleCiclo();
+           frmReporteDetalleCiclo repo = new frmReporteDetalleCiclo();
             repo.ShowDialog();
             Close();
         }

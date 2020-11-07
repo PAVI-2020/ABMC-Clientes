@@ -69,9 +69,9 @@
 			this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnImprimir.Location = new System.Drawing.Point(585, 49);
+			this.btnImprimir.Location = new System.Drawing.Point(584, 49);
 			this.btnImprimir.Name = "btnImprimir";
-			this.btnImprimir.Size = new System.Drawing.Size(176, 40);
+			this.btnImprimir.Size = new System.Drawing.Size(177, 40);
 			this.btnImprimir.TabIndex = 3;
 			this.btnImprimir.Text = "Imprimir";
 			this.btnImprimir.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
 			this.label1.Location = new System.Drawing.Point(162, 3);
 			this.label1.Margin = new System.Windows.Forms.Padding(3);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(417, 40);
+			this.label1.Size = new System.Drawing.Size(416, 40);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Buscar clientes creados entre";
+			this.label1.Text = "Buscar planes generados por usuario:";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// tableLayoutPanel1
@@ -99,7 +99,7 @@
 			this.tableLayoutPanel1.ColumnCount = 3;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.34899F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.65101F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
 			this.tableLayoutPanel1.Controls.Add(this.btnSalir, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.btnImprimir, 2, 1);
 			this.tableLayoutPanel1.Controls.Add(this.cboUsuarios, 2, 0);
@@ -115,7 +115,7 @@
 			// cboUsuarios
 			// 
 			this.cboUsuarios.FormattingEnabled = true;
-			this.cboUsuarios.Location = new System.Drawing.Point(585, 3);
+			this.cboUsuarios.Location = new System.Drawing.Point(584, 3);
 			this.cboUsuarios.Name = "cboUsuarios";
 			this.cboUsuarios.Size = new System.Drawing.Size(121, 21);
 			this.cboUsuarios.TabIndex = 5;
@@ -123,10 +123,10 @@
 			// rpvPlanesDePrueba
 			// 
 			this.rpvPlanesDePrueba.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.ReportesPlanesDePrueba.rdlc";
-			this.rpvPlanesDePrueba.Location = new System.Drawing.Point(21, 13);
+			this.rpvPlanesDePrueba.Location = new System.Drawing.Point(12, 12);
 			this.rpvPlanesDePrueba.Name = "rpvPlanesDePrueba";
 			this.rpvPlanesDePrueba.ServerReport.BearerToken = null;
-			this.rpvPlanesDePrueba.Size = new System.Drawing.Size(767, 302);
+			this.rpvPlanesDePrueba.Size = new System.Drawing.Size(776, 303);
 			this.rpvPlanesDePrueba.TabIndex = 7;
 			// 
 			// PlanesDePrueba

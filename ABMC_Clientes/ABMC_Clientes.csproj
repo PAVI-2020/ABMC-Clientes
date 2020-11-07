@@ -193,41 +193,41 @@
     <Compile Include="GUI\frmNuevoCicloPrueba.Designer.cs">
       <DependentUpon>frmNuevoCicloPrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormReporteDetalleCiclo.cs">
+    <Compile Include="GUI\frmReporteDetalleCiclo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormReporteDetalleCiclo.Designer.cs">
-      <DependentUpon>FormReporteDetalleCiclo.cs</DependentUpon>
+    <Compile Include="GUI\frmReporteDetalleCiclo.Designer.cs">
+      <DependentUpon>frmReporteDetalleCiclo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormReporteCiclodePrueba.cs">
+    <Compile Include="GUI\frmReporteCiclodePrueba.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormReporteCiclodePrueba.Designer.cs">
-      <DependentUpon>FormReporteCiclodePrueba.cs</DependentUpon>
+    <Compile Include="GUI\frmReporteCiclodePrueba.Designer.cs">
+      <DependentUpon>frmReporteCiclodePrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormABMCBarrios.cs">
+    <Compile Include="GUI\frmABMCBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormABMCBarrios.Designer.cs">
-      <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    <Compile Include="GUI\frmABMCBarrios.Designer.cs">
+      <DependentUpon>frmABMCBarrios.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormABMCContactos.cs">
+    <Compile Include="GUI\frmABMCContactos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormABMCContactos.Designer.cs">
-      <DependentUpon>FormABMCContactos.cs</DependentUpon>
+    <Compile Include="GUI\frmABMCContactos.Designer.cs">
+      <DependentUpon>frmABMCContactos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormABMCPruebas.cs">
+    <Compile Include="GUI\frmABMCPruebas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormABMCPruebas.Designer.cs">
-      <DependentUpon>FormABMCPruebas.cs</DependentUpon>
+    <Compile Include="GUI\frmABMCPruebas.Designer.cs">
+      <DependentUpon>frmABMCPruebas.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormLogin.cs">
+    <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmFacturacion.cs">
       <SubType>Form</SubType>
@@ -253,17 +253,17 @@
     <Compile Include="GUI\frmSeleccionReportes.Designer.cs">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Mainmenu.cs">
+    <Compile Include="GUI\frmMainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Mainmenu.Designer.cs">
-      <DependentUpon>Mainmenu.cs</DependentUpon>
+    <Compile Include="GUI\frmMainmenu.Designer.cs">
+      <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormABMC.cs">
+    <Compile Include="GUI\frmABMC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormABMC.Designer.cs">
-      <DependentUpon>FormABMC.cs</DependentUpon>
+    <Compile Include="GUI\frmABMC.Designer.cs">
+      <DependentUpon>frmABMC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -277,23 +277,23 @@
     <EmbeddedResource Include="GUI\frmEstadisticaPorcClientesBarrio.resx">
       <DependentUpon>frmEstadisticaPorcClientesBarrio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormReporteDetalleCiclo.resx">
-      <DependentUpon>FormReporteDetalleCiclo.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmReporteDetalleCiclo.resx">
+      <DependentUpon>frmReporteDetalleCiclo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormABMCBarrios.resx">
-      <DependentUpon>FormABMCBarrios.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmABMCBarrios.resx">
+      <DependentUpon>frmABMCBarrios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormABMCContactos.resx">
-      <DependentUpon>FormABMCContactos.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmABMCContactos.resx">
+      <DependentUpon>frmABMCContactos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormABMCPruebas.resx">
-      <DependentUpon>FormABMCPruebas.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmABMCPruebas.resx">
+      <DependentUpon>frmABMCPruebas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormReporteCiclodePrueba.resx">
-      <DependentUpon>FormReporteCiclodePrueba.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmReporteCiclodePrueba.resx">
+      <DependentUpon>frmReporteCiclodePrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmEstadisticaCantHorasUsuarioTester.resx">
       <DependentUpon>frmEstadisticaCantHorasUsuarioTester.cs</DependentUpon>
@@ -328,11 +328,11 @@
     <EmbeddedResource Include="GUI\frmSeleccionReportes.resx">
       <DependentUpon>frmSeleccionReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Mainmenu.resx">
-      <DependentUpon>Mainmenu.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmMainmenu.resx">
+      <DependentUpon>frmMainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormABMC.resx">
-      <DependentUpon>FormABMC.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmABMC.resx">
+      <DependentUpon>frmABMC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

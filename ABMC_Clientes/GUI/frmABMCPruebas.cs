@@ -4,14 +4,14 @@ using System;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
-	public partial class FormABMCPruebas : Form {
+	public partial class frmABMCPruebas : Form {
 		enum State { None, Nuevo, Consultar }
 		private State operacion;
 
 		bool nuevo { get { return operacion == State.Nuevo; } }
 		bool consultar { get { return operacion == State.Consultar; } }
 
-		public FormABMCPruebas() {
+		public frmABMCPruebas() {
 			InitializeComponent();
 		}
 

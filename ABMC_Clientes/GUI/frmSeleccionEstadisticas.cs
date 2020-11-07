@@ -36,5 +36,10 @@ namespace ABMC_Clientes.GUI {
 			frmEstadisticaPorcentajeTipoCobros repo = new frmEstadisticaPorcentajeTipoCobros();
 			repo.ShowDialog();
 		}
-	}
+
+        private void frmSeleccionEstadisticas_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

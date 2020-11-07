@@ -41,11 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grdContactos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -55,6 +50,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdContactos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -69,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarContacto.Location = new System.Drawing.Point(3, 3);
             this.btnAgregarContacto.Name = "btnAgregarContacto";
-            this.btnAgregarContacto.Size = new System.Drawing.Size(135, 50);
+            this.btnAgregarContacto.Size = new System.Drawing.Size(134, 50);
             this.btnAgregarContacto.TabIndex = 0;
             this.btnAgregarContacto.Text = "Nuevo Contacto";
             this.btnAgregarContacto.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             this.btnEditarContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditarContacto.Location = new System.Drawing.Point(144, 3);
+            this.btnEditarContacto.Location = new System.Drawing.Point(143, 3);
             this.btnEditarContacto.Name = "btnEditarContacto";
             this.btnEditarContacto.Size = new System.Drawing.Size(141, 50);
             this.btnEditarContacto.TabIndex = 1;
@@ -93,7 +93,7 @@
             this.btnEliminarContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarContacto.Location = new System.Drawing.Point(291, 3);
+            this.btnEliminarContacto.Location = new System.Drawing.Point(290, 3);
             this.btnEliminarContacto.Name = "btnEliminarContacto";
             this.btnEliminarContacto.Size = new System.Drawing.Size(148, 50);
             this.btnEliminarContacto.TabIndex = 2;
@@ -106,9 +106,9 @@
             this.btnConsultarContacto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultarContacto.Location = new System.Drawing.Point(445, 3);
+            this.btnConsultarContacto.Location = new System.Drawing.Point(444, 3);
             this.btnConsultarContacto.Name = "btnConsultarContacto";
-            this.btnConsultarContacto.Size = new System.Drawing.Size(137, 50);
+            this.btnConsultarContacto.Size = new System.Drawing.Size(138, 50);
             this.btnConsultarContacto.TabIndex = 3;
             this.btnConsultarContacto.Text = "Buscar contacto";
             this.btnConsultarContacto.UseVisualStyleBackColor = true;
@@ -116,14 +116,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(246, 3);
+            this.txtNombre.Location = new System.Drawing.Point(245, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(436, 3);
+            this.txtApellido.Location = new System.Drawing.Point(435, 3);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 5;
@@ -139,7 +139,7 @@
             // 
             this.txtMail.Location = new System.Drawing.Point(52, 58);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(132, 20);
+            this.txtMail.Size = new System.Drawing.Size(131, 20);
             this.txtMail.TabIndex = 7;
             // 
             // lblNom
@@ -148,7 +148,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(190, 3);
+            this.lblNom.Location = new System.Drawing.Point(189, 3);
             this.lblNom.Margin = new System.Windows.Forms.Padding(3);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(50, 49);
@@ -162,7 +162,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(378, 3);
+            this.label1.Location = new System.Drawing.Point(377, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 49);
@@ -209,7 +209,7 @@
             this.Nombre,
             this.Apellido,
             this.Email,
-            this.Telefono});
+            this.Teléfono});
             this.grdContactos.Location = new System.Drawing.Point(14, 19);
             this.grdContactos.Name = "grdContactos";
             this.grdContactos.ReadOnly = true;
@@ -218,41 +218,6 @@
             this.grdContactos.Size = new System.Drawing.Size(565, 186);
             this.grdContactos.TabIndex = 12;
             this.grdContactos.SelectionChanged += new System.EventHandler(this.grdContactos_SelectionChanged);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 107;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 107;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 175;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 120;
             // 
             // groupBox1
             // 
@@ -306,7 +271,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(436, 58);
+            this.txtTelefono.Location = new System.Drawing.Point(435, 58);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(124, 20);
             this.txtTelefono.TabIndex = 17;
@@ -317,12 +282,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(378, 58);
+            this.label4.Location = new System.Drawing.Point(377, 58);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 50);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Telefono:";
+            this.label4.Text = "Teléfono:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tableLayoutPanel1
@@ -331,7 +296,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.95833F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.04167F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.btnAgregarContacto, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEditarContacto, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEliminarContacto, 2, 0);
@@ -339,7 +304,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 9);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 56);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
@@ -351,7 +316,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtTelefono, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 4, 1);
@@ -387,7 +352,42 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(582, 39);
             this.tableLayoutPanel3.TabIndex = 21;
             // 
-            // FormABMCContactos
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 107;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 107;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 175;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Teléfono";
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 120;
+            // 
+            // frmABMCContactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -396,7 +396,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FormABMCContactos";
+            this.Name = "frmABMCContactos";
             this.Text = "FormABMCContactos";
             this.Load += new System.EventHandler(this.FormABMCContactos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdContactos)).EndInit();
@@ -428,15 +428,15 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
     }
 }

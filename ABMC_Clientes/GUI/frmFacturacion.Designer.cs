@@ -102,7 +102,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Numero de factura";
+            this.label2.Text = "Número de factura";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
@@ -127,12 +127,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.CausesValidation = false;
-            this.label5.Location = new System.Drawing.Point(340, 63);
+            this.label5.Location = new System.Drawing.Point(339, 63);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 22);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Razon social";
+            this.label5.Text = "Razón social";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label6
@@ -174,7 +174,7 @@
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(443, 63);
+            this.txtRazonSocial.Location = new System.Drawing.Point(442, 63);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(144, 20);
             this.txtRazonSocial.TabIndex = 9;
@@ -214,7 +214,7 @@
             this.btnQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuitar.Location = new System.Drawing.Point(340, 140);
+            this.btnQuitar.Location = new System.Drawing.Point(339, 140);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(97, 29);
             this.btnQuitar.TabIndex = 15;
@@ -227,9 +227,9 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(443, 140);
+            this.btnAgregar.Location = new System.Drawing.Point(442, 140);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(144, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(145, 29);
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -245,42 +245,42 @@
             this.label13.Location = new System.Drawing.Point(3, 140);
             this.label13.Margin = new System.Windows.Forms.Padding(3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 29);
+            this.label13.Size = new System.Drawing.Size(105, 29);
             this.label13.TabIndex = 13;
             this.label13.Text = "Precio";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(115, 140);
+            this.txtPrecio.Location = new System.Drawing.Point(114, 140);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 12;
             // 
             // txtIdCiclo
             // 
-            this.txtIdCiclo.Location = new System.Drawing.Point(115, 105);
+            this.txtIdCiclo.Location = new System.Drawing.Point(114, 105);
             this.txtIdCiclo.Name = "txtIdCiclo";
             this.txtIdCiclo.Size = new System.Drawing.Size(47, 20);
             this.txtIdCiclo.TabIndex = 11;
             // 
             // txtNombreProd
             // 
-            this.txtNombreProd.Location = new System.Drawing.Point(443, 72);
+            this.txtNombreProd.Location = new System.Drawing.Point(442, 72);
             this.txtNombreProd.Name = "txtNombreProd";
             this.txtNombreProd.Size = new System.Drawing.Size(144, 20);
             this.txtNombreProd.TabIndex = 10;
             // 
             // txtNombreProy
             // 
-            this.txtNombreProy.Location = new System.Drawing.Point(443, 37);
+            this.txtNombreProy.Location = new System.Drawing.Point(442, 37);
             this.txtNombreProy.Name = "txtNombreProy";
             this.txtNombreProy.Size = new System.Drawing.Size(144, 20);
             this.txtNombreProy.TabIndex = 9;
             // 
             // txtIdProducto
             // 
-            this.txtIdProducto.Location = new System.Drawing.Point(115, 72);
+            this.txtIdProducto.Location = new System.Drawing.Point(114, 72);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(47, 20);
             this.txtIdProducto.TabIndex = 8;
@@ -296,7 +296,7 @@
             this.label12.Location = new System.Drawing.Point(3, 105);
             this.label12.Margin = new System.Windows.Forms.Padding(3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 29);
+            this.label12.Size = new System.Drawing.Size(105, 29);
             this.label12.TabIndex = 7;
             this.label12.Text = "Id Ciclo de Prueba";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -308,7 +308,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.CausesValidation = false;
-            this.label11.Location = new System.Drawing.Point(340, 72);
+            this.label11.Location = new System.Drawing.Point(339, 72);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 27);
@@ -326,7 +326,7 @@
             this.label10.Location = new System.Drawing.Point(3, 72);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 27);
+            this.label10.Size = new System.Drawing.Size(105, 27);
             this.label10.TabIndex = 5;
             this.label10.Text = "Id Producto";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -338,7 +338,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.CausesValidation = false;
-            this.label9.Location = new System.Drawing.Point(340, 37);
+            this.label9.Location = new System.Drawing.Point(339, 37);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 29);
@@ -356,14 +356,14 @@
             this.label8.Location = new System.Drawing.Point(3, 37);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 29);
+            this.label8.Size = new System.Drawing.Size(105, 29);
             this.label8.TabIndex = 3;
             this.label8.Text = "Id Proyecto";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtIdProyecto
             // 
-            this.txtIdProyecto.Location = new System.Drawing.Point(115, 37);
+            this.txtIdProyecto.Location = new System.Drawing.Point(114, 37);
             this.txtIdProyecto.Name = "txtIdProyecto";
             this.txtIdProyecto.Size = new System.Drawing.Size(47, 20);
             this.txtIdProyecto.TabIndex = 2;
@@ -376,7 +376,7 @@
             "Por Producto",
             "Por Proyecto",
             "Por Ciclo de Prueba"});
-            this.cboTipoCobro.Location = new System.Drawing.Point(115, 3);
+            this.cboTipoCobro.Location = new System.Drawing.Point(114, 3);
             this.cboTipoCobro.Name = "cboTipoCobro";
             this.cboTipoCobro.Size = new System.Drawing.Size(121, 21);
             this.cboTipoCobro.TabIndex = 1;
@@ -392,7 +392,7 @@
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 28);
+            this.label7.Size = new System.Drawing.Size(105, 28);
             this.label7.TabIndex = 0;
             this.label7.Text = "Tipo De Cobro";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -499,7 +499,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.93769F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.06232F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.Controls.Add(this.txtRazonSocial, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtFecha, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 2);
@@ -527,7 +527,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.23442F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.76558F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel2.Controls.Add(this.btnAgregar, 3, 4);
             this.tableLayoutPanel2.Controls.Add(this.btnQuitar, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);

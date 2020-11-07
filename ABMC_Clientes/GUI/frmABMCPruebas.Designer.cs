@@ -42,16 +42,16 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grdPruebas = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_proyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_proyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPruebas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +65,7 @@
             this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.Location = new System.Drawing.Point(321, 3);
+            this.btnConsultar.Location = new System.Drawing.Point(320, 3);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(115, 45);
             this.btnConsultar.TabIndex = 74;
@@ -80,7 +80,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 69;
-            this.label6.Text = "Descripcion:";
+            this.label6.Text = "Descripción:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
@@ -179,7 +179,7 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(564, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(563, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 45);
             this.btnCancelar.TabIndex = 57;
@@ -192,7 +192,7 @@
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(442, 3);
+            this.btnAceptar.Location = new System.Drawing.Point(441, 3);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(116, 45);
             this.btnAceptar.TabIndex = 56;
@@ -205,7 +205,7 @@
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(211, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(210, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 45);
             this.btnEliminar.TabIndex = 55;
@@ -220,7 +220,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Location = new System.Drawing.Point(103, 3);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(102, 45);
+            this.btnEditar.Size = new System.Drawing.Size(101, 45);
             this.btnEditar.TabIndex = 54;
             this.btnEditar.Text = "Editar Prueba";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -244,9 +244,9 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(689, 3);
+            this.btnSalir.Location = new System.Drawing.Point(688, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 45);
+            this.btnSalir.Size = new System.Drawing.Size(113, 45);
             this.btnSalir.TabIndex = 58;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -290,38 +290,6 @@
             this.grdPruebas.TabIndex = 0;
             this.grdPruebas.SelectionChanged += new System.EventHandler(this.grdPruebas_SelectionChanged);
             // 
-            // Id
-            // 
-            this.Id.FillWeight = 200F;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Width = 50;
-            // 
-            // Id_proyecto
-            // 
-            this.Id_proyecto.HeaderText = "Id_proyecto";
-            this.Id_proyecto.Name = "Id_proyecto";
-            this.Id_proyecto.Width = 110;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 150;
-            // 
-            // id_responsable
-            // 
-            this.id_responsable.FillWeight = 200F;
-            this.id_responsable.HeaderText = "Id responsable";
-            this.id_responsable.Name = "id_responsable";
-            this.id_responsable.Width = 200;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Width = 250;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -351,7 +319,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel1.Controls.Add(this.btnAgregar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEditar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnConsultar, 3, 0);
@@ -406,7 +374,39 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(227, 154);
             this.tableLayoutPanel3.TabIndex = 79;
             // 
-            // FormABMCPruebas
+            // Id
+            // 
+            this.Id.FillWeight = 200F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Width = 50;
+            // 
+            // Id_proyecto
+            // 
+            this.Id_proyecto.HeaderText = "Id_proyecto";
+            this.Id_proyecto.Name = "Id_proyecto";
+            this.Id_proyecto.Width = 110;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 150;
+            // 
+            // id_responsable
+            // 
+            this.id_responsable.FillWeight = 200F;
+            this.id_responsable.HeaderText = "Id responsable";
+            this.id_responsable.Name = "id_responsable";
+            this.id_responsable.Width = 200;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Width = 250;
+            // 
+            // frmABMCPruebas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -417,7 +417,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormABMCPruebas";
+            this.Name = "frmABMCPruebas";
             this.Text = "ABMC Pruebas";
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.groupBox1.ResumeLayout(false);
@@ -454,13 +454,13 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.DataGridView grdPruebas;
 		private System.Windows.Forms.TextBox txtDescripcion;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Id_proyecto;
-		private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-		private System.Windows.Forms.DataGridViewTextBoxColumn id_responsable;
-		private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_proyecto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_responsable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
     }
 }

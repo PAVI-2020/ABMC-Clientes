@@ -51,17 +51,17 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.grdDetalle = new System.Windows.Forms.DataGridView();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnSolicitar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.IDDetalleCicloPrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDCasodePrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDUsuarioTester = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadHoras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaEjecucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdCasoPrueba = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnSolicitar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.gbCicloPrueba.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,7 +89,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.61354F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.38646F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel1.Controls.Add(this.txtNumeroPlanPrueba, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -113,7 +113,7 @@
             // 
             // txtNumeroPlanPrueba
             // 
-            this.txtNumeroPlanPrueba.Location = new System.Drawing.Point(427, 67);
+            this.txtNumeroPlanPrueba.Location = new System.Drawing.Point(426, 67);
             this.txtNumeroPlanPrueba.Name = "txtNumeroPlanPrueba";
             this.txtNumeroPlanPrueba.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroPlanPrueba.TabIndex = 16;
@@ -123,7 +123,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Location = new System.Drawing.Point(282, 67);
+            this.label7.Location = new System.Drawing.Point(281, 67);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 30);
@@ -147,7 +147,7 @@
             // dtpInicioEjecucion
             // 
             this.dtpInicioEjecucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicioEjecucion.Location = new System.Drawing.Point(427, 3);
+            this.dtpInicioEjecucion.Location = new System.Drawing.Point(426, 3);
             this.dtpInicioEjecucion.Name = "dtpInicioEjecucion";
             this.dtpInicioEjecucion.Size = new System.Drawing.Size(100, 20);
             this.dtpInicioEjecucion.TabIndex = 13;
@@ -186,7 +186,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Location = new System.Drawing.Point(282, 34);
+            this.label5.Location = new System.Drawing.Point(281, 34);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 27);
@@ -212,7 +212,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Location = new System.Drawing.Point(282, 3);
+            this.label6.Location = new System.Drawing.Point(281, 3);
             this.label6.Margin = new System.Windows.Forms.Padding(3);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 25);
@@ -230,7 +230,7 @@
             // dtpFinEjecucion
             // 
             this.dtpFinEjecucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFinEjecucion.Location = new System.Drawing.Point(427, 34);
+            this.dtpFinEjecucion.Location = new System.Drawing.Point(426, 34);
             this.dtpFinEjecucion.Name = "dtpFinEjecucion";
             this.dtpFinEjecucion.Size = new System.Drawing.Size(100, 20);
             this.dtpFinEjecucion.TabIndex = 14;
@@ -253,7 +253,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34884F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.65116F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.Controls.Add(this.btnAgregar, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnQuitar, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.dtpFechaEjecucion, 3, 0);
@@ -279,9 +279,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.AutoSize = true;
-            this.btnAgregar.Location = new System.Drawing.Point(430, 77);
+            this.btnAgregar.Location = new System.Drawing.Point(429, 77);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(121, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(122, 35);
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.btnQuitar.AutoSize = true;
             this.btnQuitar.Location = new System.Drawing.Point(3, 77);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(122, 35);
+            this.btnQuitar.Size = new System.Drawing.Size(121, 35);
             this.btnQuitar.TabIndex = 15;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = true;
@@ -303,21 +303,21 @@
             // dtpFechaEjecucion
             // 
             this.dtpFechaEjecucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEjecucion.Location = new System.Drawing.Point(430, 3);
+            this.dtpFechaEjecucion.Location = new System.Drawing.Point(429, 3);
             this.dtpFechaEjecucion.Name = "dtpFechaEjecucion";
             this.dtpFechaEjecucion.Size = new System.Drawing.Size(100, 20);
             this.dtpFechaEjecucion.TabIndex = 16;
             // 
             // txtIdCasoPrueba
             // 
-            this.txtIdCasoPrueba.Location = new System.Drawing.Point(131, 3);
+            this.txtIdCasoPrueba.Location = new System.Drawing.Point(130, 3);
             this.txtIdCasoPrueba.Name = "txtIdCasoPrueba";
             this.txtIdCasoPrueba.Size = new System.Drawing.Size(47, 20);
             this.txtIdCasoPrueba.TabIndex = 18;
             // 
             // txtCantidadHoras
             // 
-            this.txtCantidadHoras.Location = new System.Drawing.Point(430, 40);
+            this.txtCantidadHoras.Location = new System.Drawing.Point(429, 40);
             this.txtCantidadHoras.Name = "txtCantidadHoras";
             this.txtCantidadHoras.Size = new System.Drawing.Size(47, 20);
             this.txtCantidadHoras.TabIndex = 11;
@@ -330,7 +330,7 @@
             this.label11.Location = new System.Drawing.Point(3, 3);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 31);
+            this.label11.Size = new System.Drawing.Size(121, 31);
             this.label11.TabIndex = 17;
             this.label11.Text = "Id Caso de Prueba";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -343,14 +343,14 @@
             this.label10.Location = new System.Drawing.Point(3, 40);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 31);
+            this.label10.Size = new System.Drawing.Size(121, 31);
             this.label10.TabIndex = 5;
             this.label10.Text = "Id Usuario Tester";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtIdUsuarioTester
             // 
-            this.txtIdUsuarioTester.Location = new System.Drawing.Point(131, 40);
+            this.txtIdUsuarioTester.Location = new System.Drawing.Point(130, 40);
             this.txtIdUsuarioTester.Name = "txtIdUsuarioTester";
             this.txtIdUsuarioTester.Size = new System.Drawing.Size(47, 20);
             this.txtIdUsuarioTester.TabIndex = 8;
@@ -360,7 +360,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.Location = new System.Drawing.Point(285, 40);
+            this.label12.Location = new System.Drawing.Point(284, 40);
             this.label12.Margin = new System.Windows.Forms.Padding(3);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(139, 31);
@@ -373,7 +373,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Location = new System.Drawing.Point(285, 3);
+            this.label9.Location = new System.Drawing.Point(284, 3);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 31);
@@ -402,36 +402,6 @@
             this.grdDetalle.Size = new System.Drawing.Size(554, 150);
             this.grdDetalle.TabIndex = 14;
             this.grdDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // IDDetalleCicloPrueba
-            // 
-            this.IDDetalleCicloPrueba.HeaderText = "ID Detalle Ciclo de Prueba";
-            this.IDDetalleCicloPrueba.Name = "IDDetalleCicloPrueba";
-            // 
-            // IDCasodePrueba
-            // 
-            this.IDCasodePrueba.HeaderText = "ID Caso de Prueba";
-            this.IDCasodePrueba.Name = "IDCasodePrueba";
-            // 
-            // IDUsuarioTester
-            // 
-            this.IDUsuarioTester.HeaderText = "ID Usuario Tester";
-            this.IDUsuarioTester.Name = "IDUsuarioTester";
-            // 
-            // CantidadHoras
-            // 
-            this.CantidadHoras.HeaderText = "Cantidad Horas";
-            this.CantidadHoras.Name = "CantidadHoras";
-            // 
-            // FechaEjecucion
-            // 
-            this.FechaEjecucion.HeaderText = "Fecha Ejecucion";
-            this.FechaEjecucion.Name = "FechaEjecucion";
-            // 
-            // IdCasoPrueba
-            // 
-            this.IdCasoPrueba.HeaderText = "Id Caso de Prueba";
-            this.IdCasoPrueba.Name = "IdCasoPrueba";
             // 
             // txtTotal
             // 
@@ -503,6 +473,36 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(223, 68);
             this.tableLayoutPanel3.TabIndex = 20;
             // 
+            // IDDetalleCicloPrueba
+            // 
+            this.IDDetalleCicloPrueba.HeaderText = "ID Detalle Ciclo de Prueba";
+            this.IDDetalleCicloPrueba.Name = "IDDetalleCicloPrueba";
+            // 
+            // IDCasodePrueba
+            // 
+            this.IDCasodePrueba.HeaderText = "ID Caso de Prueba";
+            this.IDCasodePrueba.Name = "IDCasodePrueba";
+            // 
+            // IDUsuarioTester
+            // 
+            this.IDUsuarioTester.HeaderText = "ID Usuario Tester";
+            this.IDUsuarioTester.Name = "IDUsuarioTester";
+            // 
+            // CantidadHoras
+            // 
+            this.CantidadHoras.HeaderText = "Cantidad Horas";
+            this.CantidadHoras.Name = "CantidadHoras";
+            // 
+            // FechaEjecucion
+            // 
+            this.FechaEjecucion.HeaderText = "Fecha Ejecución";
+            this.FechaEjecucion.Name = "FechaEjecucion";
+            // 
+            // IdCasoPrueba
+            // 
+            this.IdCasoPrueba.HeaderText = "Id Caso de Prueba";
+            this.IdCasoPrueba.Name = "IdCasoPrueba";
+            // 
             // frmNuevoCicloPrueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,14 +559,14 @@
 		private System.Windows.Forms.Button btnSolicitar;
 		private System.Windows.Forms.TextBox txtIdCasoPrueba;
 		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDDetalleCicloPrueba;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDCasodePrueba;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IDUsuarioTester;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CantidadHoras;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FechaEjecucion;
-		private System.Windows.Forms.DataGridViewTextBoxColumn IdCasoPrueba;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDDetalleCicloPrueba;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCasodePrueba;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDUsuarioTester;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadHoras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEjecucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCasoPrueba;
     }
 }

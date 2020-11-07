@@ -16,6 +16,7 @@ namespace ABMC_Clientes.GUI {
 
         public frmFacturacion(Usuario usuario) {
             InitializeComponent();
+            CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
             CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
             CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
             CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
@@ -35,7 +36,7 @@ namespace ABMC_Clientes.GUI {
         }
 
         private void ClearFields() {
-            txtIdCliente.Text = "";
+            cboCliente.SelectedIndex = -1;
             cboTipoCobro.SelectedIndex = -1;
             txtPrecio.Text = "";
             txtNumeroFactura.Text = "";
@@ -55,10 +56,10 @@ namespace ABMC_Clientes.GUI {
 
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
+            CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
             CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
             CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
             CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
-            txtRazonSocial.Enabled = false;
             txtUsuario.Enabled = false;
             txtFecha.Text = DateTime.Now.ToString();
             txtFecha.Enabled = false;
@@ -72,7 +73,7 @@ namespace ABMC_Clientes.GUI {
                 (cboCiclo.Enabled && cboCiclo.SelectedIndex == -1) || 
                 (txtPrecio.Text == "") ||
                 (txtNumeroFactura.Text == "") ||
-                (txtIdCliente.Text == "") ||
+                (cboCliente.SelectedIndex == -1) ||
                 (cboTipoCobro.SelectedIndex == -1)
                 )
                 {
@@ -126,7 +127,7 @@ namespace ABMC_Clientes.GUI {
             }
 
             
-            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(txtIdCliente.Text), Convert.ToDateTime(txtFecha.Text), usuario.IdUsuario, false, txtRazonSocial.Text, txtUsuario.Text, detalles.ToArray());
+            Factura factura = new Factura(0, txtNumeroFactura.Text, Convert.ToInt32(cboCliente.SelectedValue), Convert.ToDateTime(txtFecha.Text), usuario.IdUsuario, false, cboCliente.SelectedText, txtUsuario.Text, detalles.ToArray());
             FacturaBusiness fbus = new FacturaBusiness();
             fbus.CrearFactura(factura);
 
@@ -134,14 +135,6 @@ namespace ABMC_Clientes.GUI {
 
             ClearFields();
 		}
-
-		private void txtIdCliente_TextChanged(object sender, EventArgs e) {
-            int id;
-            if (int.TryParse(txtIdCliente.Text, out id) && razonesSociales.ContainsKey(id))
-                txtRazonSocial.Text = razonesSociales[id];
-            else
-                txtRazonSocial.Text = "-";
-        }
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {

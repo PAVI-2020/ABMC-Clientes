@@ -32,12 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtNumeroFactura = new System.Windows.Forms.TextBox();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,6 +62,7 @@
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboCiclo = new System.Windows.Forms.ComboBox();
+            this.cboCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdDetallesFactura)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -113,23 +111,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cliente - ID";
+            this.label3.Text = "Cliente";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.CausesValidation = false;
-            this.label5.Location = new System.Drawing.Point(338, 63);
-            this.label5.Margin = new System.Windows.Forms.Padding(3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 22);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Razón social";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label6
             // 
@@ -159,21 +142,6 @@
             this.txtNumeroFactura.Name = "txtNumeroFactura";
             this.txtNumeroFactura.Size = new System.Drawing.Size(100, 20);
             this.txtNumeroFactura.TabIndex = 7;
-            // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.Location = new System.Drawing.Point(113, 63);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(45, 20);
-            this.txtIdCliente.TabIndex = 8;
-            this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
-            // 
-            // txtRazonSocial
-            // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(441, 63);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(144, 20);
-            this.txtRazonSocial.TabIndex = 9;
             // 
             // txtFecha
             // 
@@ -414,12 +382,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.06232F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
-            this.tableLayoutPanel1.Controls.Add(this.txtRazonSocial, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cboCliente, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtFecha, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUsuario, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtIdCliente, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNumeroFactura, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
@@ -521,6 +487,14 @@
             this.cboCiclo.Size = new System.Drawing.Size(143, 21);
             this.cboCiclo.TabIndex = 19;
             // 
+            // cboCliente
+            // 
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Location = new System.Drawing.Point(113, 63);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(143, 21);
+            this.cboCliente.TabIndex = 20;
+            // 
             // frmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,12 +526,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtNumeroFactura;
-        private System.Windows.Forms.TextBox txtIdCliente;
-        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -585,5 +556,6 @@
         private System.Windows.Forms.ComboBox cboProducto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboCiclo;
+        private System.Windows.Forms.ComboBox cboCliente;
     }
 }

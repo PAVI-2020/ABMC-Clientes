@@ -36,7 +36,7 @@ namespace ABMC_Clientes.GUI {
 
                     rpvCantHorasUsuario.LocalReport.DataSources.Clear();
 
-                    rpvCantHorasUsuario.LocalReport.DataSources.Add(new ReportDataSource("HorasPorUsuarioTester", oDat.ConsultarTabla("U.usuario, SUM(C.cantidad_horas) AS 'Total_horas'", " CiclosPruebaDetalle C JOIN Usuarios U on (C.id_usuario_tester = U.id_usuario)", "C.borrado = 0 GROUP BY U.usuario AND C.fecha_ejecucion BETWEEN "+dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") +" AND "+ dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss"))));
+                    rpvCantHorasUsuario.LocalReport.DataSources.Add(new ReportDataSource("HorasPorUsuarioTester", oDat.ConsultarTabla("U.usuario, SUM(C.cantidad_horas) AS 'Total_horas'", " CiclosPruebaDetalle C JOIN Usuarios U on (C.id_usuario_tester = U.id_usuario)", "C.borrado = 0 GROUP BY U.usuario AND C.fecha_ejecucion BETWEEN '"+dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") +"' AND '"+ dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss")+"'")));
                     rpvCantHorasUsuario.RefreshReport();
 
                     List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };

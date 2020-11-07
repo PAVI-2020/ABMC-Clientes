@@ -3,6 +3,7 @@ using ABMC_Clientes.Clases;
 using ABMC_Clientes.DataAccess;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes {
@@ -215,7 +216,5 @@ namespace ABMC_Clientes {
 			Habilitar(false);
 			operacion = State.None;
 		}
-
-       
-    }
+	}
 }

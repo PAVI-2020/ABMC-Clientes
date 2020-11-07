@@ -23,117 +23,130 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaCantidadRecaudadoUsuario));
-            this.rpvCantDineroPorUsuario = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.gbFiltrarFechas = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.lblCiclos = new System.Windows.Forms.Label();
-            this.gbFiltrarFechas.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // rpvCantDineroPorUsuario
-            // 
-            this.rpvCantDineroPorUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaCantidadRecaudadoUsuario));
+			this.rpvCantDineroPorUsuario = new Microsoft.Reporting.WinForms.ReportViewer();
+			this.gbFiltrarFechas = new System.Windows.Forms.GroupBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
+			this.btnFiltrar = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
+			this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+			this.lblCiclos = new System.Windows.Forms.Label();
+			this.gbFiltrarFechas.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// rpvCantDineroPorUsuario
+			// 
+			this.rpvCantDineroPorUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rpvCantDineroPorUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rpvCantDineroPorUsuario.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.EstadisticaCantidadRecaudadaporUsuario.rdlc";
-            this.rpvCantDineroPorUsuario.Location = new System.Drawing.Point(0, 0);
-            this.rpvCantDineroPorUsuario.Name = "rpvCantDineroPorUsuario";
-            this.rpvCantDineroPorUsuario.ServerReport.BearerToken = null;
-            this.rpvCantDineroPorUsuario.Size = new System.Drawing.Size(802, 320);
-            this.rpvCantDineroPorUsuario.TabIndex = 0;
-            // 
-            // gbFiltrarFechas
-            // 
-            this.gbFiltrarFechas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.rpvCantDineroPorUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.rpvCantDineroPorUsuario.LocalReport.ReportEmbeddedResource = "ABMC_Clientes.Reportes.EstadisticaCantidadRecaudadaporUsuario.rdlc";
+			this.rpvCantDineroPorUsuario.Location = new System.Drawing.Point(0, 0);
+			this.rpvCantDineroPorUsuario.Name = "rpvCantDineroPorUsuario";
+			this.rpvCantDineroPorUsuario.ServerReport.BearerToken = null;
+			this.rpvCantDineroPorUsuario.Size = new System.Drawing.Size(722, 320);
+			this.rpvCantDineroPorUsuario.TabIndex = 0;
+			// 
+			// gbFiltrarFechas
+			// 
+			this.gbFiltrarFechas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFiltrarFechas.Controls.Add(this.label1);
-            this.gbFiltrarFechas.Controls.Add(this.dtpFechaHasta);
-            this.gbFiltrarFechas.Controls.Add(this.btnFiltrar);
-            this.gbFiltrarFechas.Controls.Add(this.btnExit);
-            this.gbFiltrarFechas.Controls.Add(this.dtpFechaDesde);
-            this.gbFiltrarFechas.Controls.Add(this.lblCiclos);
-            this.gbFiltrarFechas.Location = new System.Drawing.Point(12, 326);
-            this.gbFiltrarFechas.Name = "gbFiltrarFechas";
-            this.gbFiltrarFechas.Size = new System.Drawing.Size(776, 112);
-            this.gbFiltrarFechas.TabIndex = 3;
-            this.gbFiltrarFechas.TabStop = false;
-            this.gbFiltrarFechas.Text = "Filtrar por Fechas";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(291, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "y";
-            // 
-            // dtpFechaHasta
-            // 
-            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(326, 26);
-            this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(127, 20);
-            this.dtpFechaHasta.TabIndex = 9;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFiltrar.Location = new System.Drawing.Point(650, 64);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(120, 38);
-            this.btnFiltrar.TabIndex = 8;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Location = new System.Drawing.Point(17, 64);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(121, 38);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // dtpFechaDesde
-            // 
-            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(138, 26);
-            this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(127, 20);
-            this.dtpFechaDesde.TabIndex = 1;
-            // 
-            // lblCiclos
-            // 
-            this.lblCiclos.AutoSize = true;
-            this.lblCiclos.Location = new System.Drawing.Point(6, 32);
-            this.lblCiclos.Name = "lblCiclos";
-            this.lblCiclos.Size = new System.Drawing.Size(126, 13);
-            this.lblCiclos.TabIndex = 0;
-            this.lblCiclos.Text = "Buscar Facturados entre:";
-            // 
-            // frmEstadisticaCantidadRecaudadoUsuario
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gbFiltrarFechas);
-            this.Controls.Add(this.rpvCantDineroPorUsuario);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmEstadisticaCantidadRecaudadoUsuario";
-            this.Text = "Estadisitca Cantidad de Dinero Recaudado por usuario Responsable";
-            this.Load += new System.EventHandler(this.frmEstadisticaCantidadRecaudadoUsuario_Load);
-            this.gbFiltrarFechas.ResumeLayout(false);
-            this.gbFiltrarFechas.PerformLayout();
-            this.ResumeLayout(false);
+			this.gbFiltrarFechas.Controls.Add(this.label1);
+			this.gbFiltrarFechas.Controls.Add(this.dtpFechaHasta);
+			this.gbFiltrarFechas.Controls.Add(this.btnFiltrar);
+			this.gbFiltrarFechas.Controls.Add(this.btnExit);
+			this.gbFiltrarFechas.Controls.Add(this.dtpFechaDesde);
+			this.gbFiltrarFechas.Controls.Add(this.lblCiclos);
+			this.gbFiltrarFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.gbFiltrarFechas.Location = new System.Drawing.Point(12, 326);
+			this.gbFiltrarFechas.Name = "gbFiltrarFechas";
+			this.gbFiltrarFechas.Size = new System.Drawing.Size(698, 112);
+			this.gbFiltrarFechas.TabIndex = 3;
+			this.gbFiltrarFechas.TabStop = false;
+			this.gbFiltrarFechas.Text = "Filtrar por Fechas";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(301, 26);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(15, 16);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "y";
+			// 
+			// dtpFechaHasta
+			// 
+			this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpFechaHasta.Location = new System.Drawing.Point(322, 21);
+			this.dtpFechaHasta.Name = "dtpFechaHasta";
+			this.dtpFechaHasta.Size = new System.Drawing.Size(127, 22);
+			this.dtpFechaHasta.TabIndex = 9;
+			// 
+			// btnFiltrar
+			// 
+			this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(209)))), ((int)(((byte)(29)))));
+			this.btnFiltrar.FlatAppearance.BorderSize = 0;
+			this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnFiltrar.Image = global::ABMC_Clientes.Properties.Resources.icn_print;
+			this.btnFiltrar.Location = new System.Drawing.Point(6, 52);
+			this.btnFiltrar.Name = "btnFiltrar";
+			this.btnFiltrar.Size = new System.Drawing.Size(54, 54);
+			this.btnFiltrar.TabIndex = 8;
+			this.btnFiltrar.UseVisualStyleBackColor = false;
+			this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+			// 
+			// btnExit
+			// 
+			this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
+			this.btnExit.FlatAppearance.BorderSize = 0;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExit.Image = global::ABMC_Clientes.Properties.Resources.icn_exit;
+			this.btnExit.Location = new System.Drawing.Point(638, 52);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(54, 54);
+			this.btnExit.TabIndex = 7;
+			this.btnExit.UseVisualStyleBackColor = false;
+			// 
+			// dtpFechaDesde
+			// 
+			this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpFechaDesde.Location = new System.Drawing.Point(168, 21);
+			this.dtpFechaDesde.Name = "dtpFechaDesde";
+			this.dtpFechaDesde.Size = new System.Drawing.Size(127, 22);
+			this.dtpFechaDesde.TabIndex = 1;
+			// 
+			// lblCiclos
+			// 
+			this.lblCiclos.AutoSize = true;
+			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCiclos.Location = new System.Drawing.Point(5, 26);
+			this.lblCiclos.Name = "lblCiclos";
+			this.lblCiclos.Size = new System.Drawing.Size(157, 16);
+			this.lblCiclos.TabIndex = 0;
+			this.lblCiclos.Text = "Buscar Facturados entre:";
+			// 
+			// frmEstadisticaCantidadRecaudadoUsuario
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(722, 450);
+			this.Controls.Add(this.gbFiltrarFechas);
+			this.Controls.Add(this.rpvCantDineroPorUsuario);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Name = "frmEstadisticaCantidadRecaudadoUsuario";
+			this.Text = "Estadisitca Cantidad de Dinero Recaudado por usuario Responsable";
+			this.Load += new System.EventHandler(this.frmEstadisticaCantidadRecaudadoUsuario_Load);
+			this.gbFiltrarFechas.ResumeLayout(false);
+			this.gbFiltrarFechas.PerformLayout();
+			this.ResumeLayout(false);
 
 		}
 

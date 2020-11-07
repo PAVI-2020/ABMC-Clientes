@@ -418,6 +418,7 @@
     <None Include="assets\icn-accept.png" />
     <None Include="assets\icn-cancel.png" />
     <None Include="assets\icn-exit.png" />
+    <None Include="assets\icn-add.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

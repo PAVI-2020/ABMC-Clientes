@@ -4,18 +4,15 @@ using ABMC_Clientes.DataAccess;
 namespace ABMC_Clientes.Business {
 	class CicloPruebaBusiness {
 		public CiclosPrueba[] ConsultarCiclosPrueba() {
-			CicloPruebaDatos cicloPruebaDatos = new CicloPruebaDatos();
-			return cicloPruebaDatos.Recuperar("CiclosPrueba.borrado = 0");
+			return CicloPruebaDatos.RecuperarCicloPrueba();
 		}
 
 		public void Insertar(CiclosPrueba factura) {
-			CicloPruebaDatos cicloPruebaDatos = new CicloPruebaDatos();
-			cicloPruebaDatos.Insertar(factura);
+			CicloPruebaDatos.InsertarCiclosPrueba(factura);
 		}
 
 		public void CrearCiclo(CiclosPrueba factura) {
-			CicloPruebaDatos cicloPruebaDatos = new CicloPruebaDatos();
-			cicloPruebaDatos.Insertar(factura);
+			CicloPruebaDatos.InsertarCiclosPrueba(factura);
 		}
 	}
 }

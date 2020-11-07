@@ -1,5 +1,4 @@
-﻿using ABMC_Clientes.Business;
-using ABMC_Clientes.Clases;
+﻿using ABMC_Clientes.Clases;
 using System;
 using System.Windows.Forms;
 
@@ -17,17 +16,15 @@ namespace ABMC_Clientes.GUI {
 			if (currentUsuario == null) {
 				frmLogin login = new frmLogin();
 
-				switch (login.ShowDialog())
-                {
-					case DialogResult.OK: currentUsuario = login.usuario;
+				switch (login.ShowDialog()) {
+					case DialogResult.OK:
+						currentUsuario = login.usuario;
 						break;
-
-					case DialogResult.Cancel: Close();
+					case DialogResult.Cancel:
+						Close();
 						break;
-
 					default: return null;
 				}
-				
 
 			}
 			return currentUsuario;

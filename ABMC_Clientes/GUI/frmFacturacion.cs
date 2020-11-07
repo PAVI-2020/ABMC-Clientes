@@ -16,47 +16,14 @@ namespace ABMC_Clientes.GUI {
 
         public frmFacturacion(Usuario usuario) {
             InitializeComponent();
+            CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
+            CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
+            CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
             this.usuario = usuario;
-            proyectosName = FetchProyectosName();
-            productosName = FetchProductosName();
-            razonesSociales = FetchRazonesSociales();
             txtUsuario.Text = usuario.N_usuario;
         }
 
-        private Dictionary<int, string> FetchProyectosName() {
-            Dictionary<int, string> ret = new Dictionary<int, string>();
-            ProyectoBusiness pBusiness = new ProyectoBusiness();
-            Proyecto[] proyectos = pBusiness.ConsultarProyectos();
-
-            foreach (Proyecto p in proyectos) {
-                ret.Add(p.Id_proyecto, p.Descripcion);
-            }
-
-            return ret;
-		}
-
-        private Dictionary<int, string> FetchProductosName() {
-            Dictionary<int, string> ret = new Dictionary<int, string>();
-            Producto[] productos = ProductoBusiness.ConsultarProductos();
-
-            foreach (Producto p in productos) {
-                ret.Add(p.Id_producto, p.Nombre);
-            }
-
-            return ret;
-        }
-
-        private Dictionary<int, string> FetchRazonesSociales() {
-            Dictionary<int, string> ret = new Dictionary<int, string>();
-            ClienteBusiness bus = new ClienteBusiness();
-            Cliente[] clientes = bus.ConsultarClientes();
-
-            foreach (Cliente c in clientes) {
-                ret.Add(c.Id, c.RazonSocial);
-            }
-
-            return ret;
-        }
+        
 
         private void CalcularTotal() {
             float total = 0;

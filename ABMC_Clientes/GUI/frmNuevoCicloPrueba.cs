@@ -16,7 +16,7 @@ namespace ABMC_Clientes.GUI {
 			txtUsuario.Text = usuario.N_usuario;
 			txtIdUsuario.Text = usuario.IdUsuario.ToString();
 			CargarComboOptions("CasosDePrueba", "id_caso_prueba, titulo", cboCasoPrueba);
-			CargarComboOptions("Usuarios", "id_usuario, usuario", cboCasoPrueba);
+			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsrTestr);
 		}
 
 		private void CalcularTotal() {

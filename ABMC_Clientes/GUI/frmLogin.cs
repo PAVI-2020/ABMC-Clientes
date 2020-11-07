@@ -19,12 +19,17 @@ namespace ABMC_Clientes.GUI {
 		private void btnOK_Click(object sender, EventArgs e) {
 			UsuarioBusiness bus = new UsuarioBusiness();
 			usuario = bus.ValidarUsuario(txtUsuario.Text, txtPass.Text);
-			if (usuario == null) {
+			if (usuario == null)
+			{
 				MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			DialogResult = DialogResult.OK;
-			Close();
+
+			else
+			{
+				DialogResult = DialogResult.OK;
+				Close();
+			}
 		}
 	}
 }

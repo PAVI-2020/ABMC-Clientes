@@ -1,7 +1,9 @@
 ﻿using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
+using ABMC_Clientes.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
@@ -13,6 +15,8 @@ namespace ABMC_Clientes.GUI {
 			this.usuario = usuario;
 			txtUsuario.Text = usuario.N_usuario;
 			txtIdUsuario.Text = usuario.IdUsuario.ToString();
+			CargarComboOptions("CasosDePrueba", "id_caso_prueba, titulo", cboCasoPrueba);
+			CargarComboOptions("Usuarios", "id_usuario, usuario", cboCasoPrueba);
 		}
 
 		private void CalcularTotal() {
@@ -25,16 +29,13 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void ClearFields() {
-			txtIdCasoPrueba.Text = "";
-			txtIdUsuarioTester.Text = "";
+			cboCasoPrueba.SelectedIndex = -1;
+			cboUsrTestr.SelectedIndex = -1;
 			txtCantidadHoras.Text = "";
 			dtpFechaEjecucion.Value = DateTime.Today;
 			grdDetalle.Rows.Clear();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-		}
 
 		private void btnSalir_Click(object sender, EventArgs e) {
 			this.Close();
@@ -43,17 +44,17 @@ namespace ABMC_Clientes.GUI {
 		private void btnAgregar_Click(object sender, EventArgs e) {
 			if (txtNumeroCiclo.Text == "" ||
 				txtNumeroPlanPrueba.Text == "" ||
-				txtIdCasoPrueba.Text == "" ||
-				txtIdUsuarioTester.Text == "" ||
+				cboCasoPrueba.SelectedIndex == -1 ||
+				cboUsrTestr.SelectedIndex == -1 ||
 				txtCantidadHoras.Text == "") {
 				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
 				return;
 			}
 
-			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1, txtNumeroPlanPrueba.Text, txtIdUsuarioTester.Text, txtCantidadHoras.Text, dtpFechaEjecucion.Value.ToString(), txtIdCasoPrueba.Text);
+			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1, txtNumeroPlanPrueba.Text, cboUsrTestr.SelectedValue, txtCantidadHoras.Text, dtpFechaEjecucion.Value.ToString(), cboCasoPrueba.SelectedValue);
 			CalcularTotal();
-			txtIdCasoPrueba.Clear();
-			txtIdUsuarioTester.Clear();
+			cboCasoPrueba.SelectedIndex = -1 ;
+			cboUsrTestr.SelectedIndex = -1;
 			txtCantidadHoras.Clear();
 		}
 
@@ -83,5 +84,19 @@ namespace ABMC_Clientes.GUI {
         {
 
         }
-    }
+
+		public void CargarComboOptions(string tabla, string columnas, ComboBox cmb)
+		{
+			Datos datos = new Datos();
+
+			DataTable table = datos.ConsultarTabla(columnas, tabla);
+			cmb.DataSource = table;
+			cmb.DisplayMember = table.Columns[1].ColumnName;
+			cmb.ValueMember = table.Columns[0].ColumnName;
+
+			cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+			cmb.SelectedIndex = -1;
+			cmb.SelectedValue = -1;
+		}
+	}
 }

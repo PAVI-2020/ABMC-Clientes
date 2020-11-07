@@ -11,23 +11,23 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private Usuario LogUser() {
-			Usuario currentUsuario = this.usuario;
+			Usuario currentUsuario = new Usuario();
+
+			frmLogin login = new frmLogin();
 			
-			if (currentUsuario == null) {
-				frmLogin login = new frmLogin();
+			switch (login.ShowDialog())
+            {
+				case DialogResult.OK:
+					currentUsuario = login.usuario;
+					break;
+				case DialogResult.Cancel:
+					Close();
+					break;
+            }
 
-				switch (login.ShowDialog()) {
-					case DialogResult.OK:
-						currentUsuario = login.usuario;
-						break;
-					case DialogResult.Cancel:
-						Close();
-						break;
-					default: return null;
-				}
-
-			}
 			return currentUsuario;
+
+
 		}
 
 		private void button1_Click(object sender, EventArgs e) {
@@ -71,10 +71,7 @@ namespace ABMC_Clientes.GUI {
 
 		private void frmMainMenu_Load(object sender, EventArgs e) {
 			usuario = LogUser();
-			while (usuario == null) {
-				MessageBox.Show("Acceso denegado");
-				usuario = LogUser();
-			}
+			
 		}
 
 		private void btnEstadisticas_Click(object sender, EventArgs e) {

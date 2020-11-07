@@ -121,11 +121,12 @@
 			this.lblCiclos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblCiclos.AutoSize = true;
 			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCiclos.Location = new System.Drawing.Point(383, 21);
+			this.lblCiclos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.lblCiclos.Location = new System.Drawing.Point(364, 21);
 			this.lblCiclos.Name = "lblCiclos";
-			this.lblCiclos.Size = new System.Drawing.Size(173, 16);
+			this.lblCiclos.Size = new System.Drawing.Size(192, 16);
 			this.lblCiclos.TabIndex = 0;
-			this.lblCiclos.Text = "Buscar planes creados por:";
+			this.lblCiclos.Text = "Buscar proyectos creados por:";
 			// 
 			// frmReporteProyectos
 			// 

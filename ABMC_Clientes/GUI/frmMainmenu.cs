@@ -13,10 +13,22 @@ namespace ABMC_Clientes.GUI {
 
 		private Usuario LogUser() {
 			Usuario currentUsuario = this.usuario;
+			
 			if (currentUsuario == null) {
 				frmLogin login = new frmLogin();
-				if (login.ShowDialog() == DialogResult.OK)
-					currentUsuario = login.usuario;
+
+				switch (login.ShowDialog())
+                {
+					case DialogResult.OK: currentUsuario = login.usuario;
+						break;
+
+					case DialogResult.Cancel: Close();
+						break;
+
+					default: return null;
+				}
+				
+
 			}
 			return currentUsuario;
 		}

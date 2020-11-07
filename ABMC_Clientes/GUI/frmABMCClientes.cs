@@ -6,7 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes {
-	public partial class FormABMC : Form {
+	public partial class frmABMCClientes : Form {
 		enum State { None, Nuevo, Consultar }
 		private State operacion;
 
@@ -15,7 +15,7 @@ namespace ABMC_Clientes {
 
 		Verificador verificador = new Verificador();
 
-		public FormABMC() {
+		public frmABMCClientes() {
 			InitializeComponent();
 		}
 

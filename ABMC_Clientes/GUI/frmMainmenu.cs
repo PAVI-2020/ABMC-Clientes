@@ -31,7 +31,7 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void button1_Click(object sender, EventArgs e) {
-			FormABMC abmcClientes = new FormABMC();
+			frmABMCClientes abmcClientes = new frmABMCClientes();
 			abmcClientes.ShowDialog();
 		}
 

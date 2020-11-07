@@ -259,11 +259,11 @@
     <Compile Include="GUI\frmMainmenu.Designer.cs">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmABMC.cs">
+    <Compile Include="GUI\frmABMCClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmABMC.Designer.cs">
-      <DependentUpon>frmABMC.cs</DependentUpon>
+    <Compile Include="GUI\frmABMCClientes.Designer.cs">
+      <DependentUpon>frmABMCClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -331,8 +331,8 @@
     <EmbeddedResource Include="GUI\frmMainmenu.resx">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmABMC.resx">
-      <DependentUpon>frmABMC.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmABMCClientes.resx">
+      <DependentUpon>frmABMCClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -410,6 +410,13 @@
     <None Include="assets\BlackStarBanner.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\icn-add-client.png" />
+    <None Include="assets\icn-edit.png" />
+    <None Include="assets\outline_delete_forever_white_36dp.png" />
+    <None Include="assets\icn-find.png" />
+    <None Include="assets\icn-accept.png" />
+    <None Include="assets\icn-cancel.png" />
+    <None Include="assets\icn-exit.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

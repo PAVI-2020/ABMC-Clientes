@@ -17,7 +17,7 @@ namespace ABMC_Clientes.DataAccess {
 			List<string> fieldNames = new List<string>();
 
 			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null && p.GetCustomAttribute<SQLPrimaryKey>() == null)
 					fieldNames.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName);
 
 			fields = fieldNames.ToArray();
@@ -99,7 +99,7 @@ namespace ABMC_Clientes.DataAccess {
 		protected string GetValuesSQL(T input) {
 			List<string> fields = new List<string>();
 			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.GetCustomAttribute<SQLFieldAttribute>() != null)
+				if (p.GetCustomAttribute<SQLFieldAttribute>() != null && p.GetCustomAttribute<SQLPrimaryKey>() == null)
 					fields.Add("'" + GetValueForSQL(p.GetValue(input)) + "'");
 
 			return string.Join(", ", fields);
@@ -127,8 +127,8 @@ namespace ABMC_Clientes.DataAccess {
 			List<string> fields = new List<string>();
 			int i = 0;
 			foreach (PropertyInfo p in typeof(T).GetProperties())
-				if (p.PropertyType.GetCustomAttribute<SQLPrimaryKey>() != null) {
-					fields.Add(p.PropertyType.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + keyValues[i].ToString() + "'");
+				if (p.GetCustomAttribute<SQLPrimaryKey>() != null) {
+					fields.Add(p.GetCustomAttribute<SQLFieldAttribute>().sqlName + " = '" + keyValues[i].ToString() + "'");
 					i++;
 				}
 

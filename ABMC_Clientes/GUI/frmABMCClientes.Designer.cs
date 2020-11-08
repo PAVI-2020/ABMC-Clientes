@@ -480,7 +480,7 @@ namespace ABMC_Clientes {
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
 			this.tableLayoutPanel4.Controls.Add(this.btnAgregar, 0, 0);
 			this.tableLayoutPanel4.Controls.Add(this.btnSalir, 8, 0);
 			this.tableLayoutPanel4.Controls.Add(this.btnCancelar, 6, 0);
@@ -528,10 +528,10 @@ namespace ABMC_Clientes {
 			this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSalir.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnSalir.Image = global::ABMC_Clientes.Properties.Resources.icn_exit;
-			this.btnSalir.Location = new System.Drawing.Point(927, 3);
+			this.btnSalir.Location = new System.Drawing.Point(922, 3);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.RegularColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
-			this.btnSalir.Size = new System.Drawing.Size(50, 44);
+			this.btnSalir.Size = new System.Drawing.Size(55, 44);
 			this.btnSalir.TabIndex = 32;
 			this.btnSalir.UseVisualStyleBackColor = false;
 			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -548,7 +548,7 @@ namespace ABMC_Clientes {
 			this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnCancelar.Image = global::ABMC_Clientes.Properties.Resources.icn_cancel;
-			this.btnCancelar.Location = new System.Drawing.Point(486, 3);
+			this.btnCancelar.Location = new System.Drawing.Point(484, 3);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.RegularColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(44)))), ((int)(((byte)(27)))));
 			this.btnCancelar.Size = new System.Drawing.Size(49, 44);
@@ -588,7 +588,7 @@ namespace ABMC_Clientes {
 			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.btnAceptar.Image = global::ABMC_Clientes.Properties.Resources.icn_accept;
-			this.btnAceptar.Location = new System.Drawing.Point(431, 3);
+			this.btnAceptar.Location = new System.Drawing.Point(429, 3);
 			this.btnAceptar.Name = "btnAceptar";
 			this.btnAceptar.RegularColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(209)))), ((int)(((byte)(29)))));
 			this.btnAceptar.Size = new System.Drawing.Size(49, 44);

@@ -46,6 +46,6 @@ namespace ABMC_Clientes.Clases {
 		[SQLField("borrado")]		public bool Borrado { get => borrado; set => borrado = value; }
 
 		[SQLSecondaryField("Barrios.nombre", "barrio")]		public string Barrio { get => nombreBarrio; set => nombreBarrio = value; }
-		[SQLSecondaryField("Contactos.nombre", "contacto")]	public string Contacto { get => nombreContacto; set => nombreContacto = value; }
+		[SQLSecondaryField("Contactos.nombre + ' ' + Contactos.apellido", "contacto")]	public string Contacto { get => nombreContacto; set => nombreContacto = value; }
 	}
 }

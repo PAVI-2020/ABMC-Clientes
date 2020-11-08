@@ -180,7 +180,6 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmSeleccionReportes";
 			this.Text = "Realizar un Reporte";
-			this.Load += new System.EventHandler(this.frmSeleccionReportes_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 

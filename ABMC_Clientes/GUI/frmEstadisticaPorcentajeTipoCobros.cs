@@ -14,7 +14,7 @@ namespace ABMC_Clientes.GUI {
 			Datos Odato = new Datos();
 
 			rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Clear();
-			rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("PorcentajeTipoCobro", Odato.ConsultarTabla("(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))) as 'ciclos', (CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))) as productos, (CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)")));
+			rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("PorcentajeTipoCobro", Odato.ConsultarTabla("ROUND(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))*100, 2) as 'ciclos', ROUND(CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))*100, 2) as productos, ROUND(CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))*100, 2) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)")));
 			this.rpvPorcentajeTipoCobroFacturas.RefreshReport();
 		}
 
@@ -30,7 +30,7 @@ namespace ABMC_Clientes.GUI {
 
                 rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Clear();
 
-                rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("dstEstadisticas", oDat.ConsultarTabla("(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))) as 'ciclos', (CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))) as productos, (CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)", "F.borrado = 0 AND Fa.borrado = 0 AND Fa.fecha BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss")+"'")));
+                rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("dstEstadisticas", oDat.ConsultarTabla("ROUND(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))*100, 2) as 'ciclos', ROUND(CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))*100, 2) as productos, ROUND(CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))*100, 2) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)", "F.borrado = 0 AND Fa.borrado = 0 AND Fa.fecha BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss")+"'")));
                 rpvPorcentajeTipoCobroFacturas.RefreshReport();
 
                 List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };

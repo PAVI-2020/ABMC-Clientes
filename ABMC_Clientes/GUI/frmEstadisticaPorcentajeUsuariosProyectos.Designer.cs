@@ -48,7 +48,7 @@
 			this.Controls.Add(this.reportViewer1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmEstadisticaPorcentajeUsuariosProyectos";
-			this.Text = "Estadistica Porcentaje Usuarios por Proyecto";
+			this.Text = "Porcentaje Usuarios por Proyecto";
 			this.Load += new System.EventHandler(this.frmEstadisticaPorcentajeUsuariosProyectos_Load);
 			this.ResumeLayout(false);
 

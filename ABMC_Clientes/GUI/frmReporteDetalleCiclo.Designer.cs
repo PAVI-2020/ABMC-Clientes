@@ -154,7 +154,7 @@
 			this.lblCiclos.Name = "lblCiclos";
 			this.lblCiclos.Size = new System.Drawing.Size(157, 16);
 			this.lblCiclos.TabIndex = 0;
-			this.lblCiclos.Text = "Buscar Facturados entre:";
+			this.lblCiclos.Text = "Buscar Ejecutados entre:";
 			// 
 			// frmReporteDetalleCiclo
 			// 
@@ -165,7 +165,7 @@
 			this.Controls.Add(this.reportViewer1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmReporteDetalleCiclo";
-			this.Text = "Reporte Detalle Ciclo de Pruba";
+			this.Text = "Reporte Detalles Ciclos de Prueba";
 			this.Load += new System.EventHandler(this.FormReporteDetalleCiclo_Load);
 			((System.ComponentModel.ISupportInitialize)(this.CiclosPruebaDetalleBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dstGeneral)).EndInit();

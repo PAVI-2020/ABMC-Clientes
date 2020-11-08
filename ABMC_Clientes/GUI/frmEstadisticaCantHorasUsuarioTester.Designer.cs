@@ -28,10 +28,10 @@
 			this.gbFiltrarFechas = new System.Windows.Forms.GroupBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
-			this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-			this.lblCiclos = new System.Windows.Forms.Label();
 			this.btnFiltrar = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
+			this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+			this.lblCiclos = new System.Windows.Forms.Label();
 			this.gbFiltrarFechas.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -86,26 +86,6 @@
 			this.dtpFechaHasta.Size = new System.Drawing.Size(127, 22);
 			this.dtpFechaHasta.TabIndex = 9;
 			// 
-			// dtpFechaDesde
-			// 
-			this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpFechaDesde.Location = new System.Drawing.Point(162, 27);
-			this.dtpFechaDesde.Name = "dtpFechaDesde";
-			this.dtpFechaDesde.Size = new System.Drawing.Size(127, 22);
-			this.dtpFechaDesde.TabIndex = 1;
-			// 
-			// lblCiclos
-			// 
-			this.lblCiclos.AutoSize = true;
-			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCiclos.Location = new System.Drawing.Point(6, 32);
-			this.lblCiclos.Name = "lblCiclos";
-			this.lblCiclos.Size = new System.Drawing.Size(157, 16);
-			this.lblCiclos.TabIndex = 0;
-			this.lblCiclos.Text = "Buscar Facturados entre:";
-			this.lblCiclos.Click += new System.EventHandler(this.lblCiclos_Click);
-			// 
 			// btnFiltrar
 			// 
 			this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -136,6 +116,26 @@
 			this.btnExit.Size = new System.Drawing.Size(54, 54);
 			this.btnExit.TabIndex = 7;
 			this.btnExit.UseVisualStyleBackColor = false;
+			// 
+			// dtpFechaDesde
+			// 
+			this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpFechaDesde.Location = new System.Drawing.Point(162, 27);
+			this.dtpFechaDesde.Name = "dtpFechaDesde";
+			this.dtpFechaDesde.Size = new System.Drawing.Size(127, 22);
+			this.dtpFechaDesde.TabIndex = 1;
+			// 
+			// lblCiclos
+			// 
+			this.lblCiclos.AutoSize = true;
+			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCiclos.Location = new System.Drawing.Point(17, 32);
+			this.lblCiclos.Name = "lblCiclos";
+			this.lblCiclos.Size = new System.Drawing.Size(139, 16);
+			this.lblCiclos.TabIndex = 0;
+			this.lblCiclos.Text = "Buscar creados entre:";
+			this.lblCiclos.Click += new System.EventHandler(this.lblCiclos_Click);
 			// 
 			// frmEstadisticaCantHorasUsuarioTester
 			// 

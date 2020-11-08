@@ -157,9 +157,9 @@
 			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblCiclos.Location = new System.Drawing.Point(5, 26);
 			this.lblCiclos.Name = "lblCiclos";
-			this.lblCiclos.Size = new System.Drawing.Size(157, 16);
+			this.lblCiclos.Size = new System.Drawing.Size(139, 16);
 			this.lblCiclos.TabIndex = 0;
-			this.lblCiclos.Text = "Buscar Facturados entre:";
+			this.lblCiclos.Text = "Buscar creados entre:";
 			// 
 			// frmReporteClientes
 			// 

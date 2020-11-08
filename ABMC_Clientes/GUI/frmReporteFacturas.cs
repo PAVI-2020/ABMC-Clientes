@@ -18,6 +18,9 @@ namespace ABMC_Clientes.GUI
             // TODO: esta línea de código carga datos en la tabla 'dstGeneral.Facturas' Puede moverla o quitarla según sea necesario.
             this.facturasTableAdapter.Fill(this.dstGeneral.Facturas);
 
+            List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "") };
+            rpvFacturas.LocalReport.SetParameters(parameters);
+
             this.rpvFacturas.RefreshReport();
         }
 

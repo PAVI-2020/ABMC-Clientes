@@ -141,7 +141,7 @@
 			this.Controls.Add(this.rpvPorcentajeTipoCobroFacturas);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmEstadisticaPorcentajeTipoCobros";
-			this.Text = "Estadistica Porcentaje de Tipos de Cobro de Facturas";
+			this.Text = "Porcentaje de Tipos de Cobro de Facturas";
 			this.Load += new System.EventHandler(this.frmEstadisticaPorcentajeTipoCobros_Load);
 			this.gbFiltrarFechas.ResumeLayout(false);
 			this.gbFiltrarFechas.PerformLayout();

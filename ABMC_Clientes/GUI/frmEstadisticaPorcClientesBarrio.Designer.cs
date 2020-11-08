@@ -75,7 +75,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(301, 26);
+			this.label1.Location = new System.Drawing.Point(328, 26);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(15, 16);
 			this.label1.TabIndex = 10;
@@ -85,7 +85,7 @@
 			// 
 			this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpFechaHasta.Location = new System.Drawing.Point(322, 21);
+			this.dtpFechaHasta.Location = new System.Drawing.Point(349, 21);
 			this.dtpFechaHasta.Name = "dtpFechaHasta";
 			this.dtpFechaHasta.Size = new System.Drawing.Size(127, 22);
 			this.dtpFechaHasta.TabIndex = 9;
@@ -122,7 +122,7 @@
 			// 
 			this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpFechaDesde.Location = new System.Drawing.Point(168, 21);
+			this.dtpFechaDesde.Location = new System.Drawing.Point(195, 21);
 			this.dtpFechaDesde.Name = "dtpFechaDesde";
 			this.dtpFechaDesde.Size = new System.Drawing.Size(127, 22);
 			this.dtpFechaDesde.TabIndex = 1;
@@ -133,9 +133,9 @@
 			this.lblCiclos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblCiclos.Location = new System.Drawing.Point(5, 26);
 			this.lblCiclos.Name = "lblCiclos";
-			this.lblCiclos.Size = new System.Drawing.Size(157, 16);
+			this.lblCiclos.Size = new System.Drawing.Size(190, 16);
 			this.lblCiclos.TabIndex = 0;
-			this.lblCiclos.Text = "Buscar Facturados entre:";
+			this.lblCiclos.Text = "Buscar Clientes creados entre:";
 			// 
 			// frmEstadisticaPorcClientesBarrio
 			// 
@@ -146,7 +146,7 @@
 			this.Controls.Add(this.rpvPorcClientes);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmEstadisticaPorcClientesBarrio";
-			this.Text = "FormPorcClientesBarrio";
+			this.Text = "Porcentaje de Clientes por Barrio";
 			this.Load += new System.EventHandler(this.FormPorcClientesBarrio_Load);
 			this.gbFiltrarFechas.ResumeLayout(false);
 			this.gbFiltrarFechas.PerformLayout();

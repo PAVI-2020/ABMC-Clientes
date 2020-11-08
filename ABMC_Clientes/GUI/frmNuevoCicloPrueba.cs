@@ -17,6 +17,7 @@ namespace ABMC_Clientes.GUI {
 			txtIdUsuario.Text = usuario.IdUsuario.ToString();
 			CargarComboOptions("CasosDePrueba", "id_caso_prueba, titulo", cboCasoPrueba);
 			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsrTestr);
+			CargarComboOptions("PlanesDePrueba", "id_plan_prueba, nombre", cboPlanPrueba);
 		}
 
 		private void CalcularTotal() {
@@ -43,7 +44,7 @@ namespace ABMC_Clientes.GUI {
 
 		private void btnAgregar_Click(object sender, EventArgs e) {
 			if (txtNumeroCiclo.Text == "" ||
-				txtNumeroPlanPrueba.Text == "" ||
+				cboPlanPrueba.SelectedIndex == -1 ||
 				cboCasoPrueba.SelectedIndex == -1 ||
 				cboUsrTestr.SelectedIndex == -1 ||
 				txtCantidadHoras.Text == "") {
@@ -51,7 +52,7 @@ namespace ABMC_Clientes.GUI {
 				return;
 			}
 
-			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1, txtNumeroPlanPrueba.Text, cboUsrTestr.SelectedValue, txtCantidadHoras.Text, dtpFechaEjecucion.Value.ToString(), cboCasoPrueba.SelectedValue);
+			grdDetalle.Rows.Add(grdDetalle.Rows.Count + 1, cboPlanPrueba.SelectedValue, cboUsrTestr.SelectedValue, txtCantidadHoras.Text, dtpFechaEjecucion.Value.ToString(), cboCasoPrueba.SelectedValue);
 			CalcularTotal();
 			cboCasoPrueba.SelectedIndex = -1 ;
 			cboUsrTestr.SelectedIndex = -1;
@@ -70,7 +71,7 @@ namespace ABMC_Clientes.GUI {
 				detalles.Add(new CiclosPruebaDetalle(0, 0, Convert.ToInt32(dgrid.Cells[5].Value), Convert.ToInt32(dgrid.Cells[2].Value), Convert.ToInt32(dgrid.Cells[3].Value), DateTime.Parse(dgrid.Cells[4].Value.ToString()), true, false));
 			}
 
-			CiclosPrueba ciclo = new CiclosPrueba(0, dtpInicioEjecucion.Value, dtpFinEjecucion.Value, usuario.IdUsuario, Convert.ToInt32(txtNumeroPlanPrueba.Text), Convert.ToInt32(txtNumeroPlanPrueba.Text), true, false);
+			CiclosPrueba ciclo = new CiclosPrueba(0, dtpInicioEjecucion.Value, dtpFinEjecucion.Value, usuario.IdUsuario, usuario.IdUsuario, (int)cboPlanPrueba.SelectedValue, true, false);
 			ciclo.Detalles = detalles.ToArray();
 			CicloPruebaBusiness fbus = new CicloPruebaBusiness();
 			fbus.CrearCiclo(ciclo);

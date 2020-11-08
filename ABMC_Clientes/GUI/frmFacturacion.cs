@@ -63,10 +63,10 @@ namespace ABMC_Clientes.GUI {
 
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
-            CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
-            CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
-            CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
-            CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
+            CargarComboOptions("Clientes Where borrado = 0", "id_cliente, razon_social", cboCliente);
+            CargarComboOptions("Proyectos Where borrado = 0", "id_proyecto, descripcion", cboProyecto);
+            CargarComboOptions("Productos Where borrado = 0", "id_producto, nombre", cboProducto);
+            CargarComboOptions("CiclosPrueba Where borrado = 0", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
             txtUsuario.Enabled = false;
             txtFecha.Text = DateTime.Now.ToString();
             txtFecha.Enabled = false;

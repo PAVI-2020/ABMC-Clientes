@@ -15,9 +15,9 @@ namespace ABMC_Clientes.GUI {
 			this.usuario = usuario;
 			txtUsuario.Text = usuario.N_usuario;
 			txtIdUsuario.Text = usuario.IdUsuario.ToString();
-			CargarComboOptions("CasosDePrueba", "id_caso_prueba, titulo", cboCasoPrueba);
-			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsrTestr);
-			CargarComboOptions("PlanesDePrueba", "id_plan_prueba, nombre", cboPlanPrueba);
+			CargarComboOptions("CasosDePrueba Where borrado = 0", "id_caso_prueba, titulo", cboCasoPrueba);
+			CargarComboOptions("Usuarios Where borrado = 0", "id_usuario, usuario", cboUsrTestr);
+			CargarComboOptions("PlanesDePrueba Where borrado = 0", "id_plan_prueba, nombre", cboPlanPrueba);
 		}
 
 		private void CalcularTotal() {

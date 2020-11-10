@@ -41,7 +41,7 @@ namespace ABMC_Clientes.GUI {
 		void Habilitar(bool estado) {
 			txtDescripcion.Enabled = estado;
 			cboProyecto.Enabled = estado;
-			txtIdPrueba.Enabled = estado;
+			txtIdPrueba.Enabled = false;
 			cboUsuarioResponsable.Enabled = estado;
 			txtNombre.Enabled = estado;
 			btnAceptar.Enabled = estado;
@@ -68,9 +68,9 @@ namespace ABMC_Clientes.GUI {
 				return;
 			DataGridViewRow tabla = grdPruebas.SelectedRows[0];
 			txtIdPrueba.Text = tabla.Cells[0].Value.ToString();
-			cboProyecto.SelectedIndex = cboProyecto.FindStringExact(tabla.Cells[1].Value.ToString());
+			cboProyecto.SelectedValue = tabla.Cells[1].Value.ToString();
 			txtNombre.Text = tabla.Cells[2].Value.ToString();
-			cboUsuarioResponsable.SelectedIndex = cboUsuarioResponsable.FindStringExact(tabla.Cells[3].Value.ToString());
+			cboUsuarioResponsable.SelectedValue = (tabla.Cells[3].Value.ToString());
 			txtDescripcion.Text = tabla.Cells[4].Value.ToString();
 		}
 

@@ -20,7 +20,8 @@ namespace ABMC_Clientes.GUI
             this.rpvClientes.RefreshReport();
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (dtpFechaHasta.Value < dtpFechaDesde.Value)
             {
@@ -30,7 +31,7 @@ namespace ABMC_Clientes.GUI
             else
             {
                 Datos oDat = new Datos();
-        
+
                 clientesBindingSource.DataSource = oDat.ConsultarTabla("c.id_cliente, c.razon_social, c.cuit, c.calle, c.numero, c.fecha_alta, b.nombre as Barrio, Co.nombre + ' ' + Co.apellido as Contacto, c.borrado",
                                                                        "Clientes c Join Barrios b on(c.id_barrio = b.id_barrio) Join Contactos Co on(Co.id_contacto = c.id_contacto)",
                                                                        "c.borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
@@ -43,13 +44,9 @@ namespace ABMC_Clientes.GUI
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-		private void groupBox1_Enter(object sender, EventArgs e) {
-
-		}
-	}
+    }
 }

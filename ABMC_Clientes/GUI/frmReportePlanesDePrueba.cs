@@ -29,19 +29,21 @@ namespace ABMC_Clientes.GUI {
 			}
 		}
 
-		private void btnSalir_Click(object sender, EventArgs e) {
-			this.Close();
-		}
-
-		private void btnImprimir_Click(object sender, EventArgs e) {
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
 			Datos oDat = new Datos();
 
 			rpvPlanesDePrueba.LocalReport.DataSources.Clear();
 			rpvPlanesDePrueba.LocalReport.DataSources.Add(new ReportDataSource("PlanesDePrueba", oDat.ConsultarTabla("P.id_plan_prueba, P.id_proyecto, P.nombre, P.id_responsable, U.usuario, P.descripcion, P.borrado ", "dbo.PlanesDePrueba P JOIN Usuarios U on (U.id_usuario = P.id_responsable)", "P.borrado = 0 AND U.usuario = '" + cboUsuarios.Text + "'")));
-			List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado por el Usuario Responsable " + cboUsuarios.Text)};
+			List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado por el Usuario Responsable " + cboUsuarios.Text) };
 
 			rpvPlanesDePrueba.LocalReport.SetParameters(parameters);
 			this.rpvPlanesDePrueba.RefreshReport();
 		}
-	}
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+			this.Close();
+		}
+    }
 }

@@ -24,12 +24,8 @@ namespace ABMC_Clientes.GUI
             this.rpvFacturas.RefreshReport();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (dtpFechaHasta.Value < dtpFechaDesde.Value)
             {
@@ -44,7 +40,7 @@ namespace ABMC_Clientes.GUI
                                                                        "Facturas f join Usuarios u on(f.id_usuario_creador = u.id_usuario) join clientes c on(f.id_cliente = c.id_cliente)",
                                                                        "f.borrado = 0 AND c.fecha_alta BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'");
 
-                List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre "+dtpFechaDesde.Value.ToString()+" y "+dtpFechaHasta.Value.ToString()) };
+                List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };
 
                 rpvFacturas.LocalReport.SetParameters(parameters);
 
@@ -52,8 +48,9 @@ namespace ABMC_Clientes.GUI
             }
         }
 
-		private void btnSalir_Click(object sender, EventArgs e) {
+        private void btnExit_Click(object sender, EventArgs e)
+        {
             Close();
-		}
-	}
+        }
+    }
 }

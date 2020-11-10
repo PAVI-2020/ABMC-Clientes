@@ -312,7 +312,7 @@
 			this.btnAceptar.Image = global::ABMC_Clientes.Properties.Resources.icn_accept;
 			this.btnAceptar.Location = new System.Drawing.Point(3, 3);
 			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.RegularColor = System.Drawing.Color.White;
+			this.btnAceptar.RegularColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(209)))), ((int)(((byte)(29)))));
 			this.btnAceptar.Size = new System.Drawing.Size(49, 49);
 			this.btnAceptar.TabIndex = 14;
 			this.btnAceptar.UseVisualStyleBackColor = false;

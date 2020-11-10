@@ -22,5 +22,10 @@ namespace ABMC_Clientes.Business {
 			ContactoDatos contactoDatos = new ContactoDatos();
 			contactoDatos.Actualizar(Contacto);
 		}
+
+		public Contacto[] RecuperarFiltrado(int id_contacto = -1, string nombre = "", string apellido = "", string email = "", string telefono = "") {
+			ContactoDatos contactoDatos = new ContactoDatos();
+			return contactoDatos.RecuperarFiltrado(id_contacto, nombre, apellido, email, telefono);
+		}
 	}
 }

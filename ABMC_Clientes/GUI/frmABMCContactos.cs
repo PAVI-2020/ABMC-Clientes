@@ -13,6 +13,8 @@ namespace ABMC_Clientes.GUI {
         bool nuevo { get { return operacion == State.Nuevo; } }
         bool consultar { get { return operacion == State.Consultar; } }
 
+        Verificador verificador = new Verificador();
+
         public frmABMCContactos() {
             InitializeComponent();
         }
@@ -20,6 +22,10 @@ namespace ABMC_Clientes.GUI {
         private void FormABMCContactos_Load(object sender, EventArgs e) {
             Habilitar(false);
             cargarGRD(grdContactos, cBus.Recuperar());
+            verificador.Agregar("Apellido", txtApellido);
+            verificador.Agregar("Mail", txtMail);
+            verificador.Agregar("Nombre", txtNombre);
+            verificador.Agregar("Telefono", txtTelefono);
         }
 
         private void Habilitar(bool b) {
@@ -79,19 +85,20 @@ namespace ABMC_Clientes.GUI {
 
         private void btnAceptar_Click(object sender, EventArgs e) {
             if (nuevo) {
-                if (txtApellido.Text == "" || txtMail.Text == "" || txtNombre.Text == "" || txtTelefono.Text == "") {
-                    MessageBox.Show("Debe completar todos los campos", "Error al insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtNombre.Focus();
-                }
-                else {
+                if (verificador.Verificar()) {
                     Contacto c = new Contacto(-1, txtNombre.Text, txtApellido.Text, txtMail.Text, txtTelefono.Text, false);
                     cBus.Insertar(c);
                     cargarGRD(grdContactos, cBus.Recuperar());
                 }
             }
             else if (consultar) {
-                Contacto c = new Contacto((txtId.Text=="") ? -1 : Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellido.Text, txtMail.Text, txtTelefono.Text, false);
-                // cargarGRD(grdContactos, cBus.Recuperar(c)); TODO: Filter
+                cargarGRD(grdContactos, cBus.RecuperarFiltrado(
+                    id_contacto: txtId.Text == "" ? -1 : int.Parse(txtId.Text),
+                    nombre: txtNombre.Text,
+                    apellido: txtApellido.Text,
+                    email: txtMail.Text,
+                    telefono: txtTelefono.Text
+                    ));
             }
             else {
                 Contacto c = new Contacto(Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellido.Text, txtMail.Text, txtTelefono.Text, false);

@@ -78,8 +78,7 @@ namespace ABMC_Clientes.GUI {
 			} else if (consultar) {
 				ConsultarBarrios();
 			} else {
-				if (verificador.Verificar())
-					ActualizarBarrio();
+				ActualizarBarrio();
 			}
 
 			Habilitar(false);

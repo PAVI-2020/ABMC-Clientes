@@ -19,6 +19,7 @@
 			this.borrado = borrado;
 		}
 
+		[SQLPrimaryKey]
 		[SQLField("id_plan_prueba")]	public int Id_plan_prueba { get => id_plan_prueba; set => id_plan_prueba = value; }
 		[SQLField("id_proyecto")]		public int Id_proyecto { get => id_proyecto; set => id_proyecto = value; }
 		[SQLField("nombre")]			public string Nombre { get => nombre; set => nombre = value; }

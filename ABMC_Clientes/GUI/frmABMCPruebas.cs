@@ -13,6 +13,8 @@ namespace ABMC_Clientes.GUI {
 		bool nuevo { get { return operacion == State.Nuevo; } }
 		bool consultar { get { return operacion == State.Consultar; } }
 
+		Verificador verificador = new Verificador();
+
 		public frmABMCPruebas() {
 			InitializeComponent();
 		}
@@ -21,8 +23,12 @@ namespace ABMC_Clientes.GUI {
 			Habilitar(false);
 			RefreshData();
 			ActualizarCampos();
-			CargarComboOptions("Proyectos", "id_proyecto, nombre", cboProyecto);
+			CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
 			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsuarioResponsable);
+			verificador.Agregar("Proyecto", cboProyecto);
+			verificador.Agregar("Usuario Responsable", cboUsuarioResponsable);
+			verificador.Agregar("Nombre", txtNombre);
+			verificador.Agregar("Descripcion", txtDescripcion);
 		}
 
 		void RefreshData() {
@@ -85,7 +91,8 @@ namespace ABMC_Clientes.GUI {
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
 			if (nuevo) {
-				AgregarPrueba();
+				if (verificador.Verificar())
+					AgregarPrueba();
 			} else if (consultar) {
 				ConsultarPruebas();
 			} else {
@@ -97,13 +104,6 @@ namespace ABMC_Clientes.GUI {
 
 		void AgregarPrueba() {
 			PruebasBusiness pBusiness = new PruebasBusiness();
-			if (cboProyectos.SelectedIndex == -1 || txtNombre.Text == "" || cboUsuarioResponsable.SelectedIndex == -1  ||
-				txtDescripcion.Text == "") {
-
-				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
-				txtIdPrueba.Focus();
-				return;
-			}
 
 			Prueba prueba = new Prueba {
 				Id_plan_prueba = 0,

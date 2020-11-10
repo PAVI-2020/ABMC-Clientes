@@ -68,9 +68,9 @@ namespace ABMC_Clientes.GUI {
 				return;
 			DataGridViewRow tabla = grdPruebas.SelectedRows[0];
 			txtIdPrueba.Text = tabla.Cells[0].Value.ToString();
-			cboProyecto.SelectedValue = tabla.Cells[1].Value.ToString();
+			cboProyecto.SelectedValue = (int)tabla.Cells[1].Value;
 			txtNombre.Text = tabla.Cells[2].Value.ToString();
-			cboUsuarioResponsable.SelectedValue = (tabla.Cells[3].Value.ToString());
+			cboUsuarioResponsable.SelectedValue (int) tabla.Cells[3].Value;
 			txtDescripcion.Text = tabla.Cells[4].Value.ToString();
 		}
 

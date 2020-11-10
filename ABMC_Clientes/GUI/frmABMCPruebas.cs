@@ -70,9 +70,9 @@ namespace ABMC_Clientes.GUI {
 
 		public void Limpiar() {
 			txtDescripcion.Text = "";
-			txtIdProyecto.Text = "";
+			cboProyecto.SelectedIndex = -1;
 			txtIdPrueba.Text = "";
-			txtIdResponsable.Text = "";
+			cboUsuarioResponsable.SelectedIndex = -1;
 			txtNombre.Text = "";
 		}
 
@@ -97,7 +97,7 @@ namespace ABMC_Clientes.GUI {
 
 		void AgregarPrueba() {
 			PruebasBusiness pBusiness = new PruebasBusiness();
-			if (txtIdProyecto.Text == "" || txtNombre.Text == "" || txtIdResponsable.Text == "" ||
+			if (cboProyectos.SelectedIndex == -1 || txtNombre.Text == "" || cboUsuarioResponsable.SelectedIndex == -1  ||
 				txtDescripcion.Text == "") {
 
 				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);
@@ -107,9 +107,9 @@ namespace ABMC_Clientes.GUI {
 
 			Prueba prueba = new Prueba {
 				Id_plan_prueba = 0,
-				Id_proyecto = int.Parse(txtIdProyecto.Text),
+				Id_proyecto = (int)cboProyecto.SelectedValue,
 				Nombre = txtNombre.Text,
-				Id_responsable = int.Parse(txtIdResponsable.Text),
+				Id_responsable = (int)cboUsuarioResponsable.SelectedValue,
 				Descripcion = txtDescripcion.Text,
 				Borrado = false
 			};
@@ -122,9 +122,9 @@ namespace ABMC_Clientes.GUI {
 			PruebasBusiness pBusiness = new PruebasBusiness();
 			CargarGrilla(grdPruebas, pBusiness.ConsultarPruebasFiltrado(
 					id_plan_prueba: txtIdPrueba.Text == "" ? -1 : int.Parse(txtIdPrueba.Text),
-					id_proyecto: txtIdProyecto.Text == "" ? -1 : int.Parse(txtIdProyecto.Text),
+					id_proyecto: cboProyecto.SelectedIndex == -1 ? -1 : (int)cboProyecto.SelectedValue,
 					nombre: txtNombre.Text,
-					id_responsable: txtIdResponsable.Text == "" ? -1 : int.Parse(txtIdResponsable.Text),
+					id_responsable: cboUsuarioResponsable.SelectedIndex == -1 ? -1 : (int)cboUsuarioResponsable.SelectedValue,
 					descripcion: txtDescripcion.Text
 					));
 		}
@@ -133,9 +133,9 @@ namespace ABMC_Clientes.GUI {
 			PruebasBusiness pBusiness = new PruebasBusiness();
 			Prueba prueba = new Prueba {
 				Id_plan_prueba = int.Parse(txtIdPrueba.Text),
-				Id_proyecto = int.Parse(txtIdProyecto.Text),
+				Id_proyecto = (int)cboProyecto.SelectedValue,
 				Nombre = txtNombre.Text,
-				Id_responsable =int.Parse(txtIdResponsable.Text),
+				Id_responsable = (int)cboUsuarioResponsable.SelectedValue,
 				Descripcion = txtDescripcion.Text,
 				Borrado = false
 			};

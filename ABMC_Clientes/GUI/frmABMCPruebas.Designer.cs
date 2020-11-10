@@ -129,7 +129,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(114, 24);
 			this.label2.TabIndex = 65;
-			this.label2.Text = "Id Proyecto:";
+			this.label2.Text = "Id Prueba:";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label1
@@ -143,7 +143,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(114, 24);
 			this.label1.TabIndex = 64;
-			this.label1.Text = "Id Prueba:";
+			this.label1.Text = "Id Proyecto:";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// txtIdResponsable

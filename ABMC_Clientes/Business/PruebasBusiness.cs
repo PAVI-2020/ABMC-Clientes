@@ -5,7 +5,7 @@ namespace ABMC_Clientes.Business {
 	public class PruebasBusiness {
 		public Prueba[] ConsultarPruebas() {
 			PruebaDatos pruebaDatos = new PruebaDatos();
-			return pruebaDatos.Recuperar("Pruebas.borrado = 0");
+			return pruebaDatos.Recuperar("PlanesDePrueba.borrado = 0");
 		}
 
 		public Prueba[] ConsultarPruebasFiltrado(int id_plan_prueba = -1, int id_proyecto = -1, string nombre = "", int id_responsable = -1, string descripcion = "") {
@@ -24,7 +24,8 @@ namespace ABMC_Clientes.Business {
 		}
 
 		public void ActualizarPrueba(Prueba prueba) {
-			//PruebaDatos.ActualizarPrueba(prueba);
+			PruebaDatos pruebaDatos = new PruebaDatos();
+			pruebaDatos.Actualizar(prueba);
 		}
 	}
 }

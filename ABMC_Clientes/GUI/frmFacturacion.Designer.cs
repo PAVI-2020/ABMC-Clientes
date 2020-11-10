@@ -215,7 +215,6 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 120);
 			this.tableLayoutPanel1.TabIndex = 11;
-			this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
 			// 
 			// cboCliente
 			// 
@@ -330,7 +329,7 @@
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(174, 24);
 			this.label12.TabIndex = 7;
-			this.label12.Text = "Fecha inicio:";
+			this.label12.Text = "Fecha inicio ciclo:";
 			this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// cboTipoCobro
@@ -546,7 +545,6 @@
 			this.txtTotal.TabIndex = 15;
 			this.txtTotal.Text = "0";
 			this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
 			// 
 			// btnFacturar
 			// 

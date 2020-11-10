@@ -32,7 +32,7 @@ namespace ABMC_Clientes.GUI {
 		}
 		
 		void Habilitar(bool estado) {
-			txtiD.Enabled = estado;
+			txtiD.Enabled = false;
 			txtNombre.Enabled = estado;
 			btnAceptar.Enabled = estado;
 			btnCancelar.Enabled = estado;

@@ -97,7 +97,7 @@ namespace ABMC_Clientes.GUI {
 
 		void AgregarPrueba() {
 			PruebasBusiness pBusiness = new PruebasBusiness();
-			if (cboProyectos.SelectedIndex == -1 || txtNombre.Text == "" || cboUsuarioResponsable.SelectedIndex == -1  ||
+			if (cboProyecto.SelectedIndex == -1 || txtNombre.Text == "" || cboUsuarioResponsable.SelectedIndex == -1  ||
 				txtDescripcion.Text == "") {
 
 				MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK);

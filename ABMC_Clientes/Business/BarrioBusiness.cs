@@ -10,8 +10,7 @@ namespace ABMC_Clientes.Business {
 
 		public Barrio[] ConsultarBarriosFiltrado(int id_barrio = -1, string nombre = "") {
 			BarrioDatos barrioDatos = new BarrioDatos();
-			//return barrioDatos.RecuperarFiltrado(id_barrio, nombre);
-			return barrioDatos.Recuperar();
+			return barrioDatos.RecuperarFiltrado(id_barrio, nombre);
 		}
 
 		public void Eliminar(int id_barrio) {

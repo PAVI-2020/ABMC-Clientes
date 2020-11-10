@@ -10,6 +10,8 @@ namespace ABMC_Clientes.GUI {
 
 		bool nuevo { get { return operacion == State.Nuevo; } }
 		bool consultar { get { return operacion == State.Consultar; } }
+
+		Verificador verificador = new Verificador();
 		
 		public frmABMCBarrios() {
 			InitializeComponent();
@@ -19,6 +21,7 @@ namespace ABMC_Clientes.GUI {
 			Habilitar(false);
 			RefreshData();
 			ActualizarCampos();
+			verificador.Agregar("nombre", txtNombre);
 		}
 
 		void RefreshData() {
@@ -70,11 +73,13 @@ namespace ABMC_Clientes.GUI {
 
 		private void btnAceptar_Click(object sender, EventArgs e) {
 			if (nuevo) {
-				AgregarBarrio();
+				if (verificador.Verificar())
+					AgregarBarrio();
 			} else if (consultar) {
 				ConsultarBarrios();
 			} else {
-				ActualizarBarrio();
+				if (verificador.Verificar())
+					ActualizarBarrio();
 			}
 
 			Habilitar(false);

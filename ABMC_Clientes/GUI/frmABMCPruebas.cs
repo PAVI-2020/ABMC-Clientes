@@ -70,7 +70,7 @@ namespace ABMC_Clientes.GUI {
 			txtIdPrueba.Text = tabla.Cells[0].Value.ToString();
 			cboProyecto.SelectedValue = (int)tabla.Cells[1].Value;
 			txtNombre.Text = tabla.Cells[2].Value.ToString();
-			cboUsuarioResponsable.SelectedValue (int) tabla.Cells[3].Value;
+			cboUsuarioResponsable.SelectedValue = (int) tabla.Cells[3].Value;
 			txtDescripcion.Text = tabla.Cells[4].Value.ToString();
 		}
 

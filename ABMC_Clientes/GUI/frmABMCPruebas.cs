@@ -1,6 +1,8 @@
 ﻿using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
+using ABMC_Clientes.DataAccess;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.GUI {
@@ -19,6 +21,8 @@ namespace ABMC_Clientes.GUI {
 			Habilitar(false);
 			RefreshData();
 			ActualizarCampos();
+			CargarComboOptions("Proyectos", "id_proyecto, nombre", cboProyecto);
+			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsuarioResponsable);
 		}
 
 		void RefreshData() {
@@ -30,9 +34,9 @@ namespace ABMC_Clientes.GUI {
 
 		void Habilitar(bool estado) {
 			txtDescripcion.Enabled = estado;
-			txtIdProyecto.Enabled = estado;
+			cboProyecto.Enabled = estado;
 			txtIdPrueba.Enabled = estado;
-			txtIdResponsable.Enabled = estado;
+			cboUsuarioResponsable.Enabled = estado;
 			txtNombre.Enabled = estado;
 			btnAceptar.Enabled = estado;
 			btnCancelar.Enabled = estado;
@@ -58,9 +62,9 @@ namespace ABMC_Clientes.GUI {
 				return;
 			DataGridViewRow tabla = grdPruebas.SelectedRows[0];
 			txtIdPrueba.Text = tabla.Cells[0].Value.ToString();
-			txtIdProyecto.Text = tabla.Cells[1].Value.ToString();
+			cboProyecto.SelectedIndex = cboProyecto.FindStringExact(tabla.Cells[1].Value.ToString());
 			txtNombre.Text = tabla.Cells[2].Value.ToString();
-			txtIdResponsable.Text = tabla.Cells[3].Value.ToString();
+			cboUsuarioResponsable.SelectedIndex = cboUsuarioResponsable.FindStringExact(tabla.Cells[3].Value.ToString());
 			txtDescripcion.Text = tabla.Cells[4].Value.ToString();
 		}
 
@@ -175,9 +179,19 @@ namespace ABMC_Clientes.GUI {
 			ActualizarCampos();
 		}
 
-        private void label6_Click(object sender, EventArgs e)
-        {
+		public void CargarComboOptions(string tabla, string columnas, ComboBox cmb)
+		{
+			Datos datos = new Datos();
 
-        }
-    }
+			DataTable table = datos.ConsultarTabla(columnas, tabla);
+			cmb.DataSource = table;
+			cmb.DisplayMember = table.Columns[1].ColumnName;
+			cmb.ValueMember = table.Columns[0].ColumnName;
+
+			cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+			cmb.SelectedIndex = -1;
+			cmb.SelectedValue = -1;
+		}
+
+	}
 }

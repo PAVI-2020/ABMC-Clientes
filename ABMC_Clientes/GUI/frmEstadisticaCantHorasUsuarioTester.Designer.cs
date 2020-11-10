@@ -116,6 +116,7 @@
 			this.btnExit.Size = new System.Drawing.Size(54, 54);
 			this.btnExit.TabIndex = 7;
 			this.btnExit.UseVisualStyleBackColor = false;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// dtpFechaDesde
 			// 
@@ -135,7 +136,6 @@
 			this.lblCiclos.Size = new System.Drawing.Size(139, 16);
 			this.lblCiclos.TabIndex = 0;
 			this.lblCiclos.Text = "Buscar creados entre:";
-			this.lblCiclos.Click += new System.EventHandler(this.lblCiclos_Click);
 			// 
 			// frmEstadisticaCantHorasUsuarioTester
 			// 

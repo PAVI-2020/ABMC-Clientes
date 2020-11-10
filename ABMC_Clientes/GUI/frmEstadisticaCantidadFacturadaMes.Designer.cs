@@ -82,6 +82,7 @@
 			this.btnSalir.Size = new System.Drawing.Size(54, 54);
 			this.btnSalir.TabIndex = 4;
 			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
 			// btnImprimir
 			// 

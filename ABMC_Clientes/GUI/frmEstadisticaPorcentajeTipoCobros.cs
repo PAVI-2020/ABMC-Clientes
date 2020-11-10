@@ -18,19 +18,16 @@ namespace ABMC_Clientes.GUI {
 			this.rpvPorcentajeTipoCobroFacturas.RefreshReport();
 		}
 
-		private void btnFiltrar_Click(object sender, EventArgs e) {
-            if (dtpFechaHasta.Value < dtpFechaDesde.Value)
-            {
+		private void btnFiltrar_Click_1(object sender, EventArgs e) {
+            if (dtpFechaHasta.Value < dtpFechaDesde.Value) {
                 MessageBox.Show("Seleccione una fecha maxima mayor a la fecha minima");
                 dtpFechaHasta.Value = DateTime.Today;
-            }
-            else
-            {
+            } else {
                 Datos oDat = new Datos();
 
                 rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Clear();
 
-                rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("dstEstadisticas", oDat.ConsultarTabla("ROUND(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))*100, 2) as 'ciclos', ROUND(CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))*100, 2) as productos, ROUND(CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))*100, 2) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)", "F.borrado = 0 AND Fa.borrado = 0 AND Fa.fecha BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss")+"'")));
+                rpvPorcentajeTipoCobroFacturas.LocalReport.DataSources.Add(new ReportDataSource("PorcentajeTipoCobro", oDat.ConsultarTabla("ROUND(CONVERT(float,COUNT(id_ciclo_prueba))/(CONVERT(float,COUNT(*)))*100, 2) as 'ciclos', ROUND(CONVERT(float,COUNT(id_producto))/(CONVERT(float,COUNT(*)))*100, 2) as productos, ROUND(CONVERT(float,COUNT(id_proyecto))/(CONVERT(float,COUNT(*)))*100, 2) as proyectos", "FacturasDetalle F JOIN Facturas Fa on (F.id_factura = Fa.id_factura)", "F.borrado = 0 AND Fa.borrado = 0 AND Fa.fecha BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd hh:mm:ss") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd hh:mm:ss") + "'")));
                 rpvPorcentajeTipoCobroFacturas.RefreshReport();
 
                 List<ReportParameter> parameters = new List<ReportParameter> { new ReportParameter("prFiltros", "Filtrado entre " + dtpFechaDesde.Value.ToString() + " y " + dtpFechaHasta.Value.ToString()) };
@@ -40,5 +37,9 @@ namespace ABMC_Clientes.GUI {
                 this.rpvPorcentajeTipoCobroFacturas.RefreshReport();
             }
         }
+
+		private void btnExit_Click(object sender, EventArgs e) {
+			Close();
+		}
 	}
 }

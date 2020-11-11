@@ -26,3 +26,6 @@ Todo el proceso puede cancelarse con el botón salir, con el cual no se guardan 
   
 
 Por último, para los reportes y estadísticas, se abrirá una pantalla para poder seleccionar el reporte o estadística deseado. Luego cada uno permitirá filtrar el periodo o el usuario para el cual se desee realizar dicho reporte o estadística, y con el botón de imprimir, se mostrará el reporte en pantalla en forma de previsualización, a partir de la cual puede generarse el documento pdf o doc.
+![](https://lh4.googleusercontent.com/oxzZ_NXSSlLj4zUeoxHNeT25Ir7_iRpjFeRFLA5jAdP02i078dfqEqq3TLL_EIn5X2-jfBanh-FICbAFTNWEuUspEh4uMN7c9diXllCS4FyO8Q8XbgZ8LUQWhY_jbkbjPBdtfR1v)![](https://lh5.googleusercontent.com/7urXo7CGVaE4DE9di14Th4LEYtyO1ZsMgXY8Wtw4IZcf1OPp8tWUaSiQo-0-1v8Q3KNo6HsLoCTwMpeH4pdV49kkB4qFmWH0XG6jHM3VTTFXaURujNuYuCWIX0Hzzl2NGym_4Uxy)![](https://lh6.googleusercontent.com/fjL44QQLhj-EYj5f13azK-kx5g8hOR2elcydKyKSGFnOnDKMF-xhlKkV_aToGf9GC8BUnAnjvuDOJJxzD5re-iY6UOLR7Xpc8Tk9NPYIn3xScHFh75_-Y-baA2yyMryJvivMjvFq)
+
+![](https://lh3.googleusercontent.com/T54fi2XiiPqnHtFPIpY4R3lMbryTsELI4A388qIHymsLmDrTsumGPOOtVIxS1DRXEsdvVfw4aZsN5j8I8PXekCVbWANn9dfMMoFoRVABdP8VmnVe6GModvuJzBEcSXGkR4xIm4ux)

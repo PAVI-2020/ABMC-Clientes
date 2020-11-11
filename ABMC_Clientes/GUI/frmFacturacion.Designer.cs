@@ -256,12 +256,12 @@
 			this.tableLayoutPanel2.Controls.Add(this.label13, 0, 4);
 			this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
 			this.tableLayoutPanel2.Controls.Add(this.cboTipoCobro, 1, 0);
-			this.tableLayoutPanel2.Controls.Add(this.label9, 0, 1);
-			this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.cboProyecto, 1, 1);
-			this.tableLayoutPanel2.Controls.Add(this.cboProducto, 1, 2);
 			this.tableLayoutPanel2.Controls.Add(this.cboCiclo, 1, 3);
 			this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 2, 2);
+			this.tableLayoutPanel2.Controls.Add(this.cboProducto, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.cboProyecto, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.label9, 0, 2);
 			this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 19);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 5;
@@ -357,7 +357,7 @@
 			this.label9.AutoSize = true;
 			this.label9.CausesValidation = false;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(3, 33);
+			this.label9.Location = new System.Drawing.Point(3, 63);
 			this.label9.Margin = new System.Windows.Forms.Padding(3);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(174, 24);
@@ -373,7 +373,7 @@
 			this.label4.AutoSize = true;
 			this.label4.CausesValidation = false;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(3, 63);
+			this.label4.Location = new System.Drawing.Point(3, 33);
 			this.label4.Margin = new System.Windows.Forms.Padding(3);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(174, 24);
@@ -388,7 +388,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.cboProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboProyecto.FormattingEnabled = true;
-			this.cboProyecto.Location = new System.Drawing.Point(183, 33);
+			this.cboProyecto.Location = new System.Drawing.Point(183, 63);
 			this.cboProyecto.Name = "cboProyecto";
 			this.cboProyecto.Size = new System.Drawing.Size(270, 24);
 			this.cboProyecto.TabIndex = 16;
@@ -400,7 +400,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.cboProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboProducto.FormattingEnabled = true;
-			this.cboProducto.Location = new System.Drawing.Point(183, 63);
+			this.cboProducto.Location = new System.Drawing.Point(183, 33);
 			this.cboProducto.Name = "cboProducto";
 			this.cboProducto.Size = new System.Drawing.Size(270, 24);
 			this.cboProducto.TabIndex = 17;

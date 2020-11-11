@@ -1,9 +1,6 @@
 ﻿using ABMC_Clientes.Business;
 using ABMC_Clientes.Clases;
-using ABMC_Clientes.DataAccess;
 using System;
-using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes {
@@ -37,8 +34,8 @@ namespace ABMC_Clientes {
 			Cliente[] clientes = cliente.ConsultarClientes();
 			grdClientes.Rows.Clear();
 			CargarGrilla(grdClientes, clientes);
-			CargarComboOptions("Barrios", "id_barrio, nombre", cboBarrio);
-			CargarComboOptions("Contactos", "id_contacto, nombre + ' ' + apellido", cboContacto);
+			Verificador.CargarComboOptions("Barrios", "id_barrio, nombre", cboBarrio);
+			Verificador.CargarComboOptions("Contactos", "id_contacto, nombre + ' ' + apellido", cboContacto);
 		}
 
 		void Habilitar(bool estado) {
@@ -91,19 +88,6 @@ namespace ABMC_Clientes {
 			txtNumero.Text = "";
 			cboBarrio.SelectedIndex = -1;
 			cboContacto.SelectedIndex = -1;
-		}
-
-		public void CargarComboOptions(string tabla, string columnas, ComboBox cmb) {
-			Datos datos = new Datos();
-
-			DataTable table = datos.ConsultarTabla(columnas, tabla);
-			cmb.DataSource = table;
-			cmb.DisplayMember = table.Columns[1].ColumnName;
-			cmb.ValueMember = table.Columns[0].ColumnName;
-
-			cmb.DropDownStyle = ComboBoxStyle.DropDownList;
-			cmb.SelectedIndex = -1;
-			cmb.SelectedValue = -1;
 		}
 
 		private void btnSalir_Click(object sender, System.EventArgs e) {

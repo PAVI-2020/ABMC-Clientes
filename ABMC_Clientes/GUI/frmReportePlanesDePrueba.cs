@@ -13,20 +13,13 @@ namespace ABMC_Clientes.GUI {
 		}
 
 		private void frmReportePlanesDePrueba_Load(object sender, EventArgs e) {
-			CargarCBO();
+			Verificador.CargarComboOptions("Usuarios WHERE borrado = 0", "id_usuario, usuario", cboUsuarios);
 
 			Datos odato = new Datos();
 
 			rpvPlanesDePrueba.LocalReport.DataSources.Clear();
 			rpvPlanesDePrueba.LocalReport.DataSources.Add(new ReportDataSource("PlanesDePrueba", odato.ConsultarTabla("P.id_plan_prueba, P.id_proyecto, P.nombre, P.id_responsable, U.usuario, P.descripcion, P.borrado ", "dbo.PlanesDePrueba P JOIN Usuarios U on (U.id_usuario = P.id_responsable)")));
 			this.rpvPlanesDePrueba.RefreshReport();
-		}
-
-		void CargarCBO() {
-			UsuarioBusiness usuarioBusiness = new UsuarioBusiness();
-			foreach (Usuario u in usuarioBusiness.Recuperar()) {
-				cboUsuarios.Items.Add(u.N_usuario);
-			}
 		}
 
         private void btnFiltrar_Click(object sender, EventArgs e)

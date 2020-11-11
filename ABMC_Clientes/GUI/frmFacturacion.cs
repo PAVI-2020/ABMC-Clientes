@@ -17,10 +17,10 @@ namespace ABMC_Clientes.GUI {
             cboCiclo.Enabled = false;
             cboProducto.Enabled = false;
             cboProyecto.Enabled = false;
-            CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
-            CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
-            CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
-            CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
+            Verificador.CargarComboOptions("Clientes", "id_cliente, razon_social", cboCliente);
+            Verificador.CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
+            Verificador.CargarComboOptions("Productos", "id_producto, nombre", cboProducto);
+            Verificador.CargarComboOptions("CiclosPrueba", "id_ciclo_prueba, fecha_inicio_ejecucion", cboCiclo);
             this.usuario = usuario;
             txtUsuario.Text = usuario.N_usuario;
 
@@ -133,20 +133,6 @@ namespace ABMC_Clientes.GUI {
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             grdDetallesFactura.Rows.Remove(grdDetallesFactura.SelectedRows[0]);
-        }
-
-        public void CargarComboOptions(string tabla, string columnas, ComboBox cmb)
-        {
-            Datos datos = new Datos();
-
-            DataTable table = datos.ConsultarTabla(columnas, tabla);
-            cmb.DataSource = table;
-            cmb.DisplayMember = table.Columns[1].ColumnName;
-            cmb.ValueMember = table.Columns[0].ColumnName;
-
-            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb.SelectedIndex = -1;
-            cmb.SelectedValue = -1;
         }
 
     }

@@ -23,8 +23,8 @@ namespace ABMC_Clientes.GUI {
 			Habilitar(false);
 			RefreshData();
 			ActualizarCampos();
-			CargarComboOptions("Proyectos", "id_proyecto, descripcion", cboProyecto);
-			CargarComboOptions("Usuarios", "id_usuario, usuario", cboUsuarioResponsable);
+			CargarComboOptions("Proyectos WHERE borrado = 0", "id_proyecto, descripcion", cboProyecto);
+			CargarComboOptions("Usuarios WHERE borrado = 0", "id_usuario, usuario", cboUsuarioResponsable);
 			verificador.Agregar("Proyecto", cboProyecto);
 			verificador.Agregar("Usuario Responsable", cboUsuarioResponsable);
 			verificador.Agregar("Nombre", txtNombre);

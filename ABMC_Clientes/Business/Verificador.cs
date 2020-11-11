@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ABMC_Clientes.DataAccess;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ABMC_Clientes.Business {
@@ -40,6 +42,19 @@ namespace ABMC_Clientes.Business {
 				MessageBox.Show(error, "Error de verificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 			return res;
+		}
+
+		public static void CargarComboOptions(string tabla, string columnas, ComboBox cmb) {
+			Datos datos = new Datos();
+
+			DataTable table = datos.ConsultarTabla(columnas, tabla);
+			cmb.DataSource = table;
+			cmb.DisplayMember = table.Columns[1].ColumnName;
+			cmb.ValueMember = table.Columns[0].ColumnName;
+
+			cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+			cmb.SelectedIndex = -1;
+			cmb.SelectedValue = -1;
 		}
 	}
 
